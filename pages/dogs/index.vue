@@ -18,16 +18,17 @@
         <div class = "form-container">
             <label for = "age-filter">Age filter</label><input id = "age-filter" type = 'text' placeholder = "Age filter" v-model = "age">
         </div>
-        <h1>Dogs</h1>
+        <h1>persons</h1>
         <div id="card-container">
-            <Card v-for = "dog of filtered" :title = "dog.name" :subtitle = "dog.breed" :link = "'/dogs/' + dog.id" />
+            <Card v-for="person of filtered" :key="person.id" :title="person.name" :subtitle="person.surname" :link="'/dogs/' + person.id" />
+
         </div>
     </main>
 </template>
 
 <script setup>
     // useRuntimeConfig provide us with environment variables set up in the nuxtconfig file
-    const { data: dogs } = await useFetch('/api/dogs')
+    const { data: persons } = await useFetch('/api/dogs')
 
     /*
         In order to implement a filter, we use the computed property.
@@ -39,14 +40,14 @@
     const filtered = computed(() => {
         // Checking for values where the full list is provided
         if(age.value == 0 || age.value == "")
-            return dogs.value
+            return persons.value
 
         const arr = []
 
         // Filtering the list
-        for(let dog of dogs.value) {
-            if(dog.age < age.value)
-                arr.push(dog)
+        for(let person of persons.value) {
+            if(person.age < age.value)
+                arr.push(person)
         }
 
         // Returning the filtered list
