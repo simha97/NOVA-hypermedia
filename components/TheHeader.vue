@@ -17,14 +17,14 @@
 <style>
     header
     {
-        background-color: orange;
+        background-color: #36D6E7;
     }
 
     header
     {
         padding: 0px 20px 0px 20px;
         margin-bottom: 5px;
-        border-bottom: 5px solid brown;
+        border-bottom: 5px solid #0074dd;
         
         display: flex;
         justify-content: space-between;

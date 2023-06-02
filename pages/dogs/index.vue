@@ -1,27 +1,14 @@
-<!--
-    Page with the list of all the dogs.
-    As described in the Card component, the same component was used for both Dog and Location since they have the same structure.
--->
 <template>
     <main>
         <!--
-            Form used to add dogs to the database
-        -->
-        <div class = "form-container">
-            <input id = "dog-name" type = "text" placeholder="Name" v-model = "dogName">
-            <input id = "dog-breed" type = "text" placeholder="Breed" v-model = "dogBreed">
-            <button id="add-btn-form" @click = "saveDogForm">Add Card (Form values)</button>
-        </div>
-        <!--
-            Form used to filter the list by age.
+            Filter
         -->
         <div class = "form-container">
             <label for = "age-filter">Age filter</label><input id = "age-filter" type = 'text' placeholder = "Age filter" v-model = "age">
         </div>
         <h1>persons</h1>
         <div id="card-container">
-            <Card v-for="person of filtered" :key="person.id" :title="person.name" :subtitle="person.surname" :link="'/dogs/' + person.id" />
-
+            <Card v-for="person of filtered" :key="person.id" :title="person.name" :subtitle="person.surname" :number="person.age" :link="'/dogs/' + person.id" />
         </div>
     </main>
 </template>
@@ -54,39 +41,6 @@
         return arr
     })
 
-    // Managing the form for adding values to the DB
-    const dogName = ref("")
-    const dogBreed = ref("")
-
-    async function saveDogForm() {
-        // Checking whether the form is empty
-        if(dogName.value != "" && dogBreed != "") {
-            /*
-                $fetch doesn't return an object containing all the information about the request.
-                So, if the request has an error (missing values or anything else) it will return an error directly.
-                This is why it is necessary to use the try/catch.
-            */
-            try {
-                // $fetch works exactly like the normal fetchs
-                const res = await $fetch('/api/dogs', {
-                    method: "POST",
-                    body: {
-                        name: dogName.value,
-                        breed: dogBreed.value
-                    }
-                })
-                dogs.value.push(res)
-                dogName.value = ""
-                dogBreed.value = ""
-            }
-            catch{
-                alert("Something went wrong with your request")
-            }
-        }
-        else {
-            alert("Both fields should be filled")
-        }
-    }
 </script>
 
 <style>

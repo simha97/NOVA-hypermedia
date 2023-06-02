@@ -11,16 +11,17 @@
 <template>
     <div class="card">
         <div class="image-container">
-            <img class="img" src='~/assets/img/home-image.jpg' />
+            <img class="img" src='~/assets/img/youngwoman.png' />
         </div>
         <span class="title">{{ title }}</span>
         <span class="subtitle">{{ subtitle }}</span>
+        <span class="subtitle">{{ number }}</span>
         <NuxtLink :to = "link" ><button>Open description</button></NuxtLink>
     </div>
 </template>
 
 <script setup>
-    const props = defineProps(['title', 'subtitle', 'link'])
+    const props = defineProps(['title', 'subtitle', 'number', 'link'])
 </script>
 
 <style>

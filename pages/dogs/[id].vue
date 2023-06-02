@@ -7,9 +7,9 @@
         <div class = "info-group">
             <img id = "main-img" src = "~/assets/img/home-image.jpg" />
             <div id = "data-container">
-                <p class = "data">Name: <span>{{ persons.name }}</span></p>
-                <p class = "data">Breed: <span>{{ persons.surname }}</span></p>
-                <p class = "data">Age: <span>{{ persons.age }}</span></p>
+                <p class = "data">Name: <span>{{ person.name }}</span></p>
+                <p class = "data">Surname: <span>{{ person.surname }}</span></p>
+                <p class = "data">Age: <span>{{ person.age }}</span></p>
             </div>
         </div>
         <h2>Description</h2>
@@ -18,8 +18,6 @@
             It used because of the 'newLineOnFullStop' function that returns a string with the <br> tags.
             This function is a composable that is available anywhere, without requiring to be imported.
         -->
-        <p id = "description" v-html = "description"></p>
-        <SmallCard :title = "dog.locations.name" :subtitle = "dog.locations.city" :link = "'/locations/' + dog.locations.id" />
     </main>
 </template>
 
@@ -27,9 +25,9 @@
     const route = useRoute()
     const id = route.params.id
     // useRuntimeConfig provide us with environment variables set up in the nuxtconfig file
-    const { data: dog } = await useFetch('/api/dogs/' + id)
+    const { data: person } = await useFetch('/api/dogs/' + id)
 
-    const description = ref(newLineOnFullStop(dog.value.description))
+    const description = ref(newLineOnFullStop(person.value.description))
 </script>
 
 <style>
