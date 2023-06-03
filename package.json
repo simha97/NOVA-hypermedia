@@ -13,9 +13,6 @@
     "nuxt": "^3.3.3"
   },
   "dependencies": {
-    "express": "^4.18.2",
-    "lorem-ipsum": "^2.0.8",
-    "sequelize": "^6.30.0",
-    "sqlite3": "^5.1.6"
+    "express": "^4.18.2"
   }
 }

@@ -1,7 +1,13 @@
-<!--
-    Page description for a single dog.
-    As described in the SmallCard component, the same component was used for both Dog and Location since they have the same structure.
--->
+
+
+<script setup>
+    const route = useRoute()
+    const id = route.params.id
+    // useRuntimeConfig provide us with environment variables set up in the nuxtconfig file
+    const { data: person } = await useFetch('/api/ourTeam/' + id)
+    const description = ref(newLineOnFullStop(person.value.story))
+</script>
+
 <template>
     <main>
         <div class = "info-group">
@@ -13,22 +19,9 @@
             </div>
         </div>
         <h2>Description</h2>
-        <!--
-            v-html allows us to change the structure of a HTML element.
-            It used because of the 'newLineOnFullStop' function that returns a string with the <br> tags.
-            This function is a composable that is available anywhere, without requiring to be imported.
-        -->
+
     </main>
 </template>
-
-<script setup>
-    const route = useRoute()
-    const id = route.params.id
-    // useRuntimeConfig provide us with environment variables set up in the nuxtconfig file
-    const { data: person } = await useFetch('/api/dogs/' + id)
-
-    const description = ref(newLineOnFullStop(person.value.description))
-</script>
 
 <style>
     #main-img {

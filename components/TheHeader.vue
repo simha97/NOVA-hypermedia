@@ -6,10 +6,10 @@
         <h1>The Dog Shelter</h1>
         <nav>
             <NuxtLink to = "/">HOME</NuxtLink>
-            <NuxtLink to = "/dogs">DOGS</NuxtLink>
-            <NuxtLink to = "/locations">LOCATIONS</NuxtLink>
-            <NuxtLink to = "/about">ABOUT US</NuxtLink>
-            <NuxtLink to = "/contact">CONTACT US</NuxtLink>
+            <NuxtLink to = "/ourTeam">OUR TEAM</NuxtLink>
+            <NuxtLink to = "/">LOCATIONS</NuxtLink>
+            <NuxtLink to = "/">ABOUT US</NuxtLink>
+            <NuxtLink to = "/">CONTACT US</NuxtLink>
         </nav>
     </header>
 </template>

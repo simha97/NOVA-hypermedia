@@ -8,20 +8,15 @@
         </div>
         <h1>persons</h1>
         <div id="card-container">
-            <Card v-for="person of filtered" :key="person.id" :title="person.name" :subtitle="person.surname" :number="person.age" :link="'/dogs/' + person.id" />
+            <Card v-for="person of filtered" :key="person.id" :title="person.name" :subtitle="person.surname" :number="person.age" :link="'/ourTeam/' + person.id" />
         </div>
     </main>
 </template>
 
 <script setup>
-    // useRuntimeConfig provide us with environment variables set up in the nuxtconfig file
-    const { data: persons } = await useFetch('/api/dogs')
+    const { data: persons } = await useFetch('/api/ourTeam')
 
-    /*
-        In order to implement a filter, we use the computed property.
-        This allows to have a cached value that contains the filtered list.
-        Instead of using the normal list for the cards, we used the computed property directly.
-    */
+
     const age = ref(0);
 
     const filtered = computed(() => {
