@@ -13,6 +13,7 @@
     "nuxt": "^3.3.3"
   },
   "dependencies": {
+    "bootstrap-vue": "^2.23.1",
     "express": "^4.18.2"
   }
 }

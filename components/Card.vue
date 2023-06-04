@@ -10,13 +10,14 @@
 -->
 <template>
     <div class="card">
-        <div class="image-container">
-            <img class="img" src='~/assets/img/youngwoman.png' />
-        </div>
+        <img class="img" alt="Avatar" style="width:100%" src='~/assets/img/youngwoman.png' />
+        <div class="container">
         <span class="title">{{ title }}</span>
+        <div class="isFounder">Founder</div>
         <span class="subtitle">{{ subtitle }}</span>
         <span class="subtitle">{{ number }}</span>
         <NuxtLink :to = "link" ><button>Open description</button></NuxtLink>
+    </div>
     </div>
 </template>
 
@@ -25,41 +26,23 @@
 </script>
 
 <style>
-    .image-container
-    {
-        display: flex;
-        justify-content: center;
-        border: 2px dashed red;
-        border-radius: 10px;
-        padding: 2px;
-        width: 250px;
-        height: 250px;
-    }
+   .card {
+  /* Add shadows to create the "card" effect */
+  display: flex;
+  flex-flow: column;
+  padding: 32px;
+  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+  transition: 0.3s;
+}
 
-    .img
-    {
-        vertical-align: middle;
-        max-width: 100%;
-        max-height: 100%;
-        height: auto;
-        width: auto;
-        margin: auto;
-    }
+/* On mouse-over, add a deeper shadow */
+.card:hover {
+  box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+}
 
-    .card
-    {
-        display: flex;
-        flex-flow: column;
-        padding: 20px;
-        border: 2px solid black;
-        border-radius: 20px;
-        width: fit-content;
-        height: fit-content;
-    }
+/* Add some padding inside the card container */
+.container {
+  padding: 2px 16px;
+}
 
-    .title
-    {
-        font-size: 2em;
-        font-weight: bold;
-    }
 </style>

@@ -2,6 +2,13 @@
     About us page
 -->
 <template>
+
+<div class="m-5">
+    <!-- <NuxtPage /> -->
+    <div class="btn btn-success">Success</div>
+    <div class="btn btn-danger">Danger</div>
+    <div class="btn btn-warning">Warning</div>
+  </div>
     <!--
         Instead of having the two structures written directly on the page, it was preferred to use components as they had the same layout.
         This also allows to have a much cleaner and easy to read 'code'
