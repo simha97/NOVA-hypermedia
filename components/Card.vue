@@ -14,8 +14,8 @@
 <template>
   <div class="flex-container">
   <div class="card">
-      <img class="img" alt="Avatar" style="width:100%" src='~/assets/img/youngwoman.png' />
-      <div class="container">
+      <img class="main-img" alt="Avatar" style="width:100%" src='~/assets/img/youngwoman.png' />
+      <div class="data-container">
       <span class="title">{{ title }}</span>
       <div class="isFounder">Founder</div>
       <span class="subtitle">{{ subtitle }}</span>
@@ -44,16 +44,16 @@
   height: 400px;
 }
 
-.card .img{
+.card .main-img{
   filter: grayscale(100%); transition: filter .2s ease-in-out;
 }
-.card:hover img{
+.card:hover main-img{
   filter: none;
 }
 
 
 /* Add some padding inside the card container */
-.container {
+.data-container {
   padding: 2px 16px;
 }
 

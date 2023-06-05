@@ -2,42 +2,106 @@
     Header of the page
 -->
 
-
 <template>
-    <nav class="navbar navbar-expand-lg navbar-light bg-light" style="height: 96px;" >
-        <a class="navbar-brand" href="#">Navbar</a>
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-        </button>
-    <div class="collapse navbar-collapse" id="navbarNavDropdown">
-        <ul class="navbar-nav">
-            <li class="nav-item active">
-                <NuxtLink class="nav-link" href="#" to = "/">HOME <span class="sr-only">(current)</span></NuxtLink>
-            </li>
-
-            <li class="nav-item">
-                <NuxtLink class="nav-link" href="#" to = "/ourTeam">OUR TEAM</NuxtLink>
-            </li>
-
-            <li class="nav-item dropdown">
-                <NuxtLink class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" to = "/projects">Projects</NuxtLink>
-                <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-                <NuxtLink class="dropdown-item" href="#" to = "/projects">All projects</NuxtLink>
-                <NuxtLink class="dropdown-item" href="#" to = "/projects">Main projects</NuxtLink>
-                </div>
-            </li>
-
-            <li class="nav-item">
-                <NuxtLink class="nav-link" href="#" to = "/aboutUs">About Us</NuxtLink>
-            </li>
-
-            <li class="nav-item">
-                <NuxtLink class="nav-link" href="#" to = "/contactUs">Contact Us</NuxtLink>
-            </li>
-
-     
-        </ul>
+    <div class="nav-container">
+        <img src="logo.svg" alt="logo nova"/>
+        <div><NuxtLink to="/" >Home</NuxtLink></div>
+        <div>
+            <!--<button @click="toggle">Projects</button>-->      
+<div class="dropdown">
+    <div class="dropdown-title"><button @click="toggle">Projects</button></div>
+    <div class="dropdown-sub">
+        <div class="dropdown-option" v-if="active">   <NuxtLink  to="/projects" v-if="active">ALL PROJECT</NuxtLink>  </div>
+        <div class="dropdown-option" v-if="active">   <NuxtLink  to="/main-projects" v-if="active">MAIN PROJECT</NuxtLink>   </div>
     </div>
-    </nav>
+</div>
+            <!--<div class="dropdown-menu">
+                <NuxtLink  to="/projects" v-if="active">ALL PROJECT</NuxtLink>
+                <NuxtLink  to="/main-projects" v-if="active">MAIN PROJECT</NuxtLink>
+            </div>-->
+        </div>
+        <div><NuxtLink to="/">About Us</NuxtLink></div>
+        <div><NuxtLink to="/">Contact Us</NuxtLink></div>
+    </div>
+
+<!--    <nav>
+        <ul class="left">
+            <li class="logo"><a href="#">SoulOTrip</a></li>
+            <li >
+                <a href="#">Adventure Trips</a>
+                <ul class="drop-menu">
+                    <li>1</li>
+                    <li>2</li>
+                    <li>3</li>
+                    <li>4</li>
+                </ul>
+            </li>
+            <li><a href="#">Top Destinations</a></li>
+            <li><a href="#">Explore</a></li>
+        </ul>
+        <ul class="right">
+            <li class=""><a href="#">Username</a></li>
+            <li class=""><a href="/login">Login</a></li>
+            <li class=""><a href="/register">Register</a></li>
+        </ul>
+</nav>
+
+<div class="dropdown">
+    <div class="dropdown-title">PROJECTS</div>
+    <div class="dropdown-sub">
+        <div class="dropdown-option">   <NuxtLink  to="/projects" v-if="active">ALL PROJECT</NuxtLink>  </div>
+        <div class="dropdown-option">   <NuxtLink  to="/main-projects" v-if="active">MAIN PROJECT</NuxtLink>   </div>
+    </div>
+</div>
+
+
+-->
 
 </template>
+
+<script>
+  export default {
+    data () {
+      return {
+        active: false
+      }
+    },
+    methods: {
+      toggle () {
+        this.active = !this.active
+      }
+    }
+  }
+</script>
+
+<style>
+.nav-container{
+    display: flex;
+}
+/*.dropdown-menu{
+    position: absolute;
+    width: auto;
+    height: auto;
+}*/
+/* Menu Dropdown! please use div */
+.dropdown{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction:column;
+}
+.dropdown > .dropdown-title{
+    /* put the height and width here! */
+    width: 2em;
+    height: 2em;
+}
+.dropdown > .dropdown-sub{
+    display: none;
+    z-index: 1;
+    flex-direction: column; /* or row */
+}
+.dropdown:hover > .dropdown-sub {
+    display: flex;
+}.dropdown:hover > .dropdown-sub  > .dropdown-option:hover{
+    background-color: #abcdef;
+}
+</style>
