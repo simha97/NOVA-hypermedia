@@ -36,20 +36,15 @@
         padding: 10px;
         height: 480px;
         min-height: 1vh;
-
-
     }
     .footer-container
     {
-
         color:#F5F5F5;
         margin-left: 160px;
         margin-right: 160px;
         margin-bottom: 38px;
         margin-top: 63px;
         white-space: nowrap;
-
-        
 
     }
     .list1 {

@@ -5,6 +5,7 @@
     // useRuntimeConfig provide us with environment variables set up in the nuxtconfig file
     const { data: project } = await useFetch('/api/projects/' + id)
     //const description = ref(newLineOnFullStop(person.value.story))
+    console.log(project)
 </script>
 
 <template>
@@ -13,6 +14,8 @@
             <img id = "main-img" src = "~/assets/img/youngwoman.png" />
             <div id = "data-container">
                 <p class = "data">Name: <span>{{ project.projectTitle }}</span></p>
+                <p class = 'data'>Name: <span>{{ project.persons.name }}</span></p>
+                <p class = 'data'>Surname: <span>{{ project.persons.surname }}</span></p>
             </div>
         </div>
 
