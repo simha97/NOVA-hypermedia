@@ -5,7 +5,6 @@
     // useRuntimeConfig provide us with environment variables set up in the nuxtconfig file
     const { data: project } = await useFetch('/api/projects/' + id)
     //const description = ref(newLineOnFullStop(person.value.story))
-    console.log(project)
 </script>
 
 <template>
@@ -16,6 +15,7 @@
                 <p class = "data">Name: <span>{{ project.projectTitle }}</span></p>
                 <p class = 'data'>Name: <span>{{ project.persons.name }}</span></p>
                 <p class = 'data'>Surname: <span>{{ project.persons.surname }}</span></p>
+
             </div>
         </div>
 

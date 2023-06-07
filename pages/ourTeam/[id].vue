@@ -25,7 +25,9 @@
                 <p class="details">{{person.pastJobExperience}}</p>
 
               </ul>
-
+            <h2>Projects in Progress</h2>
+            <p>Discover a collection of ongoing projects by <span>{{ person.name }} {{ person.surname }}</span></p>
+            <Card v-for="project in person.projects" :key="project.id" :title="project.projectTitle"  :link="'/projects/' + project.id" />
 </template>
 
 <style>
