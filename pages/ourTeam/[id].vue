@@ -9,54 +9,80 @@
 </script>
 
 <template>
-    <main>
-        <div class = "info-group">
-            <img id = "main-img" src = "~/assets/img/youngwoman.png" />
             <div id = "data-container">
-                <p class = "data">Name: <span>{{ person.name }}</span></p>
-                <p class = "data">Surname: <span>{{ person.surname }}</span></p>
-                <p class = "data">Age: <span>{{ person.age }}</span></p>
+                <p class = "name"> <span>{{ person.name }} {{ person.surname }}</span></p>
+                <p class = "quote"><span>"As an expert in both Education and Art I am dedicated to fostering creativity and knowledge through innovative approaches"</span></p>
+                <img id = "main-img" src = "~/assets/img/youngwoman.png" />
             </div>
-        </div>
-        <h2>Description</h2>
+            <ul class="info">
+                <li>Profile</li>
+                <p class="details">{{person.story}}</p>
 
-    </main>
+                <li> Academic Experience</li>
+                <p class="details">{{person.degree}}.</p>
+
+                <li> Past Job Experience</li>
+                <p class="details">{{person.pastJobExperience}}</p>
+
+              </ul>
+
 </template>
 
 <style>
     #main-img {
-    width: 30%;
-    height: auto;
+        position: absolute;
+        width: 250px;
+        height: 300px;
+        float: right;
+        right:0;
+        
+        
     }
 
-    main {
-        width: 100%;
+    .data-container{
         display: flex;
-        flex-direction: column;
-        align-items: center;
+
     }
 
-    .info-group {
-        width: 100%;
-        display: flex;
-        flex-direction: row;
-        align-items: center;
-        justify-content: center;
-        gap: 40px;
-    }
+    .name{
+        margin-top: 50px;
+        font-family: Myriad Pro;
+        font-size: 36px;
+        text-decoration: overline;
+        text-decoration-color: #F26225;
 
-    .data {
-        font-weight: bolder;
-        font-size: 20pt
-    }
 
-    .data span {
-        font-weight: 100;
-        font-size: 15pt;
     }
+    .quote{
+        font-family: 'Myriad Pro';
+        font-style: italic;
+        font-weight: 300;
+        font-size: 24px;
+        line-height: 29px;
+        width: 576px;
+        height: 87px;
+        word-wrap: "overflow-wrap"; 
 
-    #description {
-        padding: 0 20px 0 20px;
-        font-size: 15pt;
+    }
+    .info{
+        list-style: url("~/assets/icons/orange-bullet.png");
+        font-family: 'Myriad Pro';
+        font-style: normal;
+        font-weight: 400;
+        font-size: 20px;
+        margin: auto;
+
+    }
+    .details{
+        width: 503px;
+
+        font-family: 'Myriad Pro';
+        font-style: normal;
+        font-weight: 400;
+        font-size: 13px;
+
+        flex: none;
+        order: 0;
+        flex-grow: 0;
     }
 </style>
