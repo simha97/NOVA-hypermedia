@@ -25,6 +25,34 @@
         margin-bottom: 38px;
     }
 
+    
+    .slogan {
+        src:url('/font/helvetica-light.ttf') format("truetype");
+        font-family: Helvetica;
+        font: Helvetica 48px light;
+    }
+    .title {
+        src:url('/font/Helvetica-Bold.ttf') format("truetype");
+        font-family: Helvetica;
+        font: Helvetica 36px bold;
+    }
+    h1 {
+        src:url('/font/Myriad\ Pro\ Light.otf') format("opentype");
+        font-family: "Myriad Pro";
+        font: "Myriad Pro" 48px light;
+    }
+    h2 {
+        src:url('/font/Myriad\ Pro\ Regular.ttf') format("truetype");
+        font-family: "Myriad Pro";
+        font: "Myriad Pro" 32px italic;
+    }
+    h3 {
+        src:url('/font/myriadpro-semibold.otf') format("opentype");
+        font-family: "Myriad Pro";
+        font: "Myriad Pro" 32px;
+    }
+
+
     @media screen and (max-width: 700px){
 
         .content-container {

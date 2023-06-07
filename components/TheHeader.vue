@@ -4,24 +4,21 @@
 
 <template>
     <div class="nav-container">
-        <div style="margin-left: 56px; margin-top: 22px;">
-            <NuxtLink to="/"><img src="logo.svg" alt="logo nova"></NuxtLink>
-        </div>   
-        <div class="nav-bar">            
-            <div class="dropdown" style="margin-left: 403px;">
-                <div class="dropdown-title" @click="toggle">PROJECTS
-                    <div class="dropdown-sub" v-if="active">
-                        <div class="dropdown-option" ><NuxtLink  to="/projects" >ALL PROJECT</NuxtLink>  </div>
-                        <div class="dropdown-option" ><NuxtLink  to="/main-projects">MAIN PROJECT</NuxtLink>   </div>
-                    </div>
-                </div>
-                <div>
-                        <!--<div class="dropdown-menu">
-                            <NuxtLink  to="/projects" v-if="active">ALL PROJECT</NuxtLink>
-                            <NuxtLink  to="/main-projects" v-if="active">MAIN PROJECT</NuxtLink>
-                        </div>-->
-                </div>
-            </div> 
+        <img src="/logo.svg" alt="logo nova"/>
+        <div><NuxtLink to="/" >Home</NuxtLink></div>
+        <div><NuxtLink to="/ourTeam">Our Team</NuxtLink></div>
+        <div>
+            <div class="dropdown">
+                <div class="dropdown-title"><p>Projects</p></div>
+                    <div class="dropdown-sub">
+                        <div class="dropdown-option" v-if="active">   <NuxtLink  to="/projects" v-if="active">ALL PROJECT</NuxtLink>  </div>
+                        <div class="dropdown-option" v-if="active">   <NuxtLink  to="/projects/main-projects" v-if="active">MAIN PROJECT</NuxtLink>   </div>
+    </div>
+</div>
+            <!--<div class="dropdown-menu">
+                <NuxtLink  to="/projects" v-if="active">ALL PROJECT</NuxtLink>
+                <NuxtLink  to="/main-projects" v-if="active">MAIN PROJECT</NuxtLink>
+            </div>-->
         </div>
         <div class="nav-bar" style="margin-left: 80px;">
             <NuxtLink to="/">AREAS</NuxtLink>
@@ -76,7 +73,7 @@
   export default {
     data () {
       return {
-        active: false
+        active: true
       }
     },
     methods: {

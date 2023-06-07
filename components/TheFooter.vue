@@ -5,7 +5,7 @@
 <template>
     <footer>
         <div class="footer-container">
-        <img src="logo.svg" alt="logo nova"/>
+        <img src="/logo.svg" alt="logo nova"/>
         <div class="footer-text">
             <p>NOVA, a venture capital company help you START and GROW your business</p>
               <ul class="address-links">
