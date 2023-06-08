@@ -13,20 +13,22 @@
 
 <template>
   <div class="flex-container">
-    <div class="project-card">
-        <img class="main-img" alt="Avatar" style="width:100%" src='~/assets/img/youngwoman.png' />
+    <NuxtLink :to = "link">
+      <div class="project-card">
+        <img class="main-img" alt="Avatar" style="width:100%" src="~\LogoPng\01HealthyBites.png">
         <div class="data-container">
-          <div >{{ title }}</div>
-          <div >{{ mainIdea }}</div>
-          <div >{{ area }}</div>
-          <NuxtLink :to = "link" ><button>Open description</button></NuxtLink>
+          <b><div style="font-size: 16px;">{{ title }}</div></b>
+          <div style="font-size: 12px;">{{ mainIdea }}</div>
+          <div style="font-size: 12px;">{{ city }}</div>
+          <div style="font-size: 12px; text-align: right;">{{ area }}</div>
+        </div>
       </div>
-    </div>
+    </NuxtLink>
   </div>
 </template>
 
 <script setup>
-  const props = defineProps(['title', 'mainIdea', 'area', 'link'])
+  const props = defineProps(['logo', 'title', 'mainIdea', 'city', 'area', 'link'])
 </script>
 
 <style>
@@ -41,14 +43,23 @@
   transition: 0.3s;
   width: 256px;
   height: 400px;
+  background-color: white;
+  color: #282E36;
 }
 
+.project-card:hover{
+  background-color: #282E36;
+  color:white;
+}
+
+/*
 .project-card .main-img{
   filter: grayscale(100%); transition: filter .2s ease-in-out;
 }
-.project-card:hover main-img{
+.project-card .main-img:hover{
   filter: none;
 }
+*/
 
 
 /* Add some padding inside the card container */
