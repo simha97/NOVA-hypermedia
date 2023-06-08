@@ -2,7 +2,7 @@
     <main>
         <h1>Projects</h1>
         <div id="card-container">
-            <ProjectCard v-for="project in projects" :key="project.id" :logo="project.logoPath" :title="project.projectTitle" :city="project.city" :mainIdea="project.mainIdea" :area="project.area" :link="'/projects/' + project.id" />
+            <ProjectCard v-for="project in projects" :key="project.id" :title="project.projectTitle" :city="project.city" :mainIdea="project.mainIdea" :area="project.area" :link="'/projects/' + project.id" />
         </div>
     </main>
 </template>
