@@ -48,31 +48,33 @@
 <style>
 
     .intro{
-        background: url('/windows-p74ndnYWRY4-unsplash 1.png'); /*to create images*/
-        width:  100%;
+        background: url('/windows-p74ndnYWRY4-unsplash 1.png') rgba(64, 64, 64, 0.5) ; /*to create images*/
+        width:  1440px;
         height: 648px;
         left: 0px;
         top: 0px;
-        position: absolute;
+        position: relative;
     }
 
     .intro img{
         max-width: 1440px;
         max-height: 648px;
         overflow: hidden;
+        opacity: 0.5;
     }
 
-    .intro h1, h2{
-        margin-left: 160px;
-        margin-top:  400px;
+    .intro-title {
+        position: relative;
+
     }
 
     #card-container
     {
-        display: flex-start ;
+        display: flex ;
         flex-wrap: wrap;
         flex-direction: row;
         justify-content: center;
+        align-content: flex-start;
         gap: 20px;
     }
 
