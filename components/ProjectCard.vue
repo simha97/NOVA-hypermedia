@@ -13,21 +13,20 @@
 
 <template>
   <div class="flex-container">
-  <div class="card">
-      <img class="main-img" alt="Avatar" style="width:100%" src='~/assets/img/youngwoman.png' />
-      <div class="data-container">
-      <span class="title">{{ title }}</span>
-      <div class="isFounder">Founder</div>
-      <span class="subtitle">{{ subtitle }}</span>
-      <span class="subtitle">{{ number }}</span>
-      <NuxtLink :to = "link" ><button>Open description</button></NuxtLink>
-  </div>
-  </div>
+    <div class="project-card">
+        <img class="main-img" alt="Avatar" style="width:100%" src='~/assets/img/youngwoman.png' />
+        <div class="data-container">
+          <div >{{ title }}</div>
+          <div >{{ mainIdea }}</div>
+          <div >{{ area }}</div>
+          <NuxtLink :to = "link" ><button>Open description</button></NuxtLink>
+      </div>
+    </div>
   </div>
 </template>
 
 <script setup>
-  const props = defineProps(['title', 'subtitle', 'number', 'link'])
+  const props = defineProps(['title', 'mainIdea', 'area', 'link'])
 </script>
 
 <style>
@@ -36,7 +35,7 @@
   padding:  32px;
 }
 
-.card {
+.project-card {
 /* Add shadows to create the "card" effect */
   box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
   transition: 0.3s;
@@ -44,10 +43,10 @@
   height: 400px;
 }
 
-.card .main-img{
+.project-card .main-img{
   filter: grayscale(100%); transition: filter .2s ease-in-out;
 }
-.card:hover main-img{
+.project-card:hover main-img{
   filter: none;
 }
 

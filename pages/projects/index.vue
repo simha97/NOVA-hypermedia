@@ -2,17 +2,13 @@
     <main>
         <h1>Projects</h1>
         <div id="card-container">
-            <Card v-for="project in projects" :key="project.id" :title="project.projectTitle" :subtitle="project.city" :link="'/projects/' + project.id" />
+            <ProjectCard v-for="project in projects" :key="project.id" :city="project.city" :title="project.projectTitle" :mainIdea="project.mainIdea" :area="project.area" :link="'/projects/' + project.id" />
         </div>
     </main>
 </template>
 
 <script setup>
-
     const { data: projects } = await useFetch('/api/projects')
-
-
-
 </script>
 
 <style>
