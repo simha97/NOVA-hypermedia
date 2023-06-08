@@ -15,7 +15,7 @@
                 <label for = "age-filter">Age filter</label><input id = "age-filter" type = 'text' placeholder = "Age filter" v-model = "age">
             </div>
             <h1>persons</h1>
-            <Card v-for="person of filtered" :key="person.id" :title="person.name" :subtitle="person.surname" :number="person.age" :link="'/ourTeam/' + person.id" />
+            <PersonCard v-for="person of filtered" :key="person.id" :name="person.name" :surname="person.surname" :age="person.age" :area="person.area" :isFounder="person.isFounder" :link="'/ourTeam/' + person.id" />
         </div>
     </main>
 </template>
