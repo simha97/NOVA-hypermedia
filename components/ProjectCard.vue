@@ -15,7 +15,7 @@
   <div class="flex-container">
     <NuxtLink :to = "link">
       <div class="project-card">
-        <img class="main-img" alt="logo" style="width:100%" v-bind:src="'/_nuxt/LogoPng/' + title + '.png'">
+        <img class="main-img" alt="logo" style="width:100%; border-top-right-radius: 8px; border-top-left-radius: 8px;" v-bind:src="'/_nuxt/LogoPng/' + title + '.png'">
         <div class="data-container">
           <b><div style="font-size: 16px;">{{ title }}</div></b>
           <div style="font-size: 12px;">{{ mainIdea }}</div>
@@ -40,12 +40,13 @@
 
   .project-card {
   /* Add shadows to create the "card" effect */
-    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+    box-shadow: 0 4px 8px 0 #282E36;
     transition: 0.3s;
     width: 240px;
     height: 400px;
     background-color: white;
     color: #282E36;
+    border-radius: 8px;
   }
 
   .project-card:hover{
@@ -53,14 +54,11 @@
     color:white;
   }
 
-  /*
-  .project-card .main-img{
-    filter: grayscale(100%); transition: filter .2s ease-in-out;
+  .person-card .main-img{
+    width:100%; 
+    border-top-right-radius: 8px;  
+    border-top-left-radius: 8px;
   }
-  .project-card .main-img:hover{
-    filter: none;
-  }
-  */
 
 
   /* Add some padding inside the card container */

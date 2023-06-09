@@ -10,20 +10,16 @@
     - subtitle: second information to display
     - link: link to the page description
 -->
-
-let founder = False
-
 <template>
   <div class="flex-container">
     <NuxtLink :to = "link">
       <div class="person-card">
-        <img class="main-img" alt="picture" style="width:100%" src="~\assets\img\youngwoman.png">
+        <img class="main-img" alt="picture" src="~\assets\img\youngwoman.png">
         <div class="data-container">
-          <b><div style="font-size: 16px;">{{ name }} {{surname }}</div></b>
+          <div style="font-size: 16px;">{{ name }} {{surname }}</div>
           <b><div style="font-size: 16px; position: absolute; right: 16px;" v-if="isFounder == true">Founder</div></b>
-          <div style="font-size: 12px;">Expert in
-            <div class="area-container">{{ area }}
-          </div>    
+          <div style="font-size: 12px; position: absolute; top:32px;">Expert in
+            <div class="area-container">{{ area }}</div>    
           </div>      
         </div>
       </div>
@@ -43,41 +39,45 @@ let founder = False
   }
 
   .area-container {
-    border: solid 1px #282E36;
+    border: solid 1px white;
     border-radius: 8px;
-    padding: 8px;
-    width: fit-content;
+    padding: 4px 8px 4px 8px;
+    position:relative;
+    top: 2px;
+    text-align: center;
   }
 
   .person-card {
   /* Add shadows to create the "card" effect */
-    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+    box-shadow: 0 4px 8px 0 #282E36;
     transition: 0.3s;
     width: 240px;
     height: 400px;
-    background-color: white;
-    color: #282E36;
+    background-color: #F26225;
+    color: white;
+    border-radius: 8px;
+  }
+
+  .person-card .main-img:hover{
+    background-color: #282E36;
+    filter: none;
+  }
+
+  .person-card .main-img{
+    filter: grayscale(100%); 
+    transition: filter .2s ease-in-out;
+    width:100%; 
+    border-top-right-radius: 8px;  
+    border-top-left-radius: 8px;
+  }
+
+  .data-container {
+    padding: 2px 8px;
+    position: relative; 
   }
 
   .person-card:hover{
     background-color: #282E36;
-    color:white;
-  }
-
-  /*
-  .project-card .main-img{
-    filter: grayscale(100%); transition: filter .2s ease-in-out;
-  }
-  .project-card .main-img:hover{
-    filter: none;
-  }
-  */
-
-
-  /* Add some padding inside the card container */
-  .data-container {
-    padding: 2px 16px;
-    position: relative;
   }
 
 </style>

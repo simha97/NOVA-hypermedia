@@ -1,11 +1,12 @@
 <template>
     <div class="intro-wrap">
+        <img src="~\assets\img\OurTeam.jpg" style="filter: brightness(70%); opacity: 90%;">
         <div class="intro-title">
-            <h1 style="font-size: 24;">Meet Our Teams</h1>
-            <h2>The Brilliant Minds Behind Our Vision</h2>
+            <div style="font-size: 48px;">Meet Our Teams</div>
+            <div style="font-size: 24px;">The Brilliant Minds Behind Our Vision</div>
         </div>
-    </div>
-    <main>
+    </div>    
+    <main style="padding-top: 24px;">
         <div id="card-container">
             <PersonCard v-for="person of filtered" :key="person.id" :name="person.name" :surname="person.surname" :age="person.age" :area="person.area" :isFounder="person.isFounder" :link="'/ourTeam/' + person.id" />
         </div>
@@ -14,10 +15,7 @@
 
 <script setup>
     const { data: persons } = await useFetch('/api/ourTeam')
-
-
     const age = ref(0);
-
     const filtered = computed(() => {
         // Checking for values where the full list is provided
         if(age.value == 0 || age.value == "")
@@ -40,25 +38,23 @@
 <style>
 
     .intro-wrap{
-        background: url('/windows-p74ndnYWRY4-unsplash 1.png');
         background-size:cover;
         background-repeat: no-repeat;
         width:  100%;
-        height: 400px;
+        height: 480px;
         display: flex;
         align-items: flex-end;
         overflow: hidden;
         position: relative;
-        filter: brightness(60%);
-        opacity: 85%;
+        border-radius: 8px;
     }
 
     .intro-title {
         position: absolute;
         bottom: 100px;
         left: 100px;
-        font-size: 18px;
         color: white;
+        font-weight: lighter;
     }
 
     #card-container

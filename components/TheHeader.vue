@@ -5,17 +5,17 @@
 <template>
     <div class="nav-container">
         <div class="nav-list-item">
-            <NuxtLink to="/" ><img src="/logo.svg" alt="logo nova" style="margin-left: -640px;"/></NuxtLink>
-            <div class="nav-item"><NuxtLink to="/ourTeam">Our Team</NuxtLink></div>
+            <NuxtLink to="/" ><img src="/logo.svg" alt="logo nova" style="margin-left: -480px;"/></NuxtLink>
+            <div class="nav-item"><NuxtLink to="/ourTeam">OUR TEAM</NuxtLink></div>
             <div class="dropdown">
-                <div class="dropdown-title nav-item" @click="toggle">Projects</div>
+                <div class="dropdown-title nav-item" @click="toggle">PROJECTS</div>
                     <div class="dropdown-sub">
-                        <div class="dropdown-option" v-if="true">   <NuxtLink  to="/projects" v-if="active">ALL PROJECT</NuxtLink>  </div>
-                        <div class="dropdown-option" v-if="true">   <NuxtLink  to="/projects/main-projects" v-if="active">MAIN PROJECT</NuxtLink>   </div>
+                        <div class="dropdown-option" v-if="true"><NuxtLink  to="/projects" v-if="active">ALL PROJECT</NuxtLink>  </div>
+                        <div class="dropdown-option" v-if="true"><NuxtLink  to="/projects/main-projects" v-if="active">MAIN PROJECT</NuxtLink>   </div>
                     </div>
             </div>
-            <div class="nav-item"><NuxtLink to="/aboutUs"> About Us</NuxtLink></div>
-            <div class="nav-item"><NuxtLink to="/contactUs">Contact Us</NuxtLink></div>
+            <div class="nav-item"><NuxtLink to="/aboutUs"> ABOUT US</NuxtLink></div>
+            <div class="nav-item"><NuxtLink to="/contactUs">CONTACT US</NuxtLink></div>
         </div>
     </div> 
 </template>
@@ -44,9 +44,9 @@
         max-width: 2000px;
         position: relative;
         z-index: 1; /*this give the idea of "layers", so this has to be up the root level 0, and must be accompanied with position*/
+        padding-bottom: 8px;
     }
 
-    
     .nav-list-item {
         position: absolute;
         right: 100px;
@@ -59,7 +59,6 @@
         src:url('/font/Myriad\ Pro\ Regular.ttf') format("truetype");
         font-family: "Myriad Pro";
         font-size: 32px;
-        font-style: italic;
     }
 
     .nav-item {
