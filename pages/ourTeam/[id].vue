@@ -10,11 +10,12 @@
 
 <template>
             <div id = "data-container">
-                <p class = "name"> <span>{{ person.name }} {{ person.surname }}</span></p>
+            <table>
+                <tr>
+                <td>
+                    <p class = "name"> <span>{{ person.name }} {{ person.surname }}</span></p>
                 <p class = "quote"><span>"As an expert in both Education and Art I am dedicated to fostering creativity and knowledge through innovative approaches"</span></p>
-                <img id = "main-img" src = "~/assets/img/youngwoman.png" />
-            </div>
-            <ul class="info">
+                <ul class="info">
                 <li>Profile</li>
                 <p class="details">{{person.story}}</p>
 
@@ -23,27 +24,42 @@
 
                 <li> Past Job Experience</li>
                 <p class="details">{{person.pastJobExperience}}</p>
-
               </ul>
-            <h2>Projects in Progress</h2>
+                </td>
+                <td class="image_column"><img id = "main-img" src = "~/assets/img/woman2.jpg" /></td>
+                </tr>
+            </table>
+
+            </div>
+            <h2 class="Progress_container">Projects in Progress</h2>
             <p>Discover a collection of ongoing projects by <span>{{ person.name }} {{ person.surname }}</span></p>
-            <Card v-for="project in person.projects" :key="project.id" :title="project.projectTitle"  :link="'/projects/' + project.id" />
-</template>
+            <div id="card-container">
+            <ProjectCard v-for="project in person.projects" :key="project.id" :title="project.projectTitle" :subtitle="project.city" :link="'/projects/' + project.id" />
+            </div>
+            <NuxtLink to="/ourTeam"><backbutton text="Our Team">  </backbutton></NuxtLink>
+        
+        </template>
 
 <style>
     #main-img {
-        position: absolute;
-        width: 250px;
-        height: 300px;
-        float: right;
-        right:0;
+    width: 527px;
+    height: 685px;
+    border-radius: 8px 8px 8px 8px;
+
+
         
-        
+    }
+    .image_column{
+        padding-left: 10px;    
+
     }
 
     .data-container{
         display: flex;
 
+    }
+    .Progress_container{
+        padding-top: 120px;
     }
 
     .name{
