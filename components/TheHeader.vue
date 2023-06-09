@@ -45,27 +45,32 @@
     .nav-container{
         background-color: #F5F5F5;
         display: flex;
-        width: 1440px;
+        width: 100%;
         height: 96px;
-        position:absolute;
+        max-width: 2000px;
+        position: relative;
         z-index: 1; /*this give the idea of "layers", so this has to be up the root level 0, and must be accompanied with position*/
     }
 
+    
     .nav-list-item {
+        position: absolute;
+        right: 100px;
         margin-left: auto; 
         margin-right: 0;
         align-items: center;
         display: flex;
-        text-align:left;
+        text-align:center;
         text-indent: 32px;
-
         src:url('/font/Myriad\ Pro\ Regular.ttf') format("truetype");
         font-family: "Myriad Pro";
-        font: "Myriad Pro" 32px italic;
+        font-size: 32px;
+        font-style: italic;
     }
 
     .nav-item {
         padding:32px;
+        width: max-content;
     }
 
     .dropdown{

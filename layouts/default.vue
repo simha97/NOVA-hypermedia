@@ -2,8 +2,9 @@
     Default layout used by all the page
 -->
 <template>
-    <div class = 'page'>
-        <TheHeader />
+     <TheHeader />
+     <div class = 'page'>
+       
         <div class="content-container"><slot /></div>
         
         <TheFooter />
@@ -23,6 +24,7 @@
         margin-left: 160px;
         margin-right: 160px;
         margin-bottom: 38px;
+
     }
 
     

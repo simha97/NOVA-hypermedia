@@ -1,15 +1,11 @@
 <template>
-    <div class="intro">
+    <div class="intro-wrap">
         <div class="intro-title">
             <h1>Meet Our Teams</h1>
             <h2>The Brilliant Minds Behind Our Vision</h2>
         </div>
     </div>
     <main>
-        <!--
-            Filter
-        -->
-
         <div id="card-container">
             <div class = "form-container">
                 <label for = "age-filter">Age filter</label><input id = "age-filter" type = 'text' placeholder = "Age filter" v-model = "age">
@@ -47,34 +43,35 @@
 
 <style>
 
-    .intro{
-        background: url('/windows-p74ndnYWRY4-unsplash 1.png') rgba(64, 64, 64, 0.5) ; /*to create images*/
-        width:  1440px;
-        height: 648px;
-        left: 0px;
-        top: 0px;
-        position: relative;
-    }
-
-    .intro img{
+    .intro-wrap{
+        background: url('/windows-p74ndnYWRY4-unsplash 1.png');
+        background-size: cover;
+        background-repeat: no-repeat;
+        opacity: 0.7;
+        width:  100%;
+        height: auto;
         max-width: 1440px;
-        max-height: 648px;
+        height: 648px;
+        display: flex;
+        align-items: flex-end;
         overflow: hidden;
-        opacity: 0.5;
+        position:relative;
+
     }
 
     .intro-title {
-        position: relative;
-
+        position: absolute;
+        bottom: 100px;
+        left: 100px;
+        font-size: 18px;
     }
 
     #card-container
     {
+        max-width: ;
         display: flex ;
         flex-wrap: wrap;
         flex-direction: row;
-        justify-content: center;
-        align-content: flex-start;
         gap: 20px;
     }
 
@@ -96,9 +93,23 @@
         justify-content: space-evenly;
         align-content: flex-start;
         gap: 20px;
-
+        max-width: 1440px;
         background-color: burlywood;
         padding: 20px;
     }
 
+    @media screen and (max-width: 700px) {
+        .intro {
+            width:  700px;
+            height: 400px;
+        }
+        .intro img{
+            max-width: 100%;
+            max-height: auto;
+            background-size: 100% 100%;
+            overflow: hidden;
+            opacity: 0.9;
+            position: absolute;
+        }
+    }
 </style>
