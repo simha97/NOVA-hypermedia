@@ -1,16 +1,12 @@
 <template>
     <div class="intro-wrap">
         <div class="intro-title">
-            <h1>Meet Our Teams</h1>
+            <h1 style="font-size: 24;">Meet Our Teams</h1>
             <h2>The Brilliant Minds Behind Our Vision</h2>
         </div>
     </div>
     <main>
         <div id="card-container">
-            <div class = "form-container">
-                <label for = "age-filter">Age filter</label><input id = "age-filter" type = 'text' placeholder = "Age filter" v-model = "age">
-            </div>
-            <h1>persons</h1>
             <PersonCard v-for="person of filtered" :key="person.id" :name="person.name" :surname="person.surname" :age="person.age" :area="person.area" :isFounder="person.isFounder" :link="'/ourTeam/' + person.id" />
         </div>
     </main>
@@ -45,18 +41,16 @@
 
     .intro-wrap{
         background: url('/windows-p74ndnYWRY4-unsplash 1.png');
-        background-size: cover;
+        background-size:cover;
         background-repeat: no-repeat;
-        opacity: 0.7;
         width:  100%;
-        height: auto;
-        max-width: 1440px;
-        height: 648px;
+        height: 400px;
         display: flex;
         align-items: flex-end;
         overflow: hidden;
-        position:relative;
-
+        position: relative;
+        filter: brightness(60%);
+        opacity: 85%;
     }
 
     .intro-title {
@@ -64,11 +58,11 @@
         bottom: 100px;
         left: 100px;
         font-size: 18px;
+        color: white;
     }
 
     #card-container
     {
-        max-width: ;
         display: flex ;
         flex-wrap: wrap;
         flex-direction: row;

@@ -20,9 +20,11 @@ let founder = False
         <img class="main-img" alt="picture" style="width:100%" src="~\assets\img\youngwoman.png">
         <div class="data-container">
           <b><div style="font-size: 16px;">{{ name }} {{surname }}</div></b>
-          <div style="font-size: 12px; text-align: right; " v-bind:class="{ active: isFounder }">F</div>
-          <div style="font-size: 12px;">{{ mainIdea }}</div>
-          <div style="font-size: 12px; position: absolute; bottom: 0">{{ area }}</div>
+          <b><div style="font-size: 16px; position: absolute; right: 16px;" v-if="isFounder == true">Founder</div></b>
+          <div style="font-size: 12px;">Expert in
+            <div class="area-container">{{ area }}
+          </div>    
+          </div>      
         </div>
       </div>
     </NuxtLink>
@@ -38,6 +40,13 @@ let founder = False
 
   .flex-container {
     padding:  8px;
+  }
+
+  .area-container {
+    border: solid 1px #282E36;
+    border-radius: 8px;
+    padding: 8px;
+    width: fit-content;
   }
 
   .person-card {

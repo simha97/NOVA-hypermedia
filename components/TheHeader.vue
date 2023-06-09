@@ -4,26 +4,20 @@
 
 <template>
     <div class="nav-container">
-        <img src="/logo.svg" alt="logo nova"/>
         <div class="nav-list-item">
-            <div class="nav-item"><NuxtLink to="/" >Home</NuxtLink></div>
+            <NuxtLink to="/" ><img src="/logo.svg" alt="logo nova" style="margin-left: -640px;"/></NuxtLink>
             <div class="nav-item"><NuxtLink to="/ourTeam">Our Team</NuxtLink></div>
-            
-            <div>
-                <div class="dropdown">
-                    <div class="dropdown-title nav-item" ><a href="/projects">Projects</a></div>
-                        <div class="dropdown-sub">
-                            <div class="dropdown-option" v-if="active">   <NuxtLink  to="/projects" v-if="active">ALL PROJECT</NuxtLink>  </div>
-                            <div class="dropdown-option" v-if="active">   <NuxtLink  to="/projects/main-projects" v-if="active">MAIN PROJECT</NuxtLink>   </div>
-                        </div>
-                </div>
+            <div class="dropdown">
+                <div class="dropdown-title nav-item" @click="toggle">Projects</div>
+                    <div class="dropdown-sub">
+                        <div class="dropdown-option" v-if="true">   <NuxtLink  to="/projects" v-if="active">ALL PROJECT</NuxtLink>  </div>
+                        <div class="dropdown-option" v-if="true">   <NuxtLink  to="/projects/main-projects" v-if="active">MAIN PROJECT</NuxtLink>   </div>
+                    </div>
             </div>
-
-        <div class="nav-item"><NuxtLink to="/aboutUs"> About Us</NuxtLink></div>
-        <div class="nav-item"><NuxtLink to="/contactUs">Contact Us</NuxtLink></div>
-    </div>
+            <div class="nav-item"><NuxtLink to="/aboutUs"> About Us</NuxtLink></div>
+            <div class="nav-item"><NuxtLink to="/contactUs">Contact Us</NuxtLink></div>
+        </div>
     </div> 
-
 </template>
 
 <script>
@@ -69,6 +63,7 @@
     }
 
     .nav-item {
+        color:#282E36;
         padding:32px;
         width: max-content;
     }
@@ -93,5 +88,9 @@
     }
     .dropdown:hover > .dropdown-sub  > .dropdown-option:hover{
         background-color: #abcdef;
+    }
+    
+    a{
+        color:#282E36;
     }
 </style>

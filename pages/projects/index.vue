@@ -1,6 +1,6 @@
 <template>
     <main>
-        <h1>Projects</h1>
+        <h1 style="color: #282E36;">Projects</h1>
         <div id="card-container">
             <ProjectCard v-for="project in projects" :key="project.id" :title="project.projectTitle" :city="project.city" :mainIdea="project.mainIdea" :area="project.area" :link="'/projects/' + project.id" />
         </div>
