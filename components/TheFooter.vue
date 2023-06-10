@@ -34,7 +34,6 @@
         text-align: left;
         margin-top: auto;
         padding: 10px;
-        height: 480px;
         min-height: 1vh;
     }
     .footer-container
@@ -44,7 +43,6 @@
         margin-right: 160px;
         margin-bottom: 38px;
         margin-top: 63px;
-        white-space: nowrap;
 
     }
     .list1 {
@@ -73,5 +71,30 @@
 
   }
 
+  @media (max-width: 768px) {
+    /* Styles for tablets and smaller devices */
+
+    .footer-container {
+      margin: 0 10px;
+    }
+
+    .social-media {
+      margin-right: 0;
+      justify-content: space-around;
+    }
+  }
+
+  @media (max-width: 480px) {
+    /* Styles for mobile devices */
+
+    .footer-container {
+      margin: 0 5px;
+    }
+
+    .social-media {
+      flex-direction: column;
+      align-items: center;
+    }
+  }
 
 </style>

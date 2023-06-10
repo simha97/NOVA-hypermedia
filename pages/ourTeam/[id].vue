@@ -24,7 +24,7 @@
                 <p class="details">{{person.pastJobExperience}}</p>
               </ul>
                 </td>
-                <td class="image_column"><img id = "main-img" src = "~\assets\img\youngwoman.png" /></td>
+                <td class="image-column"><img id = "main-img" src = "~\assets\img\youngwoman.png" /></td>
                 </tr>
             </table>
 
@@ -46,7 +46,7 @@
         border-radius: 8px 8px 8px 8px;  
     }
 
-    .image_column{
+    .image-column{
         padding-left: 10px;    
     }
 
@@ -74,7 +74,7 @@
         line-height: 29px;
         width: 576px;
         height: 87px;
-        word-wrap: "overflow-wrap"; 
+        word-wrap: break-word; 
     }
 
     .info{
@@ -96,5 +96,58 @@
         order: 0;
         flex-grow: 0;
     }
+
+    @media (max-width: 768px) {
+      #main-img {
+        width: 100%;
+        height: auto;
+        border-radius: 8px;
+      }
+      
+      .image-column {
+        padding-left: 0;
+        text-align: center;
+      }
+      
+      .data-container {
+        flex-direction: column;
+        align-items: left;
+      }
+      
+      .quote {
+        width: 100%;
+        padding: 0 20px;
+        text-align: center;
+      }
+      
+      .info {
+        text-align: left;
+      }
+      
+      .details {
+        width: 100%;
+      }
+    }
+
+    /* Styles for mobile devices */
+    @media (max-width: 480px) {
+      .name {
+        font-size: 24px;
+      }
+      
+      .quote {
+        font-size: 18px;
+        line-height: 24px;
+      }
+      
+      .info {
+        font-size: 16px;
+      }
+      
+      .details {
+        font-size: 12px;
+      }
+    }
+
     
 </style>

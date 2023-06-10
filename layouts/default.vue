@@ -4,8 +4,9 @@
 <template>
      <TheHeader />
      <div class = 'page'>
-       
-        <div class="content-container"><slot /></div>
+        <div class="content-container">
+            <slot />
+        </div>
         
         <TheFooter />
     </div>
@@ -20,10 +21,9 @@
         background-color: #F5F5F5;
         margin: 0;
     }
-    .content-container {
-        margin-left: 160px;
-        margin-right: 160px;
-        margin-bottom: 38px;
+    .content-container {    
+        margin: 0 20px;
+
 
     }
 
@@ -55,15 +55,60 @@
     }
 
 
-    @media screen and (max-width: 700px){
+    @media (max-width: 768px) {
+    /* Styles for tablets and smaller devices */
 
-        .content-container {
-        margin-left: 30px;
-        margin-right: 30px;
-        margin-bottom: 38px;
-        }   
-    
+    .content-container {
+      margin: 0 10px;
     }
 
+    .slogan {
+      font-size: 36px;
+    }
+
+    .title {
+      font-size: 24px;
+    }
+
+    h1 {
+      font-size: 36px;
+    }
+
+    h2 {
+      font-size: 24px;
+    }
+
+    h3 {
+      font-size: 24px;
+    }
+  }
+
+  @media (max-width: 480px) {
+    /* Styles for mobile devices */
+
+    .content-container {
+      margin: 0 5px;
+    }
+
+    .slogan {
+      font-size: 24px;
+    }
+
+    .title {
+      font-size: 18px;
+    }
+
+    h1 {
+      font-size: 24px;
+    }
+
+    h2 {
+      font-size: 18px;
+    }
+
+    h3 {
+      font-size: 18px;
+    }
+  }
     
 </style>
