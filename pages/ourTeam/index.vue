@@ -57,8 +57,7 @@
         font-weight: lighter;
     }
 
-    #card-container
-    {
+    #card-container{
         display: flex ;
         flex-wrap: wrap;
         flex-direction: row;

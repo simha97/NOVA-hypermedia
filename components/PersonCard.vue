@@ -38,10 +38,11 @@
     padding:  8px;
   }
 
-  .area-container {
+  .person-card .area-container {
     border: solid 1px white;
     border-radius: 8px;
     padding: 4px 8px 4px 8px;
+    width: fit-content;
     position:relative;
     top: 2px;
     text-align: center;
@@ -58,11 +59,6 @@
     border-radius: 8px;
   }
 
-  .person-card .main-img:hover{
-    background-color: #282E36;
-    filter: none;
-  }
-
   .person-card .main-img{
     filter: grayscale(100%); 
     transition: filter .2s ease-in-out;
@@ -70,14 +66,18 @@
     border-top-right-radius: 8px;  
     border-top-left-radius: 8px;
   }
-
-  .data-container {
+  
+  .person-card .data-container{
     padding: 2px 8px;
     position: relative; 
   }
 
   .person-card:hover{
     background-color: #282E36;
+  }
+
+  .person-card:hover .main-img{
+    filter: none;
   }
 
 </style>

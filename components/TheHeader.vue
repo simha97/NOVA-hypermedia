@@ -4,16 +4,16 @@
 
 <template>
     <div class="nav-container">
+        <NuxtLink to="/" ><img src="/logo.svg" alt="logo nova" style="position: absolute; left: 40px; top: 8px; width: 120px;"/></NuxtLink>
         <div class="nav-list-item">
-            <NuxtLink to="/" ><img src="/logo.svg" alt="logo nova" style="margin-left: -480px;"/></NuxtLink>
-            <div class="nav-item"><NuxtLink to="/ourTeam">OUR TEAM</NuxtLink></div>
             <div class="dropdown">
-                <div class="dropdown-title nav-item" @click="toggle">PROJECTS</div>
+                <div class="dropdown-title nav-item" @click="toggle"><NuxtLink to="/projects">PROJECTS</NuxtLink></div>
                     <div class="dropdown-sub">
-                        <div class="dropdown-option" v-if="true"><NuxtLink  to="/projects" v-if="active">ALL PROJECT</NuxtLink>  </div>
-                        <div class="dropdown-option" v-if="true"><NuxtLink  to="/projects/main-projects" v-if="active">MAIN PROJECT</NuxtLink>   </div>
+                        <div class="dropdown-option" v-if="true"><NuxtLink to="/projects" v-if="active">ALL PROJECT</NuxtLink>  </div>
+                        <div class="dropdown-option" v-if="true"><NuxtLink to="/projects/main-projects" v-if="active">MAIN PROJECT</NuxtLink>   </div>
                     </div>
             </div>
+            <div class="nav-item"><NuxtLink to="/ourTeam">OUR TEAM</NuxtLink></div>
             <div class="nav-item"><NuxtLink to="/aboutUs"> ABOUT US</NuxtLink></div>
             <div class="nav-item"><NuxtLink to="/contactUs">CONTACT US</NuxtLink></div>
         </div>
@@ -40,30 +40,29 @@
         background-color: #F5F5F5;
         display: flex;
         width: 100%;
-        height: 96px;
+        height: 56px;
         max-width: 2000px;
         position: relative;
         z-index: 1; /*this give the idea of "layers", so this has to be up the root level 0, and must be accompanied with position*/
         padding-bottom: 8px;
+        box-shadow: 0 1px 1px 0 #282E36;
     }
 
     .nav-list-item {
-        position: absolute;
         right: 100px;
         margin-left: auto; 
-        margin-right: 0;
+        margin-right: 80px;
         align-items: center;
         display: flex;
         text-align:center;
-        text-indent: 32px;
+        text-indent: 80px;
         src:url('/font/Myriad\ Pro\ Regular.ttf') format("truetype");
         font-family: "Myriad Pro";
-        font-size: 32px;
+        font-size: 16px;
     }
 
     .nav-item {
         color:#282E36;
-        padding:32px;
         width: max-content;
     }
 

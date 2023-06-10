@@ -1,5 +1,3 @@
-
-
 <script setup>
     const route = useRoute()
     const id = route.params.id
@@ -26,7 +24,7 @@
                 <p class="details">{{person.pastJobExperience}}</p>
               </ul>
                 </td>
-                <td class="image_column"><img id = "main-img" src = "~/assets/img/woman2.jpg" /></td>
+                <td class="image_column"><img id = "main-img" src = "~\assets\img\youngwoman.png" /></td>
                 </tr>
             </table>
 
@@ -34,30 +32,28 @@
             <h2 class="Progress_container">Projects in Progress</h2>
             <p>Discover a collection of ongoing projects by <span>{{ person.name }} {{ person.surname }}</span></p>
             <div id="card-container">
-            <ProjectCard v-for="project in person.projects" :key="project.id" :title="project.projectTitle" :subtitle="project.city" :link="'/projects/' + project.id" />
+                <ProjectCard v-for="project in person.projects" :key="project.id" :title="project.projectTitle" :city="project.city" :mainIdea="project.mainIdea" :area="project.area" :isFounder="project.isFounder" :link="'/projects/' + project.id" />
             </div>
             <NuxtLink to="/ourTeam"><backbutton text="Our Team">  </backbutton></NuxtLink>
         
         </template>
 
 <style>
+
     #main-img {
-    width: 527px;
-    height: 685px;
-    border-radius: 8px 8px 8px 8px;
-
-
-        
+        width: 527px;
+        height: 685px;
+        border-radius: 8px 8px 8px 8px;  
     }
+
     .image_column{
         padding-left: 10px;    
-
     }
 
     .data-container{
         display: flex;
-
     }
+
     .Progress_container{
         padding-top: 120px;
     }
@@ -68,9 +64,8 @@
         font-size: 36px;
         text-decoration: overline;
         text-decoration-color: #F26225;
-
-
     }
+
     .quote{
         font-family: 'Myriad Pro';
         font-style: italic;
@@ -80,8 +75,8 @@
         width: 576px;
         height: 87px;
         word-wrap: "overflow-wrap"; 
-
     }
+
     .info{
         list-style: url("~/assets/icons/orange-bullet.png");
         font-family: 'Myriad Pro';
@@ -89,18 +84,17 @@
         font-weight: 400;
         font-size: 20px;
         margin: auto;
-
     }
+
     .details{
         width: 503px;
-
         font-family: 'Myriad Pro';
         font-style: normal;
         font-weight: 400;
         font-size: 13px;
-
         flex: none;
         order: 0;
         flex-grow: 0;
     }
+    
 </style>
