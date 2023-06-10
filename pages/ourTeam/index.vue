@@ -47,11 +47,13 @@
         overflow: hidden;
         position: relative;
         border-radius: 8px;
+        src:url('/font/helvetica-light.ttf') format("truetype");
+        font-family: "Helvetica";
     }
 
     .intro-title {
         position: absolute;
-        bottom: 100px;
+        bottom: 72px;
         left: 100px;
         color: white;
         font-weight: lighter;

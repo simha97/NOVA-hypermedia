@@ -1,24 +1,12 @@
-<!--
-
-    Card to display information in the list page.
-
-    This component could be achieved with the SmallCard component by using a <slot> to insert the div with the image. The solution used here allows for better control of the layout.
-
-    Since the information shown can be categorized into title and subtitle, it was preferred to use only one component for both dogs and location.
-    PROPS:
-    - title: main information to display
-    - subtitle: second information to display
-    - link: link to the page description
--->
 <template>
   <div class="flex-container">
     <NuxtLink :to = "link">
       <div class="person-card">
         <img class="main-img" alt="picture" src="~\assets\img\youngwoman.png">
         <div class="data-container">
-          <div style="font-size: 16px;">{{ name }} {{surname }}</div>
+          <div style="font-size: 20px; font-family: 'Myriad Pro Light';">{{ name }} {{surname }}</div>
           <b><div style="font-size: 16px; position: absolute; right: 16px;" v-if="isFounder == true">Founder</div></b>
-          <div style="font-size: 12px; position: absolute; top:32px;">Expert in
+          <div style="font-size: 14px; position: absolute; top: 40px; font-family: 'Myriad Pro Light';">Expert in
             <div class="area-container">{{ area }}</div>    
           </div>      
         </div>
@@ -38,39 +26,38 @@
     padding:  8px;
   }
 
+.person-card {
+  box-shadow: 0 4px 8px 0 #282E36;
+  transition: 0.3s;
+  width: 240px;
+  height: 400px;
+  background-color: #F26225;
+  transition: background-color .3s ease-in-out;
+  color: white;
+  border-radius: 8px;
+}
+
+.person-card .data-container{
+  padding: 8px 16px;
+  position: relative; 
+}
+
+.person-card .main-img{
+  filter: grayscale(100%); 
+  transition: filter .3s ease-in-out;
+  height: 296px;
+  width: 100%;
+  border-top-right-radius: 8px;  
+  border-top-left-radius: 8px;
+}
+
   .person-card .area-container {
     border: solid 1px white;
     border-radius: 8px;
     padding: 4px 8px 4px 8px;
     width: fit-content;
     position:relative;
-    top: 2px;
     text-align: center;
-  }
-
-  .person-card {
-  /* Add shadows to create the "card" effect */
-    box-shadow: 0 4px 8px 0 #282E36;
-    transition: 0.3s;
-    width: 240px;
-    height: 400px;
-    background-color: #F26225;
-    transition: background-color .3s ease-in-out;
-    color: white;
-    border-radius: 8px;
-  }
-
-  .person-card .main-img{
-    filter: grayscale(100%); 
-    transition: filter .3s ease-in-out;
-    width:100%; 
-    border-top-right-radius: 8px;  
-    border-top-left-radius: 8px;
-  }
-  
-  .person-card .data-container{
-    padding: 2px 8px;
-    position: relative; 
   }
 
   .person-card:hover{
