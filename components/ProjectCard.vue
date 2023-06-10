@@ -45,10 +45,10 @@
   .project-card {
   /* Add shadows to create the "card" effect */
     box-shadow: 0 4px 8px 0 #282E36;
-    transition: 0.3s;
     width: 240px;
     height: 400px;
     background-color: white;
+    transition: background-color .3s ease-in-out;
     color: #282E36;
     border-radius: 8px;
   }
@@ -60,7 +60,8 @@
   }
   
   .project-card .area-container {
-    background-color: #ebeef3;
+    background-color: #dadee6;
+    transition: background-color .3s ease-in-out;
     color: #282E36;
     border-radius: 8px;
     padding: 4px 8px 4px 8px;
@@ -84,7 +85,7 @@
     left: 16px;
     width: 16px;
     opacity: 100%;
-    transition: 0.1s;
+    transition: opacity .3s ease-in-out;
   }
 
   .project-card .icon-white {
@@ -93,6 +94,7 @@
     left: 16px;
     width: 16px;
     opacity: 0%;
+    transition: opacity .3s ease-in-out;
   }
 
   .project-card:hover{

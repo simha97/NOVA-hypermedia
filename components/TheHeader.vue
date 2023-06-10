@@ -71,19 +71,23 @@
         flex-wrap: wrap;
         flex-direction:column;
     }
+
     .dropdown > .dropdown-title{
         /* put the height and width here! */
         width: auto;
         height: auto;
     }
+
     .dropdown > .dropdown-sub{
         display: none;
         z-index: 1;
         flex-direction: column; /* or row */
     }
+
     .dropdown:hover > .dropdown-sub {
         display: flex;
     }
+    
     .dropdown:hover > .dropdown-sub  > .dropdown-option:hover{
         background-color: #abcdef;
     }
@@ -91,4 +95,10 @@
     a{
         color:#282E36;
     }
+
+    a:hover{
+        color:#282E36;
+        text-decoration: none;
+    }
+
 </style>

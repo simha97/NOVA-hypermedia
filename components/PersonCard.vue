@@ -55,13 +55,14 @@
     width: 240px;
     height: 400px;
     background-color: #F26225;
+    transition: background-color .3s ease-in-out;
     color: white;
     border-radius: 8px;
   }
 
   .person-card .main-img{
     filter: grayscale(100%); 
-    transition: filter .2s ease-in-out;
+    transition: filter .3s ease-in-out;
     width:100%; 
     border-top-right-radius: 8px;  
     border-top-left-radius: 8px;
