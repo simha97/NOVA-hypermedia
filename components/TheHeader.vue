@@ -96,4 +96,70 @@
         text-decoration: none;
     }
 
+    @media (max-width: 830px) {
+        .nav-container{
+            background-color: #F5F5F5;
+            display: flex;
+            width: 100%;
+            height: 56px;
+            position: relative;
+            z-index: 1; /*this give the idea of "layers", so this has to be up the root level 0, and must be accompanied with position*/
+            padding-bottom: 8px;
+            box-shadow: 0 1px 1px 0 #282E36;
+        }
+        .nav-container:hover{
+            height: 10em;
+            
+        }
+        .nav-list-item {
+            position: relative;
+            right:1em;
+            margin-left: auto; 
+            margin-right: 0px;
+            align-items: center;
+            display: flex;
+            text-align:center;
+            text-indent:10px;
+
+        }
+        /*
+        .dropdown{
+            display: inline-block;
+            position: relative;
+        }
+
+        .dropdown-sub{
+            display: none;
+            position: absolute;
+            background-color: #F5F5F5;
+            width: 100%;
+            overflow: auto;
+            text-indent: initial;
+            box-shadow: 0px 10px 10px 0px rgba(0,0,0,0.7);
+        }
+
+        .dropdown:hover .dropdown-sub {
+            display: block;
+            border: solid 1px #282E36;
+            border-radius: 8px;
+        }
+
+        .dropdown:hover .dropdown-sub .dropdown-option:hover{
+            display:block;
+            background-color: #abcdef;
+        }
+        
+        a{
+            color:#282E36;
+            src:url('/font/Myriad\ Pro\ Regular.ttf') format("truetype");
+            font-family: "Myriad Pro Regular";
+            font-size: 16px;
+            width: max-content;
+        }
+
+        a:hover{
+            color:#282E36;
+            text-decoration: none;
+        }*/
+    }
 </style>

@@ -62,6 +62,7 @@
     .intro-wrap img{
         filter: brightness(70%); 
         opacity: 90%;
+        width: 100%;
     }
 
     .intro-title {
