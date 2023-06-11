@@ -1,6 +1,5 @@
 <template>
     <main>
-        <h1 style="color: #282E36;">Projects</h1>
         <div id="card-container">
             <ProjectCard v-for="project in projects" :key="project.id" :title="project.projectTitle" :city="project.city" :mainIdea="project.mainIdea" :area="project.area" :link="'/projects/' + project.id" />
         </div>
@@ -19,7 +18,8 @@
         flex-direction: row;
         justify-content: center;
         align-content: flex-start;
-        gap: 20px;
+        gap: 16px;
+        margin-top: 16px;
     }
 
     main
@@ -28,7 +28,7 @@
         flex-direction: column;
         justify-content: center;
         align-content: flex-start;
-        gap: 10px;
+        gap: 8px;
     }
 
     .form-container {
