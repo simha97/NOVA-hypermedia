@@ -12,6 +12,7 @@
                     <div class="dropdown-option" ><NuxtLink to="/projects/main-projects" >MAIN PROJECTS</NuxtLink>   </div>
                 </div>
             </div>
+            <div class="nav-item"><NuxtLink to="/areas">AREAS</NuxtLink></div>
             <div class="nav-item"><NuxtLink to="/ourTeam">OUR TEAM</NuxtLink></div>
             <div class="nav-item"><NuxtLink to="/aboutUs"> ABOUT US</NuxtLink></div>
             <div class="nav-item"><NuxtLink to="/contactUs">CONTACT US</NuxtLink></div>
@@ -70,6 +71,7 @@
         overflow: auto;
         text-indent: initial;
         box-shadow: 0px 10px 10px 0px rgba(0,0,0,0.7);
+        margin-left: 40px;
     }
 
     .dropdown:hover .dropdown-sub {
