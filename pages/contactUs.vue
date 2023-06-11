@@ -1,6 +1,3 @@
-<!--
-    Contact Page
--->
 <template>
     <main>
         <main>
