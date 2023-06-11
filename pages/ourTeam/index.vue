@@ -62,11 +62,12 @@
     .intro-wrap img{
         filter: brightness(70%); 
         opacity: 90%;
+        
     }
 
     .intro-title {
         position: absolute;
-        bottom: 72px;
+        bottom: 3em;
         left: 100px;
         color: white;
         font-weight: lighter;
