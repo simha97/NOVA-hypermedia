@@ -1,12 +1,14 @@
 <template>
-    <main>
-        <div id="card-container">
-            <ProjectCard v-for="project in projects" :key="project.id" :title="project.projectTitle" :city="project.city" :mainIdea="project.mainIdea" :area="project.area" :link="'/projects/' + project.id" />
-        </div>
-    </main>
+    <div>
+        <Breabcrumb :links="[{bread:'Home', goTo: '/'}, {bread:'Projects', goTo: '/projects'}]"/>
+    </div>
+    <div id="card-container">
+        <ProjectCard v-for="project in projects" :key="project.id" :title="project.projectTitle" :city="project.city" :mainIdea="project.mainIdea" :area="project.area" :link="'/projects/' + project.id" />
+    </div>
 </template>
 
 <script setup>
+    import Breabcrumb from '~/components/Breadcrumb.vue';
     const { data: projects } = await useFetch('/api/projects')
 </script>
 

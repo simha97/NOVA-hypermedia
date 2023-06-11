@@ -75,6 +75,11 @@
         margin-left: 40px;
     }
 
+    .dropdown-option {
+        height: 40px;
+        padding: 8px;
+    }
+
     .dropdown:hover .dropdown-sub {
         display: block;
         border: solid 1px #282E36;
@@ -83,7 +88,7 @@
 
     .dropdown:hover .dropdown-sub .dropdown-option:hover{
         display:block;
-        background-color: #abcdef;
+        text-decoration: underline;
     }
     
     a{

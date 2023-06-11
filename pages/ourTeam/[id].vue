@@ -1,4 +1,5 @@
 <script setup>
+    import Breabcrumb from '~/components/Breadcrumb.vue';
     const route = useRoute()
     const id = route.params.id
     // useRuntimeConfig provide us with environment variables set up in the nuxtconfig file
@@ -7,6 +8,9 @@
 </script>
 
 <template>
+  <div>
+    <Breabcrumb :links="[{bread:'Home', goTo: '/'}, {bread:'Our Team', goTo: '/ourTeam'}, {bread:person.name +  ' ' + person.surname, goTo: '/ourTeam/' + person.id}]"/>
+  </div>
             <div id = "data-container">
             <table>
                 <tr>
@@ -34,8 +38,7 @@
             <div id="card-container">
                 <ProjectCard v-for="project in person.projects" :key="project.id" :title="project.projectTitle" :city="project.city" :mainIdea="project.mainIdea" :area="project.area" :isFounder="project.isFounder" :link="'/projects/' + project.id" />
             </div>
-            <NuxtLink to="/ourTeam"><backbutton text="Our Team">  </backbutton></NuxtLink>
-        
+            <NuxtLink to="/ourTeam"><backbutton text="Our Team"></backbutton></NuxtLink>
         </template>
 
 <style>

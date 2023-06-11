@@ -1,5 +1,6 @@
 
 <script setup>
+    import Breabcrumb from '~/components/Breadcrumb.vue';
     const route = useRoute()
     const id = route.params.id
     // useRuntimeConfig provide us with environment variables set up in the nuxtconfig file
@@ -8,6 +9,9 @@
 </script>
 
 <template>
+    <div>
+      <Breabcrumb :links="[{bread:'Home', goTo: '/'}, {bread:'Project', goTo: '/projects'}, {bread:project.projectTitle, goTo: '/projects/' + project.id}]"/>
+    </div>
     <main>
         <div class = "info-group">
             <img id = "main-img" src = "~/assets/img/youngwoman.png" />

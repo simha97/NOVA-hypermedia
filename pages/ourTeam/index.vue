@@ -9,10 +9,11 @@
     </div>
 
 
-    <div class="breadcrumps-container">/Home/Our Team</div>  
+    <div>
+        <Breabcrumb :links="[{bread:'Home', goTo: '/'}, {bread:'Our Team', goTo: '/ourTeam'}]"/>
+    </div>  
     
-    <main style="padding-top: 24px;">
-    
+    <main>
         <div id="card-container">
             <PersonCard v-for="person of filtered" :key="person.id" :name="person.name" :surname="person.surname" :age="person.age" :area="person.area" :isFounder="person.isFounder" :link="'/ourTeam/' + person.id" />
         </div>
@@ -21,6 +22,7 @@
 </template>
 
 <script setup>
+    import Breabcrumb from '~/components/Breadcrumb.vue';
     const { data: persons } = await useFetch('/api/ourTeam')
     
     
@@ -41,7 +43,6 @@
         // Returning the filtered list
         return arr
     })
-
 </script>
 
 <style>
@@ -88,13 +89,6 @@
         flex-direction: column;
         justify-content: center;
         align-content: flex-start;
-    }
-
-    .breadcrumps-container{
-        width: 9em;
-        margin-left: 160px;
-        padding: 80px 0;
-        border-bottom: 3px solid #F26225;
     }
 
     .form-container {

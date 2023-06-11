@@ -1,4 +1,7 @@
 <template>
+    <div>
+      <Breabcrumb :links="[{bread:'Home', goTo: '/'}, {bread:'Contact Us', goTo: '/contactUs'}]"/>
+    </div>
     <main>
         <main>
             <p>
@@ -86,3 +89,7 @@
         }
     }
 </style>
+
+<script setup>
+    import Breabcrumb from '~/components/Breadcrumb.vue';
+</script>
