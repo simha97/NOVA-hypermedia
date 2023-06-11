@@ -48,9 +48,10 @@
     }
 
     .nav-list-item {
+        position: relative;
         right: 100px;
-        margin-left: auto; 
-        margin-right: 80px;
+        left: 10%;
+
         align-items: center;
         display: flex;
         text-align:center;
@@ -113,9 +114,7 @@
         }
         .nav-list-item {
             position: relative;
-            right:1em;
-            margin-left: auto; 
-            margin-right: 0px;
+            left:30%;
             align-items: center;
             display: flex;
             text-align:center;
