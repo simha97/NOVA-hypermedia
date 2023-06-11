@@ -1,12 +1,18 @@
 <template>
+    
     <div class="intro-wrap">
-        <img src="~\assets\img\OurTeam.jpg" style="filter: brightness(70%); opacity: 90%;">
+        <img src="~\assets\img\OurTeam.jpg">
         <div class="intro-title">
             <div style="font-size: 48px;">Meet Our Teams</div>
-            <div style="font-size: 24px;">The Brilliant Minds Behind Our Vision</div>
+            <div style="font-size: 24px; margin-top: 32px;">The Brilliant Minds Behind Our Vision</div>
         </div>
-    </div>    
+    </div>
+
+
+    <div class="breadcrumps-container">/Home/Our Team</div>  
+    
     <main style="padding-top: 24px;">
+    
         <div id="card-container">
             <PersonCard v-for="person of filtered" :key="person.id" :name="person.name" :surname="person.surname" :age="person.age" :area="person.area" :isFounder="person.isFounder" :link="'/ourTeam/' + person.id" />
         </div>
@@ -15,6 +21,8 @@
 
 <script setup>
     const { data: persons } = await useFetch('/api/ourTeam')
+    
+    
     const age = ref(0);
     const filtered = computed(() => {
         // Checking for values where the full list is provided
@@ -50,6 +58,11 @@
         src:url('/font/helvetica-light.ttf') format("truetype");
         font-family: "Helvetica";
     }
+    
+    .intro-wrap img{
+        filter: brightness(70%); 
+        opacity: 90%;
+    }
 
     .intro-title {
         position: absolute;
@@ -73,6 +86,13 @@
         justify-content: center;
         align-content: flex-start;
         gap: 10px;
+    }
+
+    .breadcrumps-container{
+        width: 9em;
+        margin-left: 160px;
+        padding: 80px 0;
+        border-bottom: 3px solid #F26225;
     }
 
     .form-container {
