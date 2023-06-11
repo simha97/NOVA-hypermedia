@@ -31,6 +31,10 @@
         gap: 8px;
     }
 
+    main #card-container{
+        gap: 32px;
+        margin: 0px 160px;
+    }
     .form-container {
         width: 90%;
         border-radius: 10px;
@@ -43,6 +47,15 @@
 
         background-color: burlywood;
         padding: 20px;
+    }
+
+    @media screen and (max-width: 830px) {
+
+        main #card-container{
+            margin: 0 10px;
+            gap: 32px;
+        }
+
     }
 
 </style>
