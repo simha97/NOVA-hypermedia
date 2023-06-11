@@ -17,6 +17,7 @@
             <PersonCard v-for="person of filtered" :key="person.id" :name="person.name" :surname="person.surname" :age="person.age" :area="person.area" :isFounder="person.isFounder" :link="'/ourTeam/' + person.id" />
         </div>
     </main>
+    
 </template>
 
 <script setup>
@@ -62,7 +63,7 @@
     .intro-wrap img{
         filter: brightness(70%); 
         opacity: 90%;
-        
+
     }
 
     .intro-title {
@@ -73,11 +74,12 @@
         font-weight: lighter;
     }
 
-    #card-container{
+    main #card-container{
         display: flex ;
         flex-wrap: wrap;
         flex-direction: row;
-        gap: 20px;
+        margin: 96px 160px 96px 160px;
+        gap: 32px;
     }
 
     main
@@ -86,7 +88,6 @@
         flex-direction: column;
         justify-content: center;
         align-content: flex-start;
-        gap: 10px;
     }
 
     .breadcrumps-container{
@@ -110,7 +111,7 @@
         padding: 20px;
     }
 
-    @media screen and (max-width: 700px) {
+    @media screen and (max-width: 830px) {
         .intro {
             width:  700px;
             height: 400px;
@@ -123,5 +124,13 @@
             opacity: 0.9;
             position: absolute;
         }
+        main #card-container{
+            display: flex ;
+            flex-wrap: wrap;
+            flex-direction: row;
+            margin: 20px 40px 20px 40px;
+            gap: 32px;
+        }
+
     }
 </style>

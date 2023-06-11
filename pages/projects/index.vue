@@ -13,15 +13,6 @@
 
 <style>
 
-    #card-container{
-        display: flex;
-        flex-wrap: wrap;
-        flex-direction: row;
-        justify-content: center;
-        align-content: flex-start;
-        gap: 20px;
-    }
-
     main
     {
         display: flex;
@@ -31,6 +22,10 @@
         gap: 10px;
     }
 
+    main #card-container{
+        gap: 32px;
+        margin: 0px 160px;
+    }
     .form-container {
         width: 90%;
         border-radius: 10px;
@@ -43,6 +38,15 @@
 
         background-color: burlywood;
         padding: 20px;
+    }
+
+    @media screen and (max-width: 830px) {
+
+        main #card-container{
+            margin: 0 10px;
+            gap: 32px;
+        }
+
     }
 
 </style>
