@@ -8,8 +8,8 @@
         <div class="nav-list-item">
             <div class="dropdown"><NuxtLink to="/projects">PROJECTS</NuxtLink>
                 <div class="dropdown-sub">
-                    <div class="dropdown-option" ><NuxtLink to="/projects" >ALL PROJECT</NuxtLink>  </div>
-                    <div class="dropdown-option" ><NuxtLink to="/projects/main-projects" >MAIN PROJECT</NuxtLink>   </div>
+                    <div class="dropdown-option" ><NuxtLink to="/projects" >ALL PROJECTS</NuxtLink>  </div>
+                    <div class="dropdown-option" ><NuxtLink to="/projects/main-projects" >MAIN PROJECTS</NuxtLink>   </div>
                 </div>
             </div>
             <div class="nav-item"><NuxtLink to="/ourTeam">OUR TEAM</NuxtLink></div>
@@ -57,33 +57,29 @@
         text-indent: 80px;
     }
 
-    .nav-item {
-        width: max-content;
-    }
-
     .dropdown{
-        flex-wrap: wrap;
-        flex-direction:column;
+        display: inline-block;
+        position: relative;
     }
 
-    .dropdown .dropdown-title{
-        width: auto;
-        height: auto;
-    }
-
-    .dropdown .dropdown-sub{
+    .dropdown-sub{
         display: none;
-        flex-direction: column; /* or row */
+        position: absolute;
+        background-color: #F5F5F5;
+        width: 100%;
+        overflow: auto;
+        text-indent: initial;
+        box-shadow: 0px 10px 10px 0px rgba(0,0,0,0.7);
     }
 
     .dropdown:hover .dropdown-sub {
-        display: flex;
+        display: block;
         border: solid 1px #282E36;
         border-radius: 8px;
-        width: 160px;
     }
-    
+
     .dropdown:hover .dropdown-sub .dropdown-option:hover{
+        display:block;
         background-color: #abcdef;
     }
     
@@ -92,6 +88,7 @@
         src:url('/font/Myriad\ Pro\ Regular.ttf') format("truetype");
         font-family: "Myriad Pro Regular";
         font-size: 16px;
+        width: max-content;
     }
 
     a:hover{

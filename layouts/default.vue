@@ -43,7 +43,7 @@
         font-family: "Myriad Pro";
         font: "Myriad Pro" 48px light;
     }
-    h2 {
+    h2, div {
         src:url('/font/Myriad\ Pro\ Regular.ttf') format("truetype");
         font-family: "Myriad Pro";
         font: "Myriad Pro" 32px italic;
