@@ -1,31 +1,32 @@
-<template>
-    
+<template> 
     <div class="intro-wrap">
         <img src="~\assets\img\OurTeam.png">
         <div class="intro-title">
             <div style="font-size: 48px;">Meet Our Teams</div>
-            <div style="font-size: 24px; margin-top: 32px;">The Brilliant Minds Behind Our Vision</div>
+            <div style="font-size: 24px; margin-top: 16px;">The Brilliant Minds Behind Our Vision</div>
         </div>
     </div>
-
-
     <div>
         <Breabcrumb :links="[{bread:'Home', goTo: '/'}, {bread:'Our Team', goTo: '/ourTeam'}]"/>
     </div>  
-    
+    <div>
+        <div class="description-title">
+            Our Team
+        </div>
+        <div class="description">
+            Our team page showcases the impressive network of backers who believe in our vision and share our passion for supporting innovative startups.
+        </div>
+    </div>
     <main>
         <div id="card-container">
             <PersonCard v-for="person of filtered" :key="person.id" :name="person.name" :surname="person.surname" :age="person.age" :area="person.area" :isFounder="person.isFounder" :link="'/ourTeam/' + person.id" />
         </div>
     </main>
-    
 </template>
 
 <script setup>
     import Breabcrumb from '~/components/Breadcrumb.vue';
     const { data: persons } = await useFetch('/api/ourTeam')
-    
-    
     const age = ref(0);
     const filtered = computed(() => {
         // Checking for values where the full list is provided
@@ -56,8 +57,6 @@
         align-items: flex-end;
         overflow: hidden;
         position: relative;
-        src:url('/font/helvetica-light.ttf') format("truetype");
-        font-family: "Helvetica";
         margin-left: -160px;
     }
     
@@ -67,11 +66,30 @@
     }
 
     .intro-title {
+        src:url('/font/helvetica-light.ttf') format("truetype");
+        font-family: "Helvetica Light";
         position: absolute;
-        bottom: 3em;
-        left: 100px;
+        left: 160px;
+        top: 304px;
         color: white;
-        font-weight: lighter;
+    }
+
+    .description-title {
+        position: relative;
+        color:#282E36;
+        src:url('/font/Myriad\ Pro\ Light.ttf') format("truetype");
+        font-family: "Myriad Pro Light";
+        padding-top: 16px;
+        font-size: 36px;
+    }
+
+    .description {
+        position: relative;
+        color:#282E36;
+        src:url('/font/Myriad\ Pro\ Regular.ttf') format("truetype");
+        font-family: "Myriad Pro Regular";
+        padding-top: 16px;
+        font-size: 24px;
     }
 
     main #card-container{
@@ -82,6 +100,7 @@
         row-gap: 80px;
         width: 1120px;
         margin-top: 96px;
+        margin-bottom: 320px;
     }
 
     main{

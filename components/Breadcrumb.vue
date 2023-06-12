@@ -1,6 +1,6 @@
 <template>
   <div class="breadcrumb-container">
-    <img src="~\assets\icons\breadcrumb.png" style="margin-right: 8px;">
+    <img src="~\assets\icons\breadcrumb.png">
     <span v-for="item in links">
         <NuxtLink :to="item.goTo" class="breadcrumbs">
           {{ item.bread }}
@@ -24,6 +24,11 @@
   padding-bottom: 80px;
   border-bottom: 4px solid #F26225;
   font-size: 18px;
+}
+
+.breadcrumb-container img{
+  margin-right: 8px; 
+  margin-top: -8px; 
 }
 
 .breadcrumb-container .breadcrumbs:hover{
