@@ -17,11 +17,9 @@
         flex-direction: column;
         background-color: #F5F5F5;
     }
-
     .content-container {    
-        margin: 0 160px;
+        margin: 0 10px;
     }
-
     
     .slogan {
         src:url('/font/helvetica-light.ttf') format("truetype");
@@ -33,6 +31,7 @@
         font-family: Helvetica;
         font: Helvetica 36px bold;
     }
+
     h1 {
         src:url('/font/Myriad\ Pro\ Light.otf') format("opentype");
         font-family: "Myriad Pro";
