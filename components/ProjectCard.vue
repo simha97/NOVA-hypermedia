@@ -1,34 +1,18 @@
-<!--
-
-    Card to display information in the list page.
-
-    This component could be achieved with the SmallCard component by using a <slot> to insert the div with the image. The solution used here allows for better control of the layout.
-
-    Since the information shown can be categorized into title and subtitle, it was preferred to use only one component for both dogs and location.
-    PROPS:
-    - title: main information to display
-    - subtitle: second information to display
-    - link: link to the page description
--->
-
 <template>
-  <div class="flex-container">
-    <NuxtLink :to = "link">
-      <div class="project-card" >
-        <img class="main-img" alt="logo" style="width:100%; border-top-right-radius: 8px; border-top-left-radius: 8px;" v-bind:src="'/_nuxt/LogoPng/' + title + '.png'">
-        <div class="data-container" style="border-color: #282E36;">
-          <b><div style="font-size: 16px; margin-top: 8px;">{{ title }}</div></b>
-          <div style="font-size: 12px; position: absolute; top: 40px; left: 16px; right: 16px;">{{ mainIdea }}</div>
-          <img class="icon-dark" alt="map" src="~\assets\icons\location-pin-dark.png">
-          <img class="icon-white" alt="map" src="~\assets\icons\location-pin-white.png">
-          <div style="font-size: 12px; position: absolute; top: 124px; left: 34px;">{{ city }}</div>
-          <div class="area-container">
-            <div style="font-size: 12px;">{{ area }}</div>
-          </div>
+  <NuxtLink :to = "link">
+    <div class="project-card" >
+      <img class="main-img" alt="logo" v-bind:src="'/_nuxt/LogoPng/' + title + '.png'">
+      <div class="data-container">
+        <div class="project-title">{{ title }}</div>
+        <div style="font-size: 12px; padding-top: 16px;">{{ mainIdea }}</div>
+        <div class="icon"></div>
+        <div style="font-size: 12px; margin-top: -28px; margin-left: 20px;">{{ city }}</div>
+        <div class="area-container">
+          <div style="font-size: 12px;">{{ area }}</div>
         </div>
       </div>
-    </NuxtLink>
-  </div>
+    </div>
+  </NuxtLink>
 </template>
 
 <script setup>
@@ -38,25 +22,21 @@
 
 <style>
 
-  .flex-container {
-    padding:  8px;
-  }
-
   .project-card {
-  /* Add shadows to create the "card" effect */
     box-shadow: 0 4px 8px 0 #282E36;
-    width: 240px;
-    height: 400px;
+    width: 352px;
+    height: 564px;
     background-color: white;
     transition: .3s ease-in-out;
     color: #282E36;
-    border-radius: 8px;
+    border-radius: 4px;
   }
   
   .project-card .main-img{
-    width:100%; 
-    border-top-right-radius: 8px;  
-    border-top-left-radius: 8px;
+    width: 352px; 
+    height: 352px;
+    border-top-right-radius: 4px;  
+    border-top-left-radius: 4px;
   }
   
   .project-card .area-container {
@@ -66,34 +46,32 @@
     padding: 4px 8px 4px 8px;
     width: fit-content;
     position: absolute;
-    top: 120px;
+    top: 168px;
     right: 16px;
     text-align: center;
   }
 
   .project-card .data-container {
-    padding: 2px 16px;
+    padding: 16px;
     position: relative; 
     border-top: solid 1px #282E36;
     margin-top: -1px;
   }
 
-  .project-card .icon-dark {
-    position: absolute; 
-    top: 126px; 
-    left: 16px;
-    width: 16px;
-    opacity: 100%;
-    transition: opacity .3s ease-in-out;
+  .project-card .project-title {
+    font-size: 24px; 
+    width: max-content;
+    src:url('/font/myriadpro-semibold.otf') format("truetype");
+    font-family: "Myriad Pro Bold";
   }
 
-  .project-card .icon-white {
-    position: absolute; 
-    top: 126px; 
-    left: 16px;
+  .project-card .icon{
+    display: inline-block;
+    margin-top: 16px;
+    height: 16px;
     width: 16px;
-    opacity: 0%;
     transition: opacity .3s ease-in-out;
+    background: url(../assets/icons/location-pin-dark.png) no-repeat;
   }
 
   .project-card:hover{
@@ -105,12 +83,8 @@
     background-color: white;
   }
 
-  .project-card:hover .icon-dark{
-    opacity: 0%;
-  }
-
-  .project-card:hover .icon-white{
-    opacity: 100%;
+  .project-card:hover .icon{
+    background: url(../assets/icons/location-pin-white.png) no-repeat;
   }
 
 </style>

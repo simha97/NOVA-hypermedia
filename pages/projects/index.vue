@@ -1,6 +1,14 @@
 <template>
-    <div>
+    <div style="top: 128px;">
         <Breabcrumb :links="[{bread:'Home', goTo: '/'}, {bread:'Projects', goTo: '/projects'}]"/>
+    </div>
+    <div>
+        <div class="description-title">
+            All Projects
+        </div>
+        <div class="description">
+            Discover our amazing projects from here.
+        </div>
     </div>
     <div id="card-container">
         <ProjectCard v-for="project in projects" :key="project.id" :title="project.projectTitle" :city="project.city" :mainIdea="project.mainIdea" :area="project.area" :link="'/projects/' + project.id" />
@@ -13,17 +21,6 @@
 </script>
 
 <style>
-
-    #card-container{
-        display: flex;
-        flex-wrap: wrap;
-        flex-direction: row;
-        justify-content: center;
-        align-content: flex-start;
-        gap: 16px;
-        margin-top: 16px;
-    }
-
     main
     {
         display: flex;
@@ -32,6 +29,7 @@
         align-content: flex-start;
         gap: 8px;
     }
+    
     .form-container {
         width: 90%;
         border-radius: 10px;
