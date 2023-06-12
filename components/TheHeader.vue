@@ -8,8 +8,8 @@
         <div class="nav-list-item">
             <div class="dropdown"><NuxtLink to="/projects">PROJECTS</NuxtLink>
                 <div class="dropdown-sub">
-                    <div class="dropdown-option" ><NuxtLink to="/projects" >ALL PROJECTS</NuxtLink>  </div>
-                    <div class="dropdown-option" ><NuxtLink to="/projects/main-projects" >MAIN PROJECTS</NuxtLink>   </div>
+                    <div class="dropdown-option" ><NuxtLink to="/projects/main-projects" >MAIN PROJECTS</NuxtLink></div>
+                    <div class="dropdown-option" ><NuxtLink to="/projects" >ALL PROJECTS</NuxtLink></div>
                 </div>
             </div>
             <div class="nav-item"><NuxtLink to="/areas">AREAS</NuxtLink></div>
@@ -41,18 +41,15 @@
         display: flex;
         width: 100%;
         height: 56px;
-        max-width: 2000px;
         position: relative;
         z-index: 1; /*this give the idea of "layers", so this has to be up the root level 0, and must be accompanied with position*/
-        padding-bottom: 8px;
-        box-shadow: 0 1px 1px 0 #282E36;
+        box-shadow: 0 0 5px 0 #282E36;
+        font-size: 24px;
     }
 
     .nav-list-item {
         position: relative;
-        right: 100px;
-        left: 10%;
-
+        margin-left: 624px;
         align-items: center;
         display: flex;
         text-align:center;
@@ -76,7 +73,7 @@
     }
 
     .dropdown-option {
-        height: 40px;
+        height: 56px;
         padding: 8px;
     }
 

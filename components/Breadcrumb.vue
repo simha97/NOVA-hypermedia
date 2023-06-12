@@ -20,10 +20,10 @@
 
 .breadcrumb-container{
   width: fit-content;
-  margin-left: 160px;
-  padding: 40px 0;
-  border-bottom: 3px solid #F26225;
-  font-size: 16px;
+  padding-top: 96px;
+  padding-bottom: 80px;
+  border-bottom: 4px solid #F26225;
+  font-size: 18px;
 }
 
 .breadcrumb-container .breadcrumbs:hover{

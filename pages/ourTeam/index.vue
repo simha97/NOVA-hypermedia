@@ -1,7 +1,7 @@
 <template>
     
     <div class="intro-wrap">
-        <img src="~\assets\img\OurTeam.jpg">
+        <img src="~\assets\img\OurTeam.png">
         <div class="intro-title">
             <div style="font-size: 48px;">Meet Our Teams</div>
             <div style="font-size: 24px; margin-top: 32px;">The Brilliant Minds Behind Our Vision</div>
@@ -50,21 +50,20 @@
     .intro-wrap{
         background-size:cover;
         background-repeat: no-repeat;
-        width:  100%;
-        height: 480px;
+        width:  1434px; 
+        height: 552px;
         display: flex;
         align-items: flex-end;
         overflow: hidden;
         position: relative;
-        border-radius: 8px;
         src:url('/font/helvetica-light.ttf') format("truetype");
         font-family: "Helvetica";
+        margin-left: -160px;
     }
     
     .intro-wrap img{
         filter: brightness(70%); 
         opacity: 90%;
-
     }
 
     .intro-title {
@@ -79,12 +78,13 @@
         display: flex ;
         flex-wrap: wrap;
         flex-direction: row;
-        margin: 96px 160px 96px 160px;
-        gap: 32px;
+        column-gap: 32px;
+        row-gap: 80px;
+        width: 1120px;
+        margin-top: 96px;
     }
 
-    main
-    {
+    main{
         display: flex;
         flex-direction: column;
         justify-content: center;
@@ -118,6 +118,7 @@
             opacity: 0.9;
             position: absolute;
         }
+
         main #card-container{
             display: flex ;
             flex-wrap: wrap;

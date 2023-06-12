@@ -1,14 +1,11 @@
-<!--
-    Default layout used by all the page
--->
 <template>
-     <TheHeader />
+     <TheHeader/>
      <div class = 'page'>
         <div class="content-container">
             <slot />
         </div>
         
-        <TheFooter />
+        <TheFooter/>
     </div>
 </template>
 
@@ -19,12 +16,10 @@
         display: flex;
         flex-direction: column;
         background-color: #F5F5F5;
-        margin: 0;
     }
+
     .content-container {    
-        margin: 0 20px;
-
-
+        margin: 0 160px;
     }
 
     
