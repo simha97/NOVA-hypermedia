@@ -4,14 +4,16 @@
 
 <template>
     <div class="nav-container">
-        <NuxtLink to="/" ><img src="/logo.svg" alt="logo nova" style="position: absolute; left: 40px; top: 8px; width: 120px;"/></NuxtLink>
+        <NuxtLink to="/" ><img src="/logo.svg" alt="logo nova" style="position: relative; left: 56px; width: 160px;"/></NuxtLink>
         <div class="nav-list-item">
-            <div class="dropdown"><NuxtLink to="/projects">PROJECTS</NuxtLink>
-                <div class="dropdown-sub">
-                    <div class="dropdown-option" ><NuxtLink to="/projects/main-projects" >MAIN PROJECTS</NuxtLink></div>
-                    <div class="dropdown-option" ><NuxtLink to="/projects" >ALL PROJECTS</NuxtLink></div>
+            <span class="nav-item">
+                <div class="dropdown"><NuxtLink to="/projects">PROJECTS</NuxtLink>
+                    <div class="dropdown-sub">
+                        <div class="dropdown-option" ><NuxtLink to="/projects/main-projects" >MAIN PROJECTS</NuxtLink></div>
+                        <div class="dropdown-option" ><NuxtLink to="/projects" >ALL PROJECTS</NuxtLink></div>
+                    </div>
                 </div>
-            </div>
+            </span>    
             <div class="nav-item"><NuxtLink to="/areas">AREAS</NuxtLink></div>
             <div class="nav-item"><NuxtLink to="/ourTeam">OUR TEAM</NuxtLink></div>
             <div class="nav-item"><NuxtLink to="/aboutUs"> ABOUT US</NuxtLink></div>
@@ -40,20 +42,24 @@
         background-color: #F5F5F5;
         display: flex;
         width: 100%;
-        height: 56px;
+        height: 96px;
         position: relative;
         z-index: 1; /*this give the idea of "layers", so this has to be up the root level 0, and must be accompanied with position*/
         box-shadow: 0 0 5px 0 #282E36;
-        font-size: 24px;
+        align-items: center;
     }
 
     .nav-list-item {
-        position: relative;
-        margin-left: 624px;
+        position: absolute;
+        right: 56px;
         align-items: center;
         display: flex;
         text-align:center;
-        text-indent: 80px;
+        gap: 48px;
+    }
+
+    .nav-item {
+        width: max-content;
     }
 
     .dropdown{
@@ -64,23 +70,24 @@
     .dropdown-sub{
         display: none;
         position: absolute;
+        left: -50%;
         background-color: #F5F5F5;
-        width: 100%;
+        width: max-content;
         overflow: auto;
-        text-indent: initial;
         box-shadow: 0px 10px 10px 0px rgba(0,0,0,0.7);
-        margin-left: 40px;
+        row-gap: 45px;
+        padding: 12px 16px 12px 16px;
+        border: solid 1px #282E36;
+        border-radius: 8px;
     }
 
     .dropdown-option {
-        height: 56px;
-        padding: 8px;
+        text-align: center;
+        padding: 4px 0 4px 0;
     }
 
     .dropdown:hover .dropdown-sub {
         display: block;
-        border: solid 1px #282E36;
-        border-radius: 8px;
     }
 
     .dropdown:hover .dropdown-sub .dropdown-option:hover{
@@ -92,7 +99,7 @@
         color:#282E36;
         src:url('/font/Myriad\ Pro\ Regular.ttf') format("truetype");
         font-family: "Myriad Pro Regular";
-        font-size: 16px;
+        font-size: 24px;
         width: max-content;
     }
 
