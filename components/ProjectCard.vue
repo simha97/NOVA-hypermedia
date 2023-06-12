@@ -3,12 +3,12 @@
     <div class="project-card" >
       <img class="main-img" alt="logo" v-bind:src="'/_nuxt/LogoPng/' + title + '.png'">
       <div class="data-container">
-        <div class="project-title">{{ title }}</div>
-        <div style="font-size: 12px; padding-top: 16px;">{{ mainIdea }}</div>
+        <b><div class="project-title">{{ title }}</div></b>
+        <div class="project-mainIdea">{{ mainIdea }}</div>
         <div class="icon"></div>
-        <div style="font-size: 12px; margin-top: -28px; margin-left: 20px;">{{ city }}</div>
+        <div class="project-city">{{ city }}</div>
         <div class="area-container">
-          <div style="font-size: 12px;">{{ area }}</div>
+          <div >{{ area }}</div>
         </div>
       </div>
     </div>
@@ -49,36 +49,54 @@
     top: 168px;
     right: 16px;
     text-align: center;
+    font-size: 12px;
+    transition: background-color .3s ease-in-out;
   }
 
   .project-card .data-container {
+    width: 352px;
+    height: 212px;
     padding: 16px;
     position: relative; 
     border-top: solid 1px #282E36;
     margin-top: -1px;
   }
 
-  .project-card .project-title {
-    font-size: 24px; 
-    width: max-content;
-    src:url('/font/myriadpro-semibold.otf') format("truetype");
-    font-family: "Myriad Pro Bold";
+  .data-container .project-title {
+    font-size: 20px; 
+    display: block;
+    width: 352px;
   }
 
-  .project-card .icon{
+  .data-container .project-mainIdea {
+    font-size: 12px; 
+    padding-top: 16px;
+  }
+
+  .data-container .icon{
     display: inline-block;
-    margin-top: 16px;
     height: 16px;
     width: 16px;
-    transition: opacity .3s ease-in-out;
+    transition: .3s ease-in-out;
     background: url(../assets/icons/location-pin-dark.png) no-repeat;
+  }
+
+  .data-container .project-city {
+    font-size: 12px; 
+    margin-top: -28px; 
+    margin-left: 20px;
   }
 
   .project-card:hover{
     background-color: #282E36;
     color:white;
   }
-  
+
+  .project-card .main-img:hover{
+    background-color: #282E36;
+    color:white;
+  }
+
   .project-card:hover .area-container{
     background-color: white;
   }

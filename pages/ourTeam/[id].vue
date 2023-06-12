@@ -11,7 +11,7 @@
   <div>
     <Breabcrumb :links="[{bread:'Home', goTo: '/'}, {bread:'Our Team', goTo: '/ourTeam'}, {bread:person.name +  ' ' + person.surname, goTo: '/ourTeam/' + person.id}]"/>
   </div>
-            <div id = "data-container">
+            <div id = "person-data-container">
             <table>
                 <tr>
                 <td>
@@ -53,7 +53,7 @@
         padding-left: 10px;    
     }
 
-    .data-container{
+    .person-data-container{
         display: flex;
     }
 

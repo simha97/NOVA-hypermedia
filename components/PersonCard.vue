@@ -28,7 +28,7 @@
     box-shadow: 0 4px 8px 0 #282E36;
     transition: 0.3s;
     width: 256px;
-    height: 410px;
+    height: 400px;
     background-color: #F26225;
     transition: background-color .3s ease-in-out;
     color: white;
@@ -38,23 +38,25 @@
   .person-card .data-container{
     padding: 8px 16px;
     position: relative; 
+    width: 256px;
+    height: 128px;
   }
 
   .person-name-surname{
     font-size: 24px;
     font-family: 'Myriad Pro Light';
   }
+
   .person-founderTag{
     font-size: 18px; 
-    position: absolute; 
-    right: 8px;
+    position: absolute;
+    top: 12px; 
+    right: 16px;
     font-style: bold;
   }
 
   .person-expertiseInfo{
     font-size: 18px;
-    position: absolute;
-    top: 40px;
     font-family: 'Myriad Pro Light';
   }
 
@@ -67,7 +69,7 @@
     filter: grayscale(100%); 
     transition: filter .3s ease-in-out;
     height: 272px;
-    width: 100%;
+    width: 256px;
     border-top-right-radius: 4px;  
     border-top-left-radius: 4px;
   }

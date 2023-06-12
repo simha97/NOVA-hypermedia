@@ -18,7 +18,7 @@
         background-color: #F5F5F5;
     }
     .content-container {    
-        margin: 0 10px;
+        margin: 0 160px;
     }
     
     .slogan {

@@ -19,15 +19,11 @@
 <style>
 
 .breadcrumb-container{
-  src:url('/font/helvetica-light.ttf') format("truetype");
-  font-family: Helvetica;
-  font: Helvetica 16px light;
-  font-style: italic;
-  opacity: 0.9;
   width: fit-content;
-  margin: 0 0 80px 110px;
+  padding-top: 96px;
+  padding-bottom: 80px;
   border-bottom: 4px solid #F26225;
-  padding: 40px 0;
+  font-size: 18px;
 }
 
 .breadcrumb-container img{
