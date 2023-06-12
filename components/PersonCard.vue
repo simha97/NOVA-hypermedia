@@ -3,10 +3,10 @@
       <div class="person-card">
         <img class="main-img" alt="picture" src="~\assets\img\youngwoman2.png">
         <div class="data-container">
-          <div style="font-size: 20px; font-family: 'Myriad Pro Light';">{{ name }} {{surname }}</div>
-          <b><div style="font-size: 16px; position: absolute; right: 16px;" v-if="isFounder == true">Founder</div></b>
-          <div style="font-size: 14px; position: absolute; top: 40px; font-family: 'Myriad Pro Light';">Expert in
-            <div style="flex-direction: row; display: flex;">
+          <div class="person-name-surname">{{ name }} {{surname }}</div>
+          <div class="person-founderTag" v-if="isFounder == true">Founder</div>
+          <div class="person-expertiseInfo">Expert in
+            <div class="person-areaTag">
               <div v-for="element in area.split(',')" class="area-container"> 
                 {{ element }}
               </div>
@@ -28,7 +28,7 @@
     box-shadow: 0 4px 8px 0 #282E36;
     transition: 0.3s;
     width: 256px;
-    height: 400px;
+    height: 410px;
     background-color: #F26225;
     transition: background-color .3s ease-in-out;
     color: white;
@@ -38,6 +38,29 @@
   .person-card .data-container{
     padding: 8px 16px;
     position: relative; 
+  }
+
+  .person-name-surname{
+    font-size: 24px;
+    font-family: 'Myriad Pro Light';
+  }
+  .person-founderTag{
+    font-size: 18px; 
+    position: absolute; 
+    right: 8px;
+    font-style: bold;
+  }
+
+  .person-expertiseInfo{
+    font-size: 18px;
+    position: absolute;
+    top: 40px;
+    font-family: 'Myriad Pro Light';
+  }
+
+  .person-areaTag{
+    flex-direction: row;
+    display: flex;
   }
 
   .person-card .main-img{

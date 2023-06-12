@@ -6,18 +6,16 @@
             <div style="font-size: 24px; margin-top: 16px;">The Brilliant Minds Behind Our Vision</div>
         </div>
     </div>
-    <div>
-        <Breabcrumb :links="[{bread:'Home', goTo: '/'}, {bread:'Our Team', goTo: '/ourTeam'}]"/>
-    </div>  
-    <div>
-        <div class="description-title">
-            Our Team
-        </div>
-        <div class="description">
-            Our team page showcases the impressive network of backers who believe in our vision and share our passion for supporting innovative startups.
-        </div>
+
+    <Breabcrumb :links="[{bread:'Home', goTo: '/'}, {bread:'Our Team', goTo: '/ourTeam'}]"/>
+    
+    <div class="introduction">
+        <h1>Our Team</h1>
+        <h2>Our team page showcases the impressive network of backers who believe in our vision and share our passion for supporting innovative startups.</h2>
     </div>
+
     <main>
+
         <div id="card-container">
             <PersonCard v-for="person of filtered" :key="person.id" :name="person.name" :surname="person.surname" :age="person.age" :area="person.area" :isFounder="person.isFounder" :link="'/ourTeam/' + person.id" />
         </div>
@@ -92,15 +90,16 @@
         font-size: 24px;
     }
 
+    .introduction {
+        margin: 16px 110px 96px 110px;
+    }
+
     main #card-container{
         display: flex ;
         flex-wrap: wrap;
         flex-direction: row;
-        column-gap: 32px;
-        row-gap: 80px;
-        width: 1120px;
-        margin-top: 96px;
-        margin-bottom: 320px;
+        margin: 96px 110px 96px 110px;
+        gap: 32px;
     }
 
     main{
