@@ -12,6 +12,9 @@
         {title:'Past Job Experience', description: person.pastJobExperience}]"/>
     </div>
     <img src="~\assets\img\youngWoman.png">
+    <div v-if="person.isFounder == true">
+      <img src="~\assets\img\founder.png" id="founder">
+    </div>
   </div>
   <div>
     <div>
@@ -59,6 +62,13 @@
     width: 464px;
     height: 608px;
     border-radius: 8px;
+  }
+
+  #founder{
+    position: absolute;
+    right: 32px;
+    width: 272px;
+    height: 272px;
   }
 
     @media (max-width: 768px) {
