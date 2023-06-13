@@ -56,7 +56,6 @@
     width: 352px;
     padding: 16px;
     position: relative; 
-    border-top: solid 1px #282E36;
     font-size: 16px;
   }
 
