@@ -40,7 +40,7 @@
   }
   
   .project-card .area-container {
-    background-color: #dadee6;
+    background-color: #f5f5f5;
     color: #282E36;
     border-radius: 8px;
     padding: 4px 8px 4px 8px;
@@ -49,27 +49,24 @@
     top: 168px;
     right: 16px;
     text-align: center;
-    font-size: 12px;
     transition: background-color .3s ease-in-out;
   }
 
   .project-card .data-container {
     width: 352px;
-    height: 212px;
     padding: 16px;
     position: relative; 
     border-top: solid 1px #282E36;
-    margin-top: -1px;
+    font-size: 16px;
   }
 
   .data-container .project-title {
-    font-size: 20px; 
+    font-size: 22px; 
     display: block;
     width: 352px;
   }
 
   .data-container .project-mainIdea {
-    font-size: 12px; 
     padding-top: 16px;
   }
 
@@ -79,11 +76,11 @@
     width: 16px;
     transition: .3s ease-in-out;
     background: url(../assets/icons/location-pin-dark.png) no-repeat;
+    margin-top: 16px;
   }
 
   .data-container .project-city {
-    font-size: 12px; 
-    margin-top: -28px; 
+    margin-top: -26px; 
     margin-left: 20px;
   }
 
@@ -95,10 +92,6 @@
   .project-card .main-img:hover{
     background-color: #282E36;
     color:white;
-  }
-
-  .project-card:hover .area-container{
-    background-color: white;
   }
 
   .project-card:hover .icon{

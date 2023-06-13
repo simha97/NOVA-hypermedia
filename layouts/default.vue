@@ -12,9 +12,6 @@
 <style>
 
     .page {
-        min-height: 100vh;
-        display: flex;
-        flex-direction: column;
         background-color: #F5F5F5;
     }
     .content-container {    

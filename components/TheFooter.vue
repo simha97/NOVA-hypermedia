@@ -38,7 +38,7 @@
     }
     .footer-container
     {
-        color:#F5F5F5;
+        color:white;
         margin-left: 160px;
         margin-right: 160px;
         margin-bottom: 38px;
