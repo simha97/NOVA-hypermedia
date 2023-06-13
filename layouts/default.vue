@@ -55,7 +55,7 @@
     margin-bottom: 320px;
   }
   
-  main{
+  main {
     display: flex;
     flex-direction: column;
     justify-content: center;
