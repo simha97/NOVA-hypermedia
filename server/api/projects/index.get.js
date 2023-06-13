@@ -5,7 +5,8 @@ export default defineEventHandler(async (event) => {
 
   const { data, error } = await client
     .from('projects')
-    .select('*');
+    .select('*')
+    .order('projectTitle', {ascending: true});
 
   if (error) {
     throw createError({ statusCode: 400, statusMessage: error.message });

@@ -1,48 +1,95 @@
 <template>
-     <TheHeader/>
-     <div class = 'page'>
+  <div class = 'page'>
+    <TheHeader/>
         <div class="content-container">
-            <slot />
+          <slot />
         </div>
-        
-        <TheFooter/>
-    </div>
+    <TheFooter/>
+  </div>
 </template>
 
 <style>
 
-    .page {
-        background-color: #F5F5F5;
-    }
-    .content-container {    
-        margin: 0 160px;
-    }
-    
-    .slogan {
-        src:url('/font/helvetica-light.ttf') format("truetype");
-        font-family: Helvetica;
-        font: Helvetica 48px light;
-    }
-    .title {
-        src:url('/font/Helvetica-Bold.ttf') format("truetype");
-        font-family: Helvetica;
-        font: Helvetica 36px bold;
-    }
+  .page {
+    background-color: #F5F5F5;
+    color:#282E36;
+  }
 
-    h1 {
-        src:url('/font/Myriad\ Pro\ Light.otf') format("opentype");
-        font-family: "Myriad Pro";
-        font: "Myriad Pro" 48px light;
-    }
-    h2, div {
-        src:url('/font/Myriad\ Pro\ Regular.ttf') format("truetype");
-        font-family: "Myriad Pro";
-        font: "Myriad Pro" 32px italic;
-    }
-    h3 {
-        src:url('/font/myriadpro-semibold.otf') format("opentype");
-        font-family: "Myriad Pro";
-        font: "Myriad Pro" 32px;
+  .content-container {    
+    margin-left: 160px;
+  }
+
+  h1 {
+    src:url('/font/helvetica-light.ttf') format("truetype");
+    font-family: "Helvetica Light";
+    font-size: 48px;
+    letter-spacing: 1px;
+    width: 1120px;
+  }
+
+  h2 {
+    position: relative;
+    src:url('/font/Myriad\ Pro\ Light.ttf') format("truetype");
+    font-family: "Myriad Pro Light";
+    padding-top: 16px;
+    font-size: 36px;
+    width: 1120px;
+  }
+
+  h3 {
+    position: relative;
+    src:url('/font/Myriad\ Pro\ Regular.ttf') format("truetype");
+    font-family: "Myriad Pro Regular";
+    padding-top: 16px;
+    font-size: 24px;
+    width: 1120px;
+  }
+
+  .card-container{
+    display: flex ;
+    flex-wrap: wrap;
+    flex-direction: row;
+    column-gap: 32px;
+    row-gap: 80px;
+    margin-top: 96px;
+    margin-bottom: 320px;
+  }
+  
+  main{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-content: flex-start;
+  }
+
+  .intro{
+    width:  1280px; 
+    height: 552px;
+  }
+
+  .intro img{
+    margin-top: -96px;
+    margin-left: -160px;
+  }
+
+  .intro-description{
+    color: white;
+    position: absolute;
+    margin-top: -248px;
+  }
+
+  .form-container {
+        width: 90%;
+        border-radius: 10px;
+        border: 2px solid brown;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-evenly;
+        align-content: flex-start;
+        gap: 20px;
+
+        background-color: burlywood;
+        padding: 20px;
     }
 
 

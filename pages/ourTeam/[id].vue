@@ -33,16 +33,16 @@
             </table>
 
             </div>
-  <div class="progress_container">
+  <div class="progress-container">
     <div>
         <div class="description-title">
-            Project in Progress
+            Projects in Progress
         </div>
         <div class="description">
           Discover a collection of ongoing projects by {{ person.name }} {{ person.surname }}.
         </div>
     </div>
-    <div id="card-container" style="margin-bottom: 240px;">
+    <div class="card-container" style="margin-bottom: 240px;">
       <ProjectCard v-for="project in person.projects" :key="project.id" :title="project.projectTitle" :city="project.city" :mainIdea="project.mainIdea" :area="project.area" :isFounder="project.isFounder" :link="'/projects/' + project.id" />
     </div>
   </div>
@@ -67,8 +67,13 @@
         display: flex;
     }
 
-    .progress_container{
+    .progress-container{
         padding-top: 120px;
+    }
+
+    .description-title{
+        border-top: solid 4px #F26225;
+        width: fit-content;
     }
 
     .goBack-container{

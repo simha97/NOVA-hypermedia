@@ -10,45 +10,41 @@
     <Breabcrumb :links="[{bread:'Home', goTo: '/'}, {bread:'Areas', goTo: '/areas/Art'}, {bread: area, goTo: '/areas/' + area}]"/>
   </div> 
   <div>
-      <div class="description-title">
-          Areas
-      </div>
-      <div class="description">
-          Our projects are variant in many different areas.
-      </div>
+    <h2>Areas</h2>
+    <h3>Our projects are variant in many different areas.</h3>
   </div>  
   <div class="areas-container">
-    <div class="area-selector">
+    <div class="areas-selector">
       <NuxtLink to="/areas/Art">
         <div v-if="area == 'Art'">
-          <div class="active-area-button">#Art</div>
+          <div class="active-area-button">Art</div>
         </div> 
         <div v-else>
-          <div class="area-button">#Art</div>
+          <div class="area-button">Art</div>
         </div>
       </NuxtLink>  
       <NuxtLink to="/areas/Education">
         <div v-if="area == 'Education'">
-          <div class="active-area-button">#Education</div>
+          <div class="active-area-button">Education</div>
         </div> 
         <div v-else>
-          <div class="area-button">#Education</div>
+          <div class="area-button">Education</div>
         </div>
       </NuxtLink>  
       <NuxtLink to="/areas/Energy">
         <div v-if="area == 'Energy'">
-          <div class="active-area-button">#Energy</div>
+          <div class="active-area-button">Energy</div>
         </div> 
         <div v-else>
-          <div class="area-button">#Energy</div>
+          <div class="area-button">Energy</div>
         </div>
       </NuxtLink>  
       <NuxtLink to="/areas/Food">
         <div v-if="area == 'Food'">
-          <div class="active-area-button">#Food</div>
+          <div class="active-area-button">Food</div>
         </div> 
         <div v-else>
-          <div class="area-button">#Food</div>
+          <div class="area-button">Food</div>
         </div>
       </NuxtLink>  
     </div>
@@ -56,7 +52,7 @@
       We support art-related startups that leverage technology to democratize art, foster diversity, and connect artists with collectors. Our focus includes emerging artists, digital art platforms, and innovative ways to engage audiences.
     </div>
   </div>
-  <div id="card-container">
+  <div class="card-container">
     <ProjectCard v-for="project in projects" :key="project.id" :title="project.projectTitle" :city="project.city" :mainIdea="project.mainIdea" :area="project.area" :link="'/projects/' + project.id" />
   </div>
 </template>
@@ -70,19 +66,19 @@
     font-family: "Myriad Pro Regular";
   }
 
-  .area-selector{
+  .areas-selector{
     gap: 56px;
     display: flex;
   }
 
   .area-button{
-    width: 160px;
-    height: 64px;
     text-align: center;
     padding: 16px;
   }
 
   .active-area-button{
+    width: 160px;
+    height: 64px;
     background-color: white;
     color: #F26225;
     width: 160px;
