@@ -4,16 +4,14 @@
     </div>
     <div id="card-container">
         <div v-for="project in projects">
-            <span v-if="project.isMain == true">
-                <ProjectCard  :key="project.id" :title="project.projectTitle" :city="project.city" :mainIdea="project.mainIdea" :area="project.area" :link="'/projects/' + project.id" />            
-            </span>
+            <ProjectCard  :key="project.id" :title="project.projectTitle" :city="project.city" :mainIdea="project.mainIdea" :area="project.area" :link="'/projects/' + project.id" />            
         </div>
     </div>
 </template>
 
 <script setup>
     import Breabcrumb from '~/components/Breadcrumb.vue';
-    const { data: projects } = await useFetch('/api/projects')
+    const { data: projects } = await useFetch('/api/projects/main-projects')
 </script>
 
 <style>

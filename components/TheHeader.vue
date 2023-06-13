@@ -14,7 +14,7 @@
                     </div>
                 </div>
             </span>    
-            <div class="nav-item"><NuxtLink to="/areas">AREAS</NuxtLink></div>
+            <div class="nav-item"><NuxtLink to="/areas/Food">AREAS</NuxtLink></div>
             <div class="nav-item"><NuxtLink to="/ourTeam">OUR TEAM</NuxtLink></div>
             <div class="nav-item"><NuxtLink to="/aboutUs"> ABOUT US</NuxtLink></div>
             <div class="nav-item"><NuxtLink to="/contactUs">CONTACT US</NuxtLink></div>
@@ -60,6 +60,10 @@
 
     .nav-item {
         width: max-content;
+    }
+
+    .nav-item:hover {
+        text-decoration: underline;
     }
 
     .dropdown{

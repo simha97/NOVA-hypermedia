@@ -51,7 +51,7 @@
     .intro-wrap{
         background-size:cover;
         background-repeat: no-repeat;
-        width:  1434px; 
+        width:  1440px; 
         height: 552px;
         display: flex;
         align-items: flex-end;
