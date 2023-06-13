@@ -7,7 +7,7 @@ export default defineEventHandler(async (event) => {
     .from('persons')
     .select('id, name, surname, area, isFounder')
     .eq('isFounder', true)
-    .order('surname', {ascending: true});
+    .order('surname');
 
   if (error) {
     throw createError({ statusCode: 400, statusMessage: error.message });

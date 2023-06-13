@@ -8,6 +8,7 @@ export default defineEventHandler(async (event) => {
     .from('projects')
     .select(`*`)
     .eq('area', area)
+    .order('projectTitle');
 
   if (error) {
     throw createError({ statusCode: 400, statusMessage: error.message });
