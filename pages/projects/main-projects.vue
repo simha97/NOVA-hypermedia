@@ -1,6 +1,6 @@
 <template>
     <div>
-        <Breabcrumb :links="[{bread:'Home', goTo: '/'}, {bread:'Projects', goTo: '/projects'}, {bread:'MainProjects', goTo: '/projects/main-projects'}]"/>
+        <Breadcrumb :links="[{bread:'Home', goTo: '/'}, {bread:'Projects', goTo: '/projects'}, {bread:'MainProjects', goTo: '/projects/main-projects'}]"/>
     </div>
     <div>
         <h2>Main Projects</h2>        
@@ -14,16 +14,7 @@
 </template>
 
 <script setup>
-    import Breabcrumb from '~/components/Breadcrumb.vue';
-    const { data: projects } = await useFetch('/api/projects/main-projects')
-</script>
 
-<style>
-    main
-    {
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-content: flex-start;
-    }
-</style>
+    const { data: projects } = await useFetch('/api/projects/main-projects')
+    
+</script>

@@ -1,12 +1,8 @@
-<!--
-    About us page
--->
 <template>
     <div>
-      <Breabcrumb :links="[{bread:'Home', goTo: '/'}, {bread:'About Us', goTo: '/aboutUs'}]"/>
+      <Breadcrumb :links="[{bread:'Home', goTo: '/'}, {bread:'About Us', goTo: '/aboutUs'}]"/>
     </div>
-
-<div class="m-5">
+    <div class="m-5">
     <!-- <NuxtPage /> -->
     <div class="btn btn-success">Success</div>
     <div class="btn btn-danger">Danger</div>
@@ -30,7 +26,3 @@
         align-items: center;
     }
 </style>
-
-<script setup>
-    import Breabcrumb from '~/components/Breadcrumb.vue';
-</script>

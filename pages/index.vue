@@ -1,6 +1,5 @@
-<!--
-    Home page
--->
+<!--Home page-->
+
 <template>
     <main>
         <img id = "main-img" src = "~/assets/img/youngwoman.png" />
@@ -11,6 +10,7 @@
 </template>
 
 <style>
+
     #main-img {
     width: 80%;
     max-width: 1000px;
@@ -23,4 +23,5 @@
         flex-direction: column;
         align-items: center;
     }
+    
 </style>

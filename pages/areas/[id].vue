@@ -1,13 +1,6 @@
-<script setup>
-  import Breabcrumb from '~/components/Breadcrumb.vue';
-  const route = useRoute()
-  const area = route.params.id
-  const { data: projects } = await useFetch('/api/areas/' + area)
-</script>
-
 <template>
   <div>
-    <Breabcrumb :links="[{bread:'Home', goTo: '/'}, {bread:'Areas', goTo: '/areas/Art'}, {bread: area, goTo: '/areas/' + area}]"/>
+    <Breadcrumb :links="[{bread:'Home', goTo: '/'}, {bread:'Areas', goTo: '/areas/Art'}, {bread: area, goTo: '/areas/' + area}]"/>
   </div> 
   <div>
     <h2>Areas</h2>
@@ -99,3 +92,11 @@
   }
 
 </style>
+
+<script setup>
+
+  const route = useRoute()
+  const area = route.params.id
+  const { data: projects } = await useFetch('/api/areas/' + area)
+  
+</script>

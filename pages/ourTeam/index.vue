@@ -7,7 +7,7 @@
         </div>
     </div>
     <div>
-        <Breabcrumb :links="[{bread:'Home', goTo: '/'}, {bread:'Our Team', goTo: '/ourTeam'}]"/>
+        <Breadcrumb :links="[{bread:'Home', goTo: '/'}, {bread:'Our Team', goTo: '/ourTeam'}]"/>
     </div>  
     <div>
         <h2>Our Team</h2>
@@ -19,28 +19,6 @@
         </div>
     </main>
 </template>
-
-<script setup>
-    import Breabcrumb from '~/components/Breadcrumb.vue';
-    const { data: persons } = await useFetch('/api/ourTeam')
-    const age = ref(0);
-    const filtered = computed(() => {
-        // Checking for values where the full list is provided
-        if(age.value == 0 || age.value == "")
-            return persons.value
-
-        const arr = []
-
-        // Filtering the list
-        for(let person of persons.value) {
-            if(person.age < age.value)
-                arr.push(person)
-        }
-
-        // Returning the filtered list
-        return arr
-    })
-</script>
 
 <style>
     
@@ -72,4 +50,25 @@
         }
 
     }
+
 </style>
+
+<script setup>
+
+    const { data: persons } = await useFetch('/api/ourTeam')
+    const age = ref(0);
+    const filtered = computed(() => {
+        if(age.value == 0 || age.value == "")
+            return persons.value
+
+        const arr = []
+
+        for(let person of persons.value) {
+            if(person.age < age.value)
+                arr.push(person)
+        }
+
+        return arr
+    })
+
+</script>

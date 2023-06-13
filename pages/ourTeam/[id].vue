@@ -1,15 +1,6 @@
-<script setup>
-    import Breabcrumb from '~/components/Breadcrumb.vue';
-    const route = useRoute()
-    const id = route.params.id
-    // useRuntimeConfig provide us with environment variables set up in the nuxtconfig file
-    const { data: person } = await useFetch('/api/ourTeam/' + id)
-    const description = ref(newLineOnFullStop(person.value.story))
-</script>
-
 <template>
   <div>
-    <Breabcrumb :links="[{bread:'Home', goTo: '/'}, {bread:'Our Team', goTo: '/ourTeam'}, {bread:person.name +  ' ' + person.surname, goTo: '/ourTeam/' + person.id}]"/>
+    <Breadcrumb :links="[{bread:'Home', goTo: '/'}, {bread:'Our Team', goTo: '/ourTeam'}, {bread:person.name +  ' ' + person.surname, goTo: '/ourTeam/' + person.id}]"/>
   </div>
   <div id = "person-data-container">
             <table>
@@ -35,14 +26,10 @@
             </div>
   <div class="progress-container">
     <div>
-        <div class="description-title">
-            Projects in Progress
-        </div>
-        <div class="description">
-          Discover a collection of ongoing projects by {{ person.name }} {{ person.surname }}.
-        </div>
+        <h2 id="project-title">Projects in Progress</h2>
+        <h3>Discover a collection of ongoing projects by {{ person.name }} {{ person.surname }}.</h3>
     </div>
-    <div class="card-container" style="margin-bottom: 240px;">
+    <div class="card-container">
       <ProjectCard v-for="project in person.projects" :key="project.id" :title="project.projectTitle" :city="project.city" :mainIdea="project.mainIdea" :area="project.area" :isFounder="project.isFounder" :link="'/projects/' + project.id" />
     </div>
   </div>
@@ -119,6 +106,11 @@
         flex-grow: 0;
     }
 
+    #project-title{
+      border-top: solid 4px #F26225;
+      width: fit-content;
+    };
+
     @media (max-width: 768px) {
       #main-img {
         width: 100%;
@@ -171,5 +163,14 @@
       }
     }
 
-    
 </style>
+
+<script setup>
+
+    const route = useRoute()
+    const id = route.params.id
+    const { data: person } = await useFetch('/api/ourTeam/' + id)
+    const description = ref(newLineOnFullStop(person.value.story))
+    
+</script>
+

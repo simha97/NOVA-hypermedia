@@ -1,16 +1,6 @@
-
-<script setup>
-    import Breabcrumb from '~/components/Breadcrumb.vue';
-    const route = useRoute()
-    const id = route.params.id
-    // useRuntimeConfig provide us with environment variables set up in the nuxtconfig file
-    const { data: project } = await useFetch('/api/projects/' + id)
-    //const description = ref(newLineOnFullStop(person.value.story))
-</script>
-
 <template>
     <div>
-      <Breabcrumb :links="[{bread:'Home', goTo: '/'}, {bread:'Project', goTo: '/projects'}, {bread:project.projectTitle, goTo: '/projects/' + project.id}]"/>
+      <Breadcrumb :links="[{bread:'Home', goTo: '/'}, {bread:'Project', goTo: '/projects'}, {bread:project.projectTitle, goTo: '/projects/' + project.id}]"/>
     </div>
     <main>
         <div class = "info-group">
@@ -66,3 +56,12 @@
         font-size: 15pt;
     }
 </style>
+
+<script setup>
+
+    const route = useRoute()
+    const id = route.params.id
+    const { data: project } = await useFetch('/api/projects/' + id)
+
+</script>
+

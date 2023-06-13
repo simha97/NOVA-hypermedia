@@ -1,6 +1,6 @@
 <template>
     <div>
-      <Breabcrumb :links="[{bread:'Home', goTo: '/'}, {bread:'Contact Us', goTo: '/contactUs'}]"/>
+      <Breadcrumb :links="[{bread:'Home', goTo: '/'}, {bread:'Contact Us', goTo: '/contactUs'}]"/>
     </div>
     <main>
         <main>
@@ -31,6 +31,7 @@
 </template>
 
 <style>
+
     main {
     width: 100%;
     display: flex;
@@ -88,8 +89,5 @@
             min-width: 400px;
         }
     }
+    
 </style>
-
-<script setup>
-    import Breabcrumb from '~/components/Breadcrumb.vue';
-</script>
