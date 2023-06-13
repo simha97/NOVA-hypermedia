@@ -11,7 +11,7 @@
   <div>
     <Breabcrumb :links="[{bread:'Home', goTo: '/'}, {bread:'Our Team', goTo: '/ourTeam'}, {bread:person.name +  ' ' + person.surname, goTo: '/ourTeam/' + person.id}]"/>
   </div>
-            <div id = "person-data-container">
+  <div id = "person-data-container">
             <table>
                 <tr>
                 <td>
@@ -33,13 +33,23 @@
             </table>
 
             </div>
-            <h2 class="Progress_container">Projects in Progress</h2>
-            <p>Discover a collection of ongoing projects by <span>{{ person.name }} {{ person.surname }}</span></p>
-            <div id="card-container">
-                <ProjectCard v-for="project in person.projects" :key="project.id" :title="project.projectTitle" :city="project.city" :mainIdea="project.mainIdea" :area="project.area" :isFounder="project.isFounder" :link="'/projects/' + project.id" />
-            </div>
-            <NuxtLink to="/ourTeam"><backbutton text="Our Team"></backbutton></NuxtLink>
-        </template>
+  <div class="progress_container">
+    <div>
+        <div class="description-title">
+            Project in Progress
+        </div>
+        <div class="description">
+          Discover a collection of ongoing projects by {{ person.name }} {{ person.surname }}.
+        </div>
+    </div>
+    <div id="card-container" style="margin-bottom: 240px;">
+      <ProjectCard v-for="project in person.projects" :key="project.id" :title="project.projectTitle" :city="project.city" :mainIdea="project.mainIdea" :area="project.area" :isFounder="project.isFounder" :link="'/projects/' + project.id" />
+    </div>
+  </div>
+  <div class="goBack-container">
+    <NuxtLink to="/ourTeam"><backbutton text="Our Team"></backbutton></NuxtLink>
+  </div>
+</template>
 
 <style>
 
@@ -57,8 +67,12 @@
         display: flex;
     }
 
-    .Progress_container{
+    .progress_container{
         padding-top: 120px;
+    }
+
+    .goBack-container{
+      margin: 0 0 320px 0;
     }
 
     .name{

@@ -24,6 +24,9 @@
         </div>
 
     </main>
+  <div class="goBack-container">
+    <NuxtLink to="/projects"><backbutton text="All Projects"></backbutton></NuxtLink>
+  </div>
 </template>
 
 <style>
