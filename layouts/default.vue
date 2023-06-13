@@ -78,6 +78,16 @@
     margin-top: -248px;
   }
 
+  .slogan{
+    position: relative;
+    padding-top: 16px;
+    font-size: 24px;
+    font-style: italic;
+    src:url('/font/helvetica-light.ttf') format("truetype");
+    font-family: "Helvetica Light";
+    width: 576px;
+  }
+
   .form-container {
         width: 90%;
         border-radius: 10px;

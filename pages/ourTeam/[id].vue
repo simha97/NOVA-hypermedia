@@ -5,7 +5,9 @@
   <div class="person-container">
     <div class="person-data">
       <h2>{{ person.name }} {{ person.surname }}</h2>
-      <h3 id="motto">“As an expert in both Education and Art I am dedicated to fostering creativity and knowledge through innovative approaches.”</h3>
+      <div class="slogan">
+        “As an expert in both Education and Art I am dedicated to fostering creativity and knowledge through innovative approaches.”
+      </div>
       <PersonInfo :infos="[{title:'Profile', description: person.story}, 
         {title:'Main Expertise', description: person.mainExpertise}, 
         {title:'Academic Experience', description: person.degree}, 
@@ -44,13 +46,6 @@
 
   .goBack-container{
     margin: 0 0 320px 0;
-  }
-
-  #motto{
-    font-style: italic;
-    src:url('/font/helvetica-light.ttf') format("truetype");
-    font-family: "Helvetica Light";
-    width: 576px;
   }
 
   #project-title{

@@ -15,7 +15,9 @@
     </div>
     <main>
         <div class="card-container">
-            <PersonCard v-for="person of filtered" :key="person.id" :name="person.name" :surname="person.surname" :age="person.age" :area="person.area" :isFounder="person.isFounder" :link="'/ourTeam/' + person.id" />
+            <div v-for="person of filtered">
+                <NuxtLink :to = "'/ourTeam/' + person.id"><PersonCard id="card" :key="person.id" :name="person.name" :surname="person.surname" :age="person.age" :area="person.area" :isFounder="person.isFounder"/></NuxtLink>
+            </div>
         </div>
     </main>
 </template>
@@ -25,6 +27,19 @@
     .intro img{
         filter: brightness(70%); 
         opacity: 90%;
+    }
+
+    #card .main-img{    
+        transition: filter .3s ease-in-out;
+        filter: grayscale(100%); 
+    }
+    
+    #card:hover .main-img{
+        filter: none;
+    }
+
+    #card:hover{
+        background-color: #282E36;
     }
 
     @media screen and (max-width: 830px) {
