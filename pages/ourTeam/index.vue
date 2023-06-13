@@ -1,6 +1,6 @@
 <template> 
     <div class="intro">
-        <img src="~\assets\img\OurTeam.png">
+        <img id="ourTeam" src="~\assets\img\OurTeam.png">
         <div class="intro-description">
             <h1>Meet Our Teams</h1>
             <h3>The Brilliant Minds Behind Our Vision</h3>
@@ -24,7 +24,7 @@
 
 <style>
     
-    .intro img{
+    #ourTeam{
         filter: brightness(70%); 
         opacity: 90%;
     }

@@ -1,6 +1,6 @@
 <template>
     <div class="intro">
-        <img src="~\assets\img\AboutUs.png">
+        <img id="aboutUs" src="~\assets\img\AboutUs.png">
         <div class="intro-description">
             <h1>Empowering Entrepreneurs<br>Powering Progress</h1>
             <h3>NOVA, a venture capital company<br>help you START and GROW your business</h3>
@@ -15,38 +15,72 @@
     </div>
     <div>
         <div>
-            <h2 id="project-title">Co-Founders</h2>
+            <h2 id="founder-title">Co-Founders</h2>
         </div>
-        <div class="card-container" v-for="founder in founders">
-            <div class="slogan">
-                “As an expert in both Education and Art I am dedicated to fostering creativity and knowledge through innovative approaches.”
+        <div v-for="founder in founders">
+            <div class="founder-container" v-bind:style=" founders.indexOf(founder) % 2 === 1 ? {'flex-direction': 'row-reverse'} : {'flex-direction': 'row'}">
+                <PersonCard :key="founder.id" :name="founder.name" :surname="founder.surname" :area="founder.area" :isFounder="founder.isFounder" :link="'/ourTeam/' + founder.id"/>
+                <div class="slogan">
+                    “As an expert in both Education and Art I am dedicated to fostering creativity and knowledge through innovative approaches.”
+                </div>
             </div>
-            <PersonCard :key="founder.id" :name="founder.name" :surname="founder.surname" :area="founder.area" :link="'/ourTeam/' + founder.id"/>
         </div>
     </div>
-    
 </template>
 
 <style>
 
-    .intro img{
+    #aboutUs {
         margin-top: 0;
         filter: brightness(70%); 
         opacity: 90%;
     }
 
-    #project-title{
-        border-top: solid 4px #F26225;
-        width: fit-content;
+    #founder-title{
         margin-top: 240px;
     }
 
-    .card-container{
+    .founder-container{
         width: 1120px;
+        display: flex;
+        margin: 64px 0;
+        gap: 256px;
     }
 
-    .slogan{
-        margin-right: 256px;
+    .founder-container .person-card{
+        width: 384px;
+        height: 600px;
+    }
+
+    .founder-container .person-card .main-img{
+        width: 384px;
+        height: 408px;
+    }
+
+    .founder-container .person-card .person-name-surname{
+        font-size: 36px;
+        width: max-content;
+    }
+
+    .founder-container .person-card .person-founderTag{
+        font-size: 24px; 
+        top: 8px; 
+        right: -100px;
+    }
+
+    .founder-container .person-card .person-expertiseInfo{
+        font-size: 24px;
+    }
+
+    .founder-container .person-card .data-container{
+        padding: 32px;
+    }
+
+    .founder-container .person-card .area-container{
+        font-size: 24px;
+    }
+
+    .founder-container .slogan{
         margin-top: 224px;
     }
 

@@ -23,7 +23,6 @@
     width: fit-content;
     margin-top: 96px;
     padding-bottom: 80px;
-    border-bottom: 4px solid #F26225;
     font-size: 24px;
   }
 

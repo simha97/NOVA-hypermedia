@@ -3,7 +3,7 @@
       <img class="main-img" alt="picture" src="~\assets\img\youngwoman2.png">
       <div class="data-container">
         <div class="person-name-surname">{{ name }} {{surname }}</div>
-        <div class="person-founderTag" v-if="isFounder == true">Founder</div>
+        <b><div class="person-founderTag" v-if="isFounder == true">Founder</div></b>
         <div class="person-expertiseInfo">Expert in
           <div class="person-areaTag">
             <div v-for="element in area.split(',')" class="area-container"> 
@@ -34,7 +34,7 @@
   }
 
   .person-card .data-container{
-    padding: 8px 16px;
+    padding: 16px;
     position: relative; 
     width: 256px;
     height: 128px;
@@ -48,7 +48,7 @@
   .person-founderTag{
     font-size: 18px; 
     position: absolute;
-    top: 12px; 
+    top: 18px; 
     right: 16px;
     font-style: bold;
   }
@@ -78,6 +78,7 @@
     position:relative;
     text-align: center;
     margin-right: 8px;
+    font-size: 16px;
   }
 
 </style>

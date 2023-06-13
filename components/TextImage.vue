@@ -38,10 +38,6 @@
 </script>
 
 <style>
-    .main-img {
-        width: 30%;
-        height: auto;
-    }
 
     .info-group {
         width: 100%;

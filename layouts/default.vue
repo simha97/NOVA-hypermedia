@@ -24,7 +24,6 @@
     font-family: "Helvetica Light";
     font-size: 48px;
     letter-spacing: 1px;
-    width: 1120px;
   }
 
   h2 {
@@ -33,7 +32,8 @@
     font-family: "Myriad Pro Light";
     padding-top: 16px;
     font-size: 36px;
-    width: 1120px;
+    width: fit-content;
+    border-top: 4px solid #F26225;
   }
 
   h3 {

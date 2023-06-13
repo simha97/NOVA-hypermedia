@@ -48,11 +48,6 @@
     margin: 0 0 320px 0;
   }
 
-  #project-title{
-    border-top: solid 4px #F26225;
-    width: fit-content;
-  }
-
   .person-container img{
     width: 464px;
     height: 608px;
