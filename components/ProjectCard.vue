@@ -45,11 +45,11 @@
     border-radius: 8px;
     padding: 4px 8px 4px 8px;
     width: fit-content;
+    text-align: center;
+    transition: background-color .3s ease-in-out;
     position: absolute;
     top: 168px;
     right: 16px;
-    text-align: center;
-    transition: background-color .3s ease-in-out;
   }
 
   .project-card .data-container {
@@ -59,17 +59,17 @@
     font-size: 16px;
   }
 
-  .data-container .project-title {
+  .project-card .project-title {
     font-size: 22px; 
     display: block;
     width: 352px;
   }
 
-  .data-container .project-mainIdea {
+  .project-card .project-mainIdea {
     padding-top: 16px;
   }
 
-  .data-container .icon{
+  .project-card .icon{
     display: inline-block;
     height: 16px;
     width: 16px;
@@ -78,7 +78,7 @@
     margin-top: 16px;
   }
 
-  .data-container .project-city {
+  .project-card .project-city {
     margin-top: -26px; 
     margin-left: 20px;
   }

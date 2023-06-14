@@ -4,11 +4,11 @@
     </div>
     <div>
         <h2>Main Projects</h2>        
-        <h3>This are the projects we believe in most.</h3>
+        <h3>Discover our main projects.</h3>
     </div>
     <div class="card-container">
         <div v-for="project in projects">
-            <ProjectCard  :key="project.id" :title="project.projectTitle" :city="project.city" :mainIdea="project.mainIdea" :area="project.area" :link="'/projects/' + project.id" />            
+            <BigProjectCard  :key="project.id" :title="project.projectTitle" :city="project.city" :mainIdea="project.mainIdea" :area="project.area" :link="'/projects/' + project.id" />            
         </div>
     </div>
 </template>

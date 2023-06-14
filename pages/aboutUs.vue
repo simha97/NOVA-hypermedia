@@ -1,5 +1,6 @@
 <template>
     <div class="intro">
+        <img class="shadow" src="~\assets\img\pageShadow.png">
         <img id="aboutUs" src="~\assets\img\AboutUs.png">
         <div class="intro-description">
             <h1>Empowering Entrepreneurs<br>Powering Progress</h1>
@@ -13,11 +14,11 @@
         <h2>About Us</h2>
         <h3>Our journey began with a shared passion for fostering entrepreneurship and driving positive change. We recognized the immense value of transformative ideas and the need for strategic capital to bring them to life. With this vision in mind, we set out to build a platform that not only provides financial support but also serves as a strategic partner and mentor to our portfolio companies.</h3>
     </div>
-    <div class="scroll-container" @wheel="ScrollPictures($event)">
-        <img src="~\assets\img\AboutUsScroll.png">
-        <img src="~\assets\img\AboutUsScroll.png">
-        <img src="~\assets\img\AboutUsScroll.png">
-        <img src="~\assets\img\AboutUsScroll.png">
+    <div class="scroll-container" @wheel="ScrollPictures($event)" >
+        <img src="~\assets\img\AboutUsScroll.png" @click="clickPicture()">
+        <img src="~\assets\img\AboutUsScroll.png" @click="clickPicture()">
+        <img src="~\assets\img\AboutUsScroll.png" @click="clickPicture()">
+        <img src="~\assets\img\AboutUsScroll.png" @click="clickPicture()">
     </div>
     <div>
         <h2 id="founder-title">Co-Founders</h2>
@@ -36,8 +37,11 @@
 
     #aboutUs {
         margin-top: 0;
-        filter: brightness(70%); 
-        opacity: 90%;
+    }
+
+    .intro .shadow{
+        width: 1440px;
+        height: 648px;
     }
 
     .scroll-container{
@@ -109,6 +113,7 @@
         methods: {
             ScrollPictures(event) {
                 event.currentTarget.scrollLeft += event.deltaX
+                console.log([event.deltX, event.target.scrollLeft])
             }
         }
     }

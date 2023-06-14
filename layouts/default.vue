@@ -102,7 +102,10 @@
         padding: 20px;
     }
 
-
+    .shadow{
+        position: absolute;
+    }
+    
     @media (max-width: 768px) {
     /* Styles for tablets and smaller devices */
 
