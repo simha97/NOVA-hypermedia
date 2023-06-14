@@ -31,21 +31,6 @@
     </div> 
 </template>
 
-<script>
-  export default {
-    data () {
-      return {
-        active: true
-      }
-    },
-    methods: {
-      toggle () {
-        this.active = !this.active
-      }
-    }
-  }
-</script>
-
 <style>
     .nav-container{
         background-color: #F5F5F5;

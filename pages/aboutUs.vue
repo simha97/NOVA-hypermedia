@@ -13,16 +13,20 @@
         <h2>About Us</h2>
         <h3>Our journey began with a shared passion for fostering entrepreneurship and driving positive change. We recognized the immense value of transformative ideas and the need for strategic capital to bring them to life. With this vision in mind, we set out to build a platform that not only provides financial support but also serves as a strategic partner and mentor to our portfolio companies.</h3>
     </div>
+    <div class="scroll-container" @wheel="ScrollPictures($event)">
+        <img src="~\assets\img\AboutUsScroll.png">
+        <img src="~\assets\img\AboutUsScroll.png">
+        <img src="~\assets\img\AboutUsScroll.png">
+        <img src="~\assets\img\AboutUsScroll.png">
+    </div>
     <div>
-        <div>
-            <h2 id="founder-title">Co-Founders</h2>
-        </div>
-        <div v-for="founder in founders">
-            <div class="founder-container" v-bind:style=" founders.indexOf(founder) % 2 === 1 ? {'flex-direction': 'row-reverse'} : {'flex-direction': 'row'}">
-                <PersonCard :key="founder.id" :name="founder.name" :surname="founder.surname" :area="founder.area" :isFounder="founder.isFounder" :link="'/ourTeam/' + founder.id"/>
-                <div class="slogan">
-                    “As an expert in both Education and Art I am dedicated to fostering creativity and knowledge through innovative approaches.”
-                </div>
+        <h2 id="founder-title">Co-Founders</h2>
+    </div>
+    <div v-for="founder in founders">
+        <div class="founder-container" v-bind:style=" founders.indexOf(founder) % 2 === 1 ? {'flex-direction': 'row-reverse'} : {'flex-direction': 'row'}">
+            <PersonCard :key="founder.id" :name="founder.name" :surname="founder.surname" :area="founder.area" :isFounder="founder.isFounder" :link="'/ourTeam/' + founder.id"/>
+            <div class="slogan">
+                “As an expert in both Education and Art I am dedicated to fostering creativity and knowledge through innovative approaches.”
             </div>
         </div>
     </div>
@@ -36,8 +40,15 @@
         opacity: 90%;
     }
 
-    #founder-title{
-        margin-top: 240px;
+    .scroll-container{
+        display: flex;
+        overflow: hidden;
+        height: 400px;
+        gap: 32px;
+        margin-left: -128px;
+        margin-top: 64px;
+        margin-bottom: 240px;
+        margin-right: 32px;
     }
 
     .founder-container{
@@ -89,5 +100,17 @@
 <script setup>
 
     const { data: founders } = await useFetch('/api/ourTeam/founders')
+    
+</script>
+
+<script>
+
+    export default {
+        methods: {
+            ScrollPictures(event) {
+                event.currentTarget.scrollLeft += event.deltaX
+            }
+        }
+    }
     
 </script>
