@@ -15,7 +15,6 @@ As usual, the first things to do are:
     to automatically open your project in a new tab of your browser.
 
 TO DO:
-- finish aboutUS page
 - finish ContaactUs page
 - finish id project page
 - finish Home page

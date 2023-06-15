@@ -37,12 +37,14 @@
     height: 480px;
     color: white;
     transition: .5s ease-in-out;
+    pointer-events: none;
   }
     
   #big-picture{
     width: 1120px; 
     height: 480px;
     border-radius: 8px;  
+    pointer-events: auto;
   }
 
   .big-project-card .data-container {
@@ -56,8 +58,6 @@
 
   .shown-data{
     display: flex;
-    height: 96px;
-    transition: height 5s ease;
   }
 
   .shown-data #small-logo{
@@ -88,9 +88,7 @@
   .hidden-data{
     margin-left: 112px;
     opacity: 0%;
-    transition: all 5s linear, opacity .3s ease;
-    position: absolute;
-    margin-top: -320px;
+    transition: opacity .3s ease;
   }
 
   .big-project-card #icon-white{
@@ -135,19 +133,12 @@
     margin-top: 56px;
   }
 
-  .big-project-card:hover .shown-data{ 
-    height: 160px;
-    transition: height .0s ease;
-  }
-
   .big-project-card:hover .hidden-data{ 
     opacity: 100%;
     transition: opacity .8s ease-in;
-    position: relative;
-    margin-top: 0px;
   }
 
-  .big-project-card a{
+  .hidden-data a{
     color: #F26225;
     font-style: italic;
     position: absolute;
@@ -155,7 +146,11 @@
     margin-left: 568px;
   }
 
-  .big-project-card a:hover{
+  .big-project-card:hover .hidden-data{
+    pointer-events: auto;
+  }
+
+  .big-project-card:hover .hidden-data a:hover{
     color: #F26225;
     text-decoration: underline;
   }

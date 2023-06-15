@@ -72,6 +72,7 @@
     position:relative;
     margin-right: 8px;
     font-size: 16px;
+    transition: background-color .3s ease-in-out;
   }
 
 </style>

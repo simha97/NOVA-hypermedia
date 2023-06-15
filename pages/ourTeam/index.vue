@@ -43,6 +43,10 @@
         background-color: #282E36;
     }
 
+    #card:hover .area-container{
+        background-color: #282E36;
+    }
+
     @media screen and (max-width: 830px) {
         .intro {
             width:  700px;
