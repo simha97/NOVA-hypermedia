@@ -10,8 +10,11 @@
         <div >{{ area }}</div>
       </div>
     </div>
-    <img class="shadow" src="~\assets\img\bigProjectShadow.png">
-    <img alt="picture" v-bind:src="'/_nuxt/LogoPng/' + title + '_Big.png'" id="big-picture">
+    <div class="big-project-picture">
+      <img class="shadow" src="~\assets\img\bigProjectShadow.png" id="start-shadow">
+      <img class="shadow" src="~\assets\img\bigProjectShadow.png" id="end-shadow">
+      <img alt="picture" v-bind:src="'/_nuxt/LogoPng/' + title + '_Big.png'" id="big-picture">
+    </div>
   </div>
 </template>
   
@@ -24,7 +27,7 @@
     transition: .3s ease-in-out;
   }
     
-  .big-project-card #big-picture{
+  #big-picture{
     width: 1120px; 
     height: 480px;
     border-radius: 8px;  

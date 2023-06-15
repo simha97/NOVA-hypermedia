@@ -27,7 +27,7 @@
     border-radius: 4px;
   }
   
-  .project-card #logo{
+  #logo{
     width: 352px; 
     height: 352px;
     border-top-right-radius: 4px;  
@@ -72,11 +72,6 @@
   }
 
   .project-card:hover{
-    background-color: #282E36;
-    color:white;
-  }
-
-  .project-card #logo:hover{
     background-color: #282E36;
     color:white;
   }
