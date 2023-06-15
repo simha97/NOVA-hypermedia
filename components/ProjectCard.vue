@@ -3,7 +3,7 @@
     <div class="project-card" >
       <img class="main-img" id="logo" v-bind:src="'/_nuxt/LogoPng/' + title + '.png'">
       <div class="data-container">
-        <b><div class="project-title">{{ title }}</div></b>
+        <div class="project-title">{{ title }}</div>
         <div class="project-mainIdea">{{ mainIdea }}</div>
         <div class="icon-text">
           <img src="~\assets\icons\location-pin-dark.png" id="icon-dark">
@@ -54,6 +54,7 @@
   .project-card .project-title {
     font-size: 22px; 
     width: 352px;
+    font-weight: bold;
   }
 
   .project-card .project-mainIdea {

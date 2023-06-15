@@ -4,7 +4,7 @@
       <div class="shown-data">
         <img v-bind:src="'/_nuxt/LogoPng/' + title + '_Icon.png'" id="small-logo">
         <div>
-          <b><div class="project-title">{{ title }}</div></b>
+          <div class="project-title">{{ title }}</div>
           <div class="project-description">{{ slogan }}</div>
         </div>
         <div class="area-container">
@@ -17,7 +17,7 @@
           <img src="~\assets\icons\location-pin-white.png" id="icon-white">
           {{ city }}
         </div>
-        <NuxtLink :to = link><b>Show me more</b></NuxtLink>
+        <NuxtLink :to = link>Show me more</NuxtLink>
         <div class="icon-text">
           <img src="~\assets\icons\date.png" id="icon-date">
           {{ date }}
@@ -71,6 +71,7 @@
     margin-bottom: 4px;
     font-size: 36px;
     width: 768px;
+    font-weight: bold;
   }
 
   .big-project-card .area-container {
@@ -141,6 +142,7 @@
   .hidden-data a{
     color: #F26225;
     font-style: italic;
+    font-weight: bold;
     position: absolute;
     margin-top: 8px;
     margin-left: 568px;

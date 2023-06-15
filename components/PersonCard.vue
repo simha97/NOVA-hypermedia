@@ -3,7 +3,7 @@
       <img alt="picture" src="~\assets\img\youngwoman2.png" id="profile">
       <div class="data-container">
         <div class="person-name-surname">{{ name }} {{surname }}</div>
-        <b><div class="person-founderTag" v-if="isFounder == true">Founder</div></b>
+        <div class="person-founderTag" v-if="isFounder == true">Founder</div>
         <div class="person-expertiseInfo">Expert in
           <div class="person-areaTag">
             <div v-for="element in area.split(',')" class="area-container"> 
@@ -45,7 +45,7 @@
     position: absolute;
     top: 18px; 
     right: 16px;
-    font-style: bold;
+    font-weight: bold;
   }
 
   .person-expertiseInfo{
