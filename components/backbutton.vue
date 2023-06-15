@@ -17,6 +17,7 @@
     border-radius: 8px;
     width: 176px;
     height: 64px;
+    transition: box-shadow .3s ease-in-out;
   }
 
   .arrow {
@@ -34,10 +35,16 @@
     font-family: 'Myriad Pro';
     margin-left: 8px;
     margin-top: 8px;
+    border-bottom: solid 3px white;
+    transition: border-color .3s ease-in-out;
+  }
+
+  .back-button:hover{
+    box-shadow: 0 2px 4px 0 #F26225;
   }
 
   .back-button:hover .back-text{
-    text-decoration: underline;
+    border-color: #F26225;
   }
 
 </style>
