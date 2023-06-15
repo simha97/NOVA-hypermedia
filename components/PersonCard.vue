@@ -1,6 +1,6 @@
 <template>
     <div class="person-card">
-      <img class="main-img" alt="picture" src="~\assets\img\youngwoman2.png">
+      <img alt="picture" src="~\assets\img\youngwoman2.png" id="profile">
       <div class="data-container">
         <div class="person-name-surname">{{ name }} {{surname }}</div>
         <b><div class="person-founderTag" v-if="isFounder == true">Founder</div></b>
@@ -14,11 +14,6 @@
       </div>
     </div>
 </template>
-
-<script setup>
-  const props = defineProps(['name', 'surname', 'isFounder', 'area', 'link']);
-
-</script>
 
 <style>
 
@@ -63,7 +58,7 @@
     display: flex;
   }
 
-  .person-card .main-img{
+  #profile{
     height: 272px;
     width: 256px;
     border-top-right-radius: 4px;  
@@ -82,3 +77,9 @@
   }
 
 </style>
+
+<script setup>
+
+  const props = defineProps(['name', 'surname', 'isFounder', 'area', 'link']);
+
+</script>

@@ -1,7 +1,7 @@
 <template>
   <NuxtLink :to = "link">
     <div class="project-card" >
-      <img class="main-img" alt="logo" v-bind:src="'/_nuxt/LogoPng/' + title + '.png'">
+      <img class="main-img" id="logo" v-bind:src="'/_nuxt/LogoPng/' + title + '.png'">
       <div class="data-container">
         <b><div class="project-title">{{ title }}</div></b>
         <div class="project-mainIdea">{{ mainIdea }}</div>
@@ -15,11 +15,6 @@
   </NuxtLink>
 </template>
 
-<script setup>
-  const props = defineProps(['title', 'mainIdea', 'city', 'area', 'link']);
-
-</script>
-
 <style>
 
   .project-card {
@@ -32,7 +27,7 @@
     border-radius: 4px;
   }
   
-  .project-card .main-img{
+  .project-card #logo{
     width: 352px; 
     height: 352px;
     border-top-right-radius: 4px;  
@@ -40,12 +35,6 @@
   }
   
   .project-card .area-container {
-    background-color: #f5f5f5;
-    color: #282E36;
-    border-radius: 8px;
-    padding: 4px 8px 4px 8px;
-    width: fit-content;
-    text-align: center;
     transition: background-color .3s ease-in-out;
     position: absolute;
     top: 168px;
@@ -61,7 +50,6 @@
 
   .project-card .project-title {
     font-size: 22px; 
-    display: block;
     width: 352px;
   }
 
@@ -88,7 +76,7 @@
     color:white;
   }
 
-  .project-card .main-img:hover{
+  .project-card #logo:hover{
     background-color: #282E36;
     color:white;
   }
@@ -98,3 +86,9 @@
   }
 
 </style>
+
+<script setup>
+
+  const props = defineProps(['title', 'mainIdea', 'city', 'area', 'link']);
+
+</script>

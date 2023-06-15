@@ -1,7 +1,7 @@
 <template>
   <button class="back-button" @click="goBack">
     <span class="arrow"></span>
-    <span class="text">{{ text }}</span>
+    <span class="back-text">{{ text }}</span>
   </button>
 </template>
 
@@ -10,6 +10,7 @@
 </script>
 
 <style>
+
   .back-button {
     border: 1px solid #F26225;
     background: #FFFFFF;
@@ -27,7 +28,7 @@
     transform: rotate(-45deg);
   }
 
-  .text {
+  .back-text {
     font-size: 24px;
     color:#F26225;
     font-family: 'Myriad Pro';
@@ -35,7 +36,7 @@
     margin-top: 8px;
   }
 
-  .back-button:hover .text{
+  .back-button:hover .back-text{
     text-decoration: underline;
   }
 

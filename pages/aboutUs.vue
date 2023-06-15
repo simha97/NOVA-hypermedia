@@ -67,7 +67,7 @@
         height: 600px;
     }
 
-    .founder-container .person-card .main-img{
+    .founder-container .person-card #profile{
         width: 384px;
         height: 408px;
     }

@@ -13,7 +13,7 @@
         {title:'Academic Experience', description: person.degree}, 
         {title:'Past Job Experience', description: person.pastJobExperience}]"/>
     </div>
-    <img src="~\assets\img\youngWoman.png">
+    <img src="~\assets\img\youngWoman.png" id="person">
     <div v-if="person.isFounder == true">
       <img src="~\assets\img\founder.png" id="founder">
     </div>
@@ -48,7 +48,7 @@
     margin: 0 0 320px 0;
   }
 
-  .person-container img{
+  #person{
     width: 464px;
     height: 608px;
     border-radius: 8px;

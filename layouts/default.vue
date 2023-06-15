@@ -18,6 +18,13 @@
   .content-container {    
     margin-left: 160px;
   }
+  
+  main {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-content: flex-start;
+  }
 
   h1 {
     src:url('/font/helvetica-light.ttf') format("truetype");
@@ -44,6 +51,19 @@
     font-size: 24px;
     width: 1120px;
   }
+  
+  a{
+    color:#282E36;
+    src:url('/font/Myriad\ Pro\ Regular.ttf') format("truetype");
+    font-family: "Myriad Pro Regular";
+    font-size: 24px;
+    width: max-content;
+  }
+
+  a:hover{
+    color:#282E36;
+    text-decoration: none;
+  }
 
   .card-container{
     display: flex ;
@@ -53,13 +73,6 @@
     row-gap: 80px;
     margin-top: 96px;
     margin-bottom: 320px;
-  }
-  
-  main {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-content: flex-start;
   }
 
   .intro{
@@ -88,6 +101,15 @@
     width: 576px;
   }
 
+  .area-container {
+      background-color: #f5f5f5;
+      color: #282E36;
+      border-radius: 8px;
+      padding: 4px 8px 4px 8px;
+      width: fit-content;
+      text-align: center;
+  }
+
   .form-container {
         width: 90%;
         border-radius: 10px;
@@ -97,7 +119,6 @@
         justify-content: space-evenly;
         align-content: flex-start;
         gap: 20px;
-
         background-color: burlywood;
         padding: 20px;
     }

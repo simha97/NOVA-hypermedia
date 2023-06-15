@@ -30,12 +30,12 @@
         height: 648px;
     }
 
-    #card .main-img{    
+    #card #profile{    
         transition: filter .3s ease-in-out;
         filter: grayscale(100%); 
     }
     
-    #card:hover .main-img{
+    #card:hover #profile{
         filter: none;
     }
 

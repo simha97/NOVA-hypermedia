@@ -92,19 +92,6 @@
         display:block;
         text-decoration: underline;
     }
-    
-    a{
-        color:#282E36;
-        src:url('/font/Myriad\ Pro\ Regular.ttf') format("truetype");
-        font-family: "Myriad Pro Regular";
-        font-size: 24px;
-        width: max-content;
-    }
-
-    a:hover{
-        color:#282E36;
-        text-decoration: none;
-    }
 
     @media (max-width: 830px) {
         .nav-container{
