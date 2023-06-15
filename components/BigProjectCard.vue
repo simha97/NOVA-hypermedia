@@ -10,11 +10,9 @@
         <div >{{ area }}</div>
       </div>
     </div>
-    <div class="big-project-picture">
-      <img class="shadow" src="~\assets\img\bigProjectShadow.png" id="start-shadow">
-      <img class="shadow" src="~\assets\img\bigProjectShadow.png" id="end-shadow">
-      <img alt="picture" v-bind:src="'/_nuxt/LogoPng/' + title + '_Big.png'" id="big-picture">
-    </div>
+    <img class="shadow" src="~\assets\img\bigProjectShadow.png" id="start-shadow">
+    <img class="shadow" src="~\assets\img\bigProjectHoverShadow.png" id="end-shadow">
+    <img alt="picture" v-bind:src="'/_nuxt/LogoPng/' + title + '_Big.png'" id="big-picture">
   </div>
 </template>
   
@@ -59,6 +57,24 @@
     height: 32px;
     position: absolute;
     right: -104px;
+  }
+
+  #start-shadow{
+    opacity: 100%;
+    transition: opacity .5s ease-in-out;
+  }
+
+  #end-shadow{
+    opacity: 0%;
+    transition: opacity .5s ease-in-out;
+  }
+
+  .big-project-card:hover #start-shadow{
+    opacity: 0%;
+  }
+
+  .big-project-card:hover #end-shadow{
+    opacity: 100%;
   }
 
 </style>
