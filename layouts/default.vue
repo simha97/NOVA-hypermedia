@@ -18,7 +18,7 @@
   .content-container {    
     margin-left: 160px;
   }
-  
+
   main {
     display: flex;
     flex-direction: column;
@@ -27,7 +27,6 @@
   }
 
   h1 {
-    src:url('/font/helvetica-light.ttf') format("truetype");
     font-family: "Helvetica Light";
     font-size: 48px;
     letter-spacing: 1px;
@@ -35,8 +34,7 @@
 
   h2 {
     position: relative;
-    src:url('/font/Myriad\ Pro\ Light.ttf') format("truetype");
-    font-family: "Myriad Pro Light";
+    font-family: "Myriad-Pro-Light";
     padding-top: 16px;
     font-size: 36px;
     width: fit-content;
@@ -45,8 +43,7 @@
 
   h3 {
     position: relative;
-    src:url('/font/Myriad\ Pro\ Regular.ttf') format("truetype");
-    font-family: "Myriad Pro Regular";
+    font-family: "Myriad-Pro-Regular";
     padding-top: 16px;
     font-size: 24px;
     width: 1120px;
@@ -54,10 +51,14 @@
   
   a{
     color:#282E36;
-    src:url('/font/Myriad\ Pro\ Regular.ttf') format("truetype");
-    font-family: "Myriad Pro Regular";
+    font-family: "Myriad-Pro-Regular";
     font-size: 24px;
     width: max-content;
+  }
+
+  p, ul li {
+    font-family: "Myriad-Pro-Regular";
+    font-size: 18px;
   }
 
   a:hover{
@@ -87,7 +88,7 @@
   .intro-description{
     color: white;
     position: absolute;
-    margin-top: -248px;
+    margin-top: -260px;
   }
 
   .slogan{
@@ -95,8 +96,7 @@
     padding-top: 16px;
     font-size: 24px;
     font-style: italic;
-    src:url('/font/helvetica-light.ttf') format("truetype");
-    font-family: "Helvetica Light";
+    font-family: "Helvetica-Light";
     width: 576px;
   }
 

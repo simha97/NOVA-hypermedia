@@ -37,7 +37,7 @@
 
   .person-name-surname{
     font-size: 24px;
-    font-family: 'Myriad Pro Light';
+    font-family: 'Myriad-Pro-Light';
   }
 
   .person-founderTag{
@@ -50,7 +50,7 @@
 
   .person-expertiseInfo{
     font-size: 18px;
-    font-family: 'Myriad Pro Light';
+    font-family: 'Myriad-Pro-Light';
   }
 
   .person-areaTag{

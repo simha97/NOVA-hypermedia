@@ -55,8 +55,7 @@
   .areas-container{
     margin-top: 96px;
     font-size: 24px;
-    src:url('/font/Myriad\ Pro\ Regular.ttf') format("truetype");
-    font-family: "Myriad Pro Regular";
+    font-family: "Myriad-Pro-Regular";
   }
 
   .areas-selector{
@@ -68,7 +67,9 @@
     text-align: center;
     padding: 16px;
   }
-
+  .area-button:hover{
+    box-shadow: 1px 1px 2px 0 #282E36;
+  }
   .active-area-button{
     width: 160px;
     height: 64px;

@@ -6,7 +6,7 @@
         <img id="home" src="~\assets\img\Home.png">
         <div class="intro-description">
             <h1>Empowering Entrepreneurs<br>Powering Progress</h1>
-            <h3>NOVA, a venture capital company<br>help you START and GROW your business</h3>
+            <h3>NOVA, a venture capital company<br>help you <span>START</span> and <span>GROW</span> your business</h3>
         </div>
     </div>
     <div>
@@ -82,6 +82,14 @@
         border-radius: 8px;
     }
 
+    .intro-description{
+        margin-top: -262px;
+    }
+
+    h3 span {
+        font-family: 'Myriad-Pro-Bold';
+    }
+
     .blank-container{
         width: 352px;
         height: 248px;
@@ -96,7 +104,7 @@
 
     .how-we-work-description{
         font-size: 16px;
-        font-family: 'Myriad Pro Regular';
+        font-family: 'Myriad-Pro-Regular';
         margin-top: 8px;
         text-align: justify;
     }

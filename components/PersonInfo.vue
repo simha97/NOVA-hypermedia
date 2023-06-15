@@ -28,8 +28,7 @@
   .person-info-data{
     display: flex;
     margin-bottom: 32px;
-    src:url('/font/Myriad\ Pro\ Regular.ttf') format("truetype");
-    font-family: "Myriad Pro Regular";
+    font-family: "Myriad-Pro-Regular";
   }
 
   #bullet{

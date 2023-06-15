@@ -61,7 +61,7 @@
   position: absolute;
   }
   .list4 {
-    list-style: url('~/assets/icons/location-pin.png');
+    list-style: url('~/assets/icons/location-pin-white.png');
   }
   .social-media{
     padding: 20px;

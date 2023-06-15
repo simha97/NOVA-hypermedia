@@ -113,44 +113,5 @@
             text-indent:10px;
 
         }
-        /*
-        .dropdown{
-            display: inline-block;
-            position: relative;
-        }
-
-        .dropdown-sub{
-            display: none;
-            position: absolute;
-            background-color: #F5F5F5;
-            width: 100%;
-            overflow: auto;
-            text-indent: initial;
-            box-shadow: 0px 10px 10px 0px rgba(0,0,0,0.7);
-        }
-
-        .dropdown:hover .dropdown-sub {
-            display: block;
-            border: solid 1px #282E36;
-            border-radius: 8px;
-        }
-
-        .dropdown:hover .dropdown-sub .dropdown-option:hover{
-            display:block;
-            background-color: #abcdef;
-        }
-        
-        a{
-            color:#282E36;
-            src:url('/font/Myriad\ Pro\ Regular.ttf') format("truetype");
-            font-family: "Myriad Pro Regular";
-            font-size: 16px;
-            width: max-content;
-        }
-
-        a:hover{
-            color:#282E36;
-            text-decoration: none;
-        }*/
     }
 </style>
