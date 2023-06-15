@@ -5,8 +5,11 @@
       <div class="data-container">
         <b><div class="project-title">{{ title }}</div></b>
         <div class="project-mainIdea">{{ mainIdea }}</div>
-        <div class="icon"></div>
-        <div class="project-city">{{ city }}</div>
+        <div class="project-city">
+          <img src="~\assets\icons\location-pin-dark.png" id="icon-dark">
+          <img src="~\assets\icons\location-pin-white.png" id="icon-white">
+          {{ city }}
+        </div>
         <div class="area-container">
           <div >{{ area }}</div>
         </div>
@@ -57,18 +60,27 @@
     padding-top: 16px;
   }
 
-  .project-card .icon{
-    display: inline-block;
-    height: 16px;
-    width: 16px;
-    transition: .3s ease-in-out;
-    background: url(../assets/icons/location-pin-dark.png) no-repeat;
-    margin-top: 16px;
+  .project-card .project-city {
+    display: flex;
+    margin-top: 8px;
+    align-items: center;
   }
 
-  .project-card .project-city {
-    margin-top: -26px; 
-    margin-left: 20px;
+  #icon-dark{
+    position: absolute;
+    height: 16px;
+    width: 16px;
+    margin-right: 4px;
+    opacity: 100%;
+    transition: opacity .3s ease-in-out;
+  }
+
+  #icon-white{
+    height: 16px;
+    width: 16px;
+    margin-right: 4px;
+    opacity: 0%;
+    transition: opacity .3s ease-in-out;
   }
 
   .project-card:hover{
@@ -76,8 +88,12 @@
     color:white;
   }
 
-  .project-card:hover .icon{
-    background: url(../assets/icons/location-pin-white.png) no-repeat;
+  .project-card:hover #icon-dark{
+    opacity: 0%;
+  }
+
+  .project-card:hover #icon-white{
+    opacity: 100%;
   }
 
 </style>

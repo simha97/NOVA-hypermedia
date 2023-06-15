@@ -66,12 +66,10 @@
   }
 
   .person-card .area-container {
+    background-color: #F26225;
+    color: white;
     border: solid 1px white;
-    border-radius: 8px;
-    padding: 4px 8px 4px 8px;
-    width: fit-content;
     position:relative;
-    text-align: center;
     margin-right: 8px;
     font-size: 16px;
   }
