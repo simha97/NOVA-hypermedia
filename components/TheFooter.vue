@@ -32,7 +32,7 @@
         background-color: #282E36;
         flex-shrink: 0;
         text-align: left;
-        margin-top: auto;
+        margin-top: 240px;
         padding: 10px;
         min-height: 1vh;
     }

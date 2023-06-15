@@ -72,7 +72,6 @@
     column-gap: 32px;
     row-gap: 80px;
     margin-top: 96px;
-    margin-bottom: 320px;
   }
 
   .intro{
@@ -130,6 +129,10 @@
 
     .shadow{
         position: absolute;
+    }
+
+    .goBack-container{
+      margin-top: 240px;
     }
     
     @media (max-width: 768px) {

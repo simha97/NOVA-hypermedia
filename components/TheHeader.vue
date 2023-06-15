@@ -1,7 +1,3 @@
-<!--
-    Header of the page
--->
-
 <template>
     <div class="nav-container">
         <NuxtLink to="/" ><img src="/logo.svg" alt="logo nova" style="position: relative; left: 56px; width: 160px;"/></NuxtLink>
@@ -9,7 +5,7 @@
             <span class="nav-item">
                 <div class="dropdown"><NuxtLink to="/projects">PROJECTS</NuxtLink>
                     <div class="dropdown-sub">
-                        <div class="dropdown-option"><NuxtLink to="/projects/main-projects" >MAIN PROJECTS</NuxtLink></div>
+                        <div class="dropdown-option"><NuxtLink to="/projects/mainProjects" >MAIN PROJECTS</NuxtLink></div>
                         <div class="dropdown-option"><NuxtLink to="/projects" >ALL PROJECTS</NuxtLink></div>
                     </div>
                 </div>

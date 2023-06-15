@@ -1,6 +1,6 @@
 <template>
     <div>
-        <Breadcrumb :links="[{bread:'Home', goTo: '/'}, {bread:'Projects', goTo: '/projects'}, {bread:'Main Projects', goTo: '/projects/main-projects'}]"/>
+        <Breadcrumb :links="[{bread:'Home', goTo: '/'}, {bread:'Projects', goTo: '/projects'}, {bread:'Main Projects', goTo: '/projects/mainProjects'}]"/>
     </div>
     <div>
         <h2>Main Projects</h2>        
@@ -15,6 +15,6 @@
 
 <script setup>
 
-    const { data: projects } = await useFetch('/api/projects/main-projects')
+    const { data: projects } = await useFetch('/api/projects/mainProjects')
     
 </script>

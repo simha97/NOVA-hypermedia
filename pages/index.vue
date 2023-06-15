@@ -39,6 +39,20 @@
             <div class="how-we-work-description">Our experienced team help you navigate challenges and make informed decisions. Drawing on our expertise, industry insights, and vast network, we assist you in refining your business strategies.</div>
         </div>
     </div>
+    <div class="smart-links-container">
+        <div class="smart-link">
+            <LinkInfo :link="{question:'Want to Meet Our Experts?', title:'Find in Our Team', page:'/ourTeam'}"/>
+        </div>
+        <div class="smart-link">
+            <LinkInfo :link="{question:'Curious about Our Areas of focus?', title:'Find in Areas', page:'/areas/Art'}"/>
+        </div>
+        <div class="smart-link">
+            <LinkInfo :link="{question:'Interested in Our Main Projects?', title:'Find in Main Projects', page:'/projects/mainProjects'}"/>
+        </div>
+        <div class="smart-link">
+            <LinkInfo :link="{question:'Learn more About Our Services?', title:'Find in Contact Us', page:'/contactUs'}"/>
+        </div>
+    </div>
 </template>
 
 <style>
@@ -52,11 +66,20 @@
         row-gap: 24px;
     }
 
+    .smart-links-container{
+        display: flex;
+        gap: 32px;
+        margin-top: 96px;
+        border-top: solid 1px #D8D8D8;
+        width:1122px;
+    }
+
     .text-container{
         width: 352px;
         height: 248px;
         padding: 24px;
         background-color: white;
+        border-radius: 8px;
     }
 
     .blank-container{
@@ -80,6 +103,12 @@
 
     #curved-arrow{
         margin-top: 68px
+    }
+
+    .smart-link{
+        margin-top: 80px;
+        height: 104px;
+        width: 256px;
     }
 
 </style>
