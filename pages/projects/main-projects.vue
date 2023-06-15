@@ -8,7 +8,7 @@
     </div>
     <div class="card-container">
         <div v-for="project in projects">
-            <BigProjectCard  :key="project.id" :title="project.projectTitle" :city="project.city" :slogan="project.slogan" :area="project.area" :link="'/projects/' + project.id" />            
+            <BigProjectCard  :key="project.id" :title="project.projectTitle" :city="project.city" :slogan="project.slogan" :area="project.area" :mainIdea="project.mainIdea" :date="project.date" :link="'/projects/' + project.id" />            
         </div>
     </div>
 </template>

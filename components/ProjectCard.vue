@@ -5,7 +5,7 @@
       <div class="data-container">
         <b><div class="project-title">{{ title }}</div></b>
         <div class="project-mainIdea">{{ mainIdea }}</div>
-        <div class="project-city">
+        <div class="icon-text">
           <img src="~\assets\icons\location-pin-dark.png" id="icon-dark">
           <img src="~\assets\icons\location-pin-white.png" id="icon-white">
           {{ city }}
@@ -60,25 +60,25 @@
     padding-top: 16px;
   }
 
-  .project-card .project-city {
-    display: flex;
+  .project-card .icon-text {
     margin-top: 8px;
-    align-items: center;
   }
 
   #icon-dark{
     position: absolute;
     height: 16px;
-    width: 16px;
+    width: 14px;
     margin-right: 4px;
+    margin-top: 6px;
     opacity: 100%;
     transition: opacity .3s ease-in-out;
   }
 
-  #icon-white{
+  .project-card #icon-white{
     height: 16px;
-    width: 16px;
+    width: 14px;
     margin-right: 4px;
+    margin-top: 6px;
     opacity: 0%;
     transition: opacity .3s ease-in-out;
   }

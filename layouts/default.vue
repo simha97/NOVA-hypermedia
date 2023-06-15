@@ -110,6 +110,11 @@
       text-align: center;
   }
 
+  .icon-text {
+    display: flex;
+    height: 16px;
+  }
+
   .form-container {
         width: 90%;
         border-radius: 10px;
