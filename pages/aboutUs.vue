@@ -3,7 +3,7 @@
         <img class="shadow" src="~\assets\img\pageShadow.png">
         <img id="aboutUs" src="~\assets\img\AboutUs.png">
         <div class="intro-description">
-            <h1>Empowering Entrepreneurs<br>Powering Progress</h1>
+            <h1>Empowering Entrepreneurs Powering Progress</h1>
             <h3>NOVA, a venture capital company<br>help you START and GROW your business</h3>
         </div>
     </div>
@@ -15,10 +15,10 @@
         <h3>Our journey began with a shared passion for fostering entrepreneurship and driving positive change. We recognized the immense value of transformative ideas and the need for strategic capital to bring them to life. With this vision in mind, we set out to build a platform that not only provides financial support but also serves as a strategic partner and mentor to our portfolio companies.</h3>
     </div>
     <div class="scroll-container" @wheel="ScrollPictures($event)" >
-        <img src="~\assets\img\AboutUsScroll.png" @click="clickPicture()">
-        <img src="~\assets\img\AboutUsScroll.png" @click="clickPicture()">
-        <img src="~\assets\img\AboutUsScroll.png" @click="clickPicture()">
-        <img src="~\assets\img\AboutUsScroll.png" @click="clickPicture()">
+        <img src="~\assets\img\AboutUsScroll.png">
+        <img src="~\assets\img\AboutUsScroll.png">
+        <img src="~\assets\img\AboutUsScroll.png">
+        <img src="~\assets\img\AboutUsScroll.png">
     </div>
     <div>
         <h2 id="founder-title">Co-Founders</h2>
@@ -79,8 +79,7 @@
 
     .founder-container .person-card .person-founderTag{
         font-size: 24px; 
-        top: 8px; 
-        right: -100px;
+        right: 24px;
     }
 
     .founder-container .person-card .person-expertiseInfo{
@@ -89,6 +88,8 @@
 
     .founder-container .person-card .data-container{
         padding: 32px;
+        width: 320px;
+        height: 128px;
     }
 
     .founder-container .person-card .area-container{

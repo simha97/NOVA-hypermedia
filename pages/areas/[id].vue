@@ -64,19 +64,15 @@
   }
 
   .area-button{
+    width: 160px;
     text-align: center;
     padding: 16px;
   }
-  .area-button:hover{
-    box-shadow: 1px 1px 2px 0 #282E36;
-  }
+
   .active-area-button{
     width: 160px;
-    height: 64px;
     background-color: white;
     color: #F26225;
-    width: 160px;
-    height: 64px;
     text-align: center;
     padding: 16px;
     border-radius: 8px;

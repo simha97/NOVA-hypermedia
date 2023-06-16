@@ -18,6 +18,7 @@
     width: 176px;
     height: 64px;
     transition: box-shadow .3s ease-in-out;
+    margin-top: 240px;
   }
 
   .arrow {
@@ -41,6 +42,7 @@
 
   .back-button:hover{
     box-shadow: 0 2px 4px 0 #F26225;
+    cursor: pointer;
   }
 
   .back-button:hover .back-text{

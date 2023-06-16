@@ -82,14 +82,6 @@
         border-radius: 8px;
     }
 
-    .intro-description{
-        margin-top: -262px;
-    }
-
-    h3 span {
-        font-family: 'Myriad-Pro-Bold';
-    }
-
     .blank-container{
         width: 352px;
         height: 248px;

@@ -64,7 +64,7 @@
     .dropdown-sub{
         display: none;
         position: absolute;
-        left: -50%;
+        transform: translate(-25%);
         background-color: #F5F5F5;
         width: max-content;
         overflow: auto;

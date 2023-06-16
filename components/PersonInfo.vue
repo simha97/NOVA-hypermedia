@@ -35,7 +35,7 @@
     height: 16px;
     width: 16px;
     margin-right: 16px;
-    margin-top: 10px;
+    margin-top: 6px;
   }
 
   .person-info-title{
@@ -43,6 +43,7 @@
   }
 
   .person-info-description{
+    margin-top: 16px;
     font-size: 18px;
   }
 

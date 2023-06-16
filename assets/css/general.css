@@ -15,10 +15,13 @@ main {
 }
 
 h1 {
-    font-weight: lighter;
-    font-family: "Helvetica";
+    font-family: "Myriad-Pro-Light";
+    font-weight:normal;
     font-size: 48px;
-    letter-spacing: 1px;
+    letter-spacing: 2px;
+    max-width: 656px;
+    margin-block-start: 0;
+    margin-block-end: 0;
 }
 
 h2 {
@@ -34,10 +37,14 @@ h2 {
 h3 {
     position: relative;
     font-family: "Myriad-Pro-Regular";
-    padding-top: 16px;
+    margin-top: 16px;
     font-size: 24px;
     width: 1120px;
     font-weight:normal;
+}
+
+.intro-description h3{
+  letter-spacing: 1px;
 }
 
 a{
@@ -84,7 +91,7 @@ p, ul li {
 .intro-description{
     color: white;
     position: absolute;
-    margin-top: -260px;
+    top: 400px;
 }
 
 .slogan{
@@ -92,7 +99,7 @@ p, ul li {
     padding-top: 16px;
     font-size: 24px;
     font-style: italic;
-    font-family: "Helvetica-Light";
+    font-family: "Myriad-Pro-Light";
     width: 576px;
 }
 

@@ -31,8 +31,9 @@
   .person-card .data-container{
     padding: 16px;
     position: relative; 
-    width: 256px;
-    height: 128px;
+    width: 224px;
+    height: 96px;
+    margin-top: -6px;
   }
 
   .person-name-surname{
@@ -44,13 +45,15 @@
     font-size: 18px; 
     position: absolute;
     top: 18px; 
-    right: 16px;
-    font-weight: bold;
+    right: 12px;
+    font-family: 'Myriad-Pro-Bold';
+    font-size: 18px;
   }
 
   .person-expertiseInfo{
     font-size: 18px;
-    font-family: 'Myriad-Pro-Light';
+    font-family: 'Myriad-Pro-Regular';
+    margin-top: 8px;
   }
 
   .person-areaTag{
@@ -65,14 +68,18 @@
     border-top-left-radius: 4px;
   }
 
+  .person-areaTag{
+    gap: 8px;
+    margin-top: 8px;
+  }
+
   .person-card .area-container {
     background-color: #F26225;
     color: white;
     border: solid 1px white;
-    position:relative;
-    margin-right: 8px;
     font-size: 16px;
     transition: background-color .3s ease-in-out;
+
   }
 
 </style>
