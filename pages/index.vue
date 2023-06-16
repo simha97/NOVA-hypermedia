@@ -6,16 +6,12 @@
         <img id="home" src="~\assets\img\Home.png">
         <div class="intro-description">
             <h1>Empowering Entrepreneurs<br>Powering Progress</h1>
-            <h3>NOVA, a venture capital company<br>help you <span>START</span> and <span>GROW</span> your business</h3>
+            <h3>NOVA, a venture capital company<br>help you <b>START</b> and <b>GROW</b> your business</h3>
         </div>
     </div>
-    <div>
-      <Breadcrumb :links="[{bread:'Home', goTo: '/'}]"/>
-    </div>  
-    <div>
-        <h2>How we work</h2>
-        <h3>Our team page showcases the impressive network of backers who believe in our vision and share our passion for supporting innovative startups.</h3>
-    </div>
+    <Breadcrumb :links="[{bread:'Home', goTo: '/'}]"/>
+    <h2>How we work</h2>
+    <h3>Our team page showcases the impressive network of backers who believe in our vision and share our passion for supporting innovative startups.</h3>
     <div class="how-we-work-container">
         <div class="text-container">
             <div class="how-we-work-title">01 Seed Funding</div>

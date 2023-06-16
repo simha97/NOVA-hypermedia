@@ -5,10 +5,6 @@
   </button>
 </template>
 
-<script setup>
-  const props = defineProps(['text']);
-</script>
-
 <style>
 
   .back-button {
@@ -50,3 +46,9 @@
   }
 
 </style>
+
+<script setup>
+
+  const props = defineProps(['text']);
+  
+</script>

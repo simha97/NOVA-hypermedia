@@ -1,7 +1,5 @@
 <template>
-    <div>
       <Breadcrumb :links="[{bread:'Home', goTo: '/'}, {bread:'Contact Us', goTo: '/contactUs'}]"/>
-    </div>
     <main>
         <main>
             <p>

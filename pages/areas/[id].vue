@@ -1,11 +1,6 @@
 <template>
-  <div>
-    <Breadcrumb :links="[{bread:'Home', goTo: '/'}, {bread:'Areas', goTo: '/areas/Art'}, {bread: area, goTo: '/areas/' + area}]"/>
-  </div> 
-  <div>
-    <h2>Areas</h2>
-    <h3>Our projects are variant in many different areas.</h3>
-  </div>  
+  <Breadcrumb :links="[{bread:'Home', goTo: '/'}, {bread:'Areas', goTo: '/areas/Art'}, {bread: area, goTo: '/areas/' + area}]"/>  <h2>Areas</h2>
+  <h3>Our projects are variant in many different areas.</h3>
   <div class="areas-container">
     <div class="areas-selector">
       <NuxtLink to="/areas/Art">

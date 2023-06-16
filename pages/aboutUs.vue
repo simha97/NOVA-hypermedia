@@ -4,25 +4,19 @@
         <img id="aboutUs" src="~\assets\img\AboutUs.png">
         <div class="intro-description">
             <h1>Empowering Entrepreneurs Powering Progress</h1>
-            <h3>NOVA, a venture capital company<br>help you START and GROW your business</h3>
+            <h3>NOVA, a venture capital company<br>help you <b>START</b> and <b>GROW</b> your business</h3>
         </div>
     </div>
-    <div>
-      <Breadcrumb :links="[{bread:'Home', goTo: '/'}, {bread:'About Us', goTo: '/aboutUs'}]"/>
-    </div>  
-    <div>
-        <h2>About Us</h2>
-        <h3>Our journey began with a shared passion for fostering entrepreneurship and driving positive change. We recognized the immense value of transformative ideas and the need for strategic capital to bring them to life. With this vision in mind, we set out to build a platform that not only provides financial support but also serves as a strategic partner and mentor to our portfolio companies.</h3>
-    </div>
+    <Breadcrumb :links="[{bread:'Home', goTo: '/'}, {bread:'About Us', goTo: '/aboutUs'}]"/>
+    <h2>About Us</h2>
+    <h3>Our journey began with a shared passion for fostering entrepreneurship and driving positive change. We recognized the immense value of transformative ideas and the need for strategic capital to bring them to life. With this vision in mind, we set out to build a platform that not only provides financial support but also serves as a strategic partner and mentor to our portfolio companies.</h3>
     <div class="scroll-container" @wheel="ScrollPictures($event)" >
         <img src="~\assets\img\AboutUsScroll.png">
         <img src="~\assets\img\AboutUsScroll.png">
         <img src="~\assets\img\AboutUsScroll.png">
         <img src="~\assets\img\AboutUsScroll.png">
     </div>
-    <div>
-        <h2 id="founder-title">Co-Founders</h2>
-    </div>
+    <h2>Co-Founders</h2>
     <div v-for="founder in founders">
         <div class="founder-container" v-bind:style=" founders.indexOf(founder) % 2 === 1 ? {'flex-direction': 'row-reverse'} : {'flex-direction': 'row'}">
             <PersonCard :key="founder.id" :name="founder.name" :surname="founder.surname" :area="founder.area" :isFounder="founder.isFounder" :link="'/ourTeam/' + founder.id"/>
@@ -42,17 +36,6 @@
     .intro .shadow{
         width: 1440px;
         height: 648px;
-    }
-
-    .scroll-container{
-        display: flex;
-        overflow: hidden;
-        height: 400px;
-        gap: 32px;
-        margin-left: -128px;
-        margin-top: 64px;
-        margin-bottom: 240px;
-        margin-right: 32px;
     }
 
     .founder-container{

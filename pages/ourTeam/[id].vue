@@ -1,7 +1,5 @@
 <template>
-  <div>
-    <Breadcrumb :links="[{bread:'Home', goTo: '/'}, {bread:'Our Team', goTo: '/ourTeam'}, {bread:person.name +  ' ' + person.surname, goTo: '/ourTeam/' + person.id}]"/>
-  </div>
+  <Breadcrumb :links="[{bread:'Home', goTo: '/'}, {bread:'Our Team', goTo: '/ourTeam'}, {bread:person.name +  ' ' + person.surname, goTo: '/ourTeam/' + person.id}]"/>
   <div class="person-container">
     <div class="person-data">
       <h2>{{ person.name }} {{ person.surname }}</h2>
@@ -19,10 +17,8 @@
     </div>
   </div>
   <div>
-    <div>
-        <h2 id="project-title">Projects in Progress</h2>
-        <h3>Discover a collection of ongoing projects by {{ person.name }} {{ person.surname }}.</h3>
-    </div>
+    <h2>Projects in Progress</h2>
+    <h3>Discover a collection of ongoing projects by {{ person.name }} {{ person.surname }}.</h3>
     <div class="card-container">
       <ProjectCard v-for="project in person.projects" :key="project.id" :title="project.projectTitle" :city="project.city" :mainIdea="project.mainIdea" :area="project.area" :isFounder="project.isFounder" :link="'/projects/' + project.id" />
     </div>
