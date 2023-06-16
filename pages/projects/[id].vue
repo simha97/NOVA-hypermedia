@@ -21,6 +21,21 @@
         <img src="~\assets\img\AboutUsScroll.png">
         <img src="~\assets\img\AboutUsScroll.png">
     </div>
+    <div class="project-info">
+        <h2>Social impact</h2> 
+        <h3>{{ project.socialImpact }}</h3>
+    </div>
+    <div class="project-info">
+        <h2>Economic impact</h2> 
+        <h3>{{ project.economicImpact }}</h3>
+    </div>
+    <div>
+        <h2>Similar Projects</h2>
+        <h3>Other {{project.area }} projects.</h3>
+        <div class="card-container">
+            <ProjectCard v-for="p in projects" :key="p.id" :title="p.projectTitle" :city="p.city" :mainIdea="p.mainIdea" :area="p.area" :isFounder="p.isFounder" :link="'/projects/' + p.id" />
+        </div>
+    </div>
     <div class="goBack-container">
         <NuxtLink to="/projects"><backbutton text="All Projects"></backbutton></NuxtLink>
     </div>
@@ -42,7 +57,29 @@
 
     const route = useRoute()
     const id = route.params.id
-    const { data: project } = await useFetch('/api/projects/' + id)
+    const { data: areaProjects } = await useFetch('/api/projects/' + id)
+
+    const project = computed(() => {
+
+        for(let p of areaProjects.value) {
+            if(p.id == id)
+                return p;
+        }
+
+        return arr
+    })
+
+    const projects = computed(() => {
+        
+        const arr = []
+
+        for(let p of areaProjects.value) {
+            if(p.id != id)
+                arr.push(p);
+        }
+
+        return arr
+    })
 
 </script>
 
