@@ -75,8 +75,8 @@
     }
 
     .text-container{
-        width: 352px;
-        height: 248px;
+        width: 304px;
+        height: 200px;
         padding: 24px;
         background-color: white;
         border-radius: 8px;
@@ -89,15 +89,14 @@
 
     .how-we-work-title{
         font-size: 24px;
-        font-weight: bolder;
+        font-family: 'Myriad-Pro-SemiBold';
         color: #F26225;
     }
 
     .how-we-work-description{
-        font-size: 16px;
+        font-size: 18px;
         font-family: 'Myriad-Pro-Regular';
         margin-top: 8px;
-        text-align: justify;
     }
 
     #curved-arrow{

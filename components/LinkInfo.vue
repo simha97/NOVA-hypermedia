@@ -24,8 +24,6 @@
 
   .link-info-data{
     display: flex;
-    src:url('/font/Myriad\ Pro.ttf') format("truetype");
-    font-family: "Myriad Pro";
   }
 
   #big-bullet{
@@ -37,15 +35,17 @@
   .link-info-question{
     line-height: normal;
     text-align:center;
+    font-family: "Myriad-Pro-Regular";
+    width: 216px;
   }
 
   .link-info-title{
     margin-top: 8px;
     color: #F26225;
-    font-weight: bold;
     font-style: italic;
     text-align:center;
     font-size: 24px;
+    font-family: "Myriad-Pro-Bold";
   }
 
   .link-info-title:hover{
