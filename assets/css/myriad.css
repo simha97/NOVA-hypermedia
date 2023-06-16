@@ -1,4 +1,9 @@
 @font-face {
+    font-family: "Myriad-Pro-Black";
+    src: url('/font/Myriad-Pro-Black.otf') format("opentype");
+}
+
+@font-face {
     font-family: "Myriad-Pro-Regular";
     src: url('/font/Myriad-Pro-Regular.ttf') format("truetype");
 }
@@ -11,4 +16,9 @@
 @font-face {
     font-family: 'Myriad-Pro-Bold';
     src:url('/font/Myriad-Pro-Bold.ttf') format("truetype");
+}
+
+@font-face {
+    font-family: 'Myriad-Pro-SemiBold';
+    src:url('/font/myriadpro-semibold.otf') format("opentype");
 }

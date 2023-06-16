@@ -70,22 +70,31 @@
 
   .big-project-card .project-title{
     margin-top: -8px;
-    margin-bottom: 4px;
+    margin-bottom: 8px;
     font-size: 36px;
     width: 768px;
-    font-weight: bold;
+    font-family: 'Myriad-Pro-Bold';
+  }
+
+  .big-project-card .icon-text{
+    display: flex;
+    height: 16px;
+    font-family: 'Myriad-Pro-Regular';
+    font-size: 18px;
   }
 
   .big-project-card .area-container {
-    height: 32px;
+    font-family: "Myriad-Pro-Regular";
     position: absolute;
     right: -104px;
+    top: 4px;
   }
 
   .big-project-card .project-description{
     font-size: 24px;
     width: 768px;
     margin-bottom: 48px;
+    font-family: 'Myriad-Pro-Regular';
   }
 
   .hidden-data{
@@ -142,9 +151,9 @@
   }
 
   .hidden-data a{
+    font-family: "Myriad-Pro-Bold";
     color: #F26225;
     font-style: italic;
-    font-weight: bold;
     position: absolute;
     margin-top: 8px;
     margin-left: 568px;

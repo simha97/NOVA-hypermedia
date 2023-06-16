@@ -97,7 +97,6 @@
 
     .how-we-work-title{
         font-size: 24px;
-        font-family: 'Helvetica Light';
         font-weight: bolder;
         color: #F26225;
     }
