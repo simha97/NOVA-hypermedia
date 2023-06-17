@@ -55,7 +55,7 @@ a{
     text-decoration: none;
 }
 
-p, ul li {
+p, ul li, .breadcrumb-container {
     font-family: "Myriad-Pro-Regular";
     font-size: 18px;
 }
@@ -76,6 +76,10 @@ p, ul li {
     column-gap: 32px;
     row-gap: 80px;
     margin-top: 96px;
+}
+
+.breadcrumb-container{
+
 }
 
 .intro{
