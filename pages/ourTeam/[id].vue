@@ -11,10 +11,12 @@
         {title:'Academic Experience', description: person.degree}, 
         {title:'Past Job Experience', description: person.pastJobExperience}]"/>
     </div>
-    <img src="~\assets\img\youngWoman.png" id="person">
-    <div v-if="person.isFounder == true">
-      <img src="~\assets\img\founder.png" id="founder">
-    </div>
+    <div class="bigimage-container">
+      <img src="~\assets\img\youngWoman.png" id="person">
+      <div v-if="person.isFounder == true">
+        <img src="~\assets\img\founder.png" id="founder">
+      </div>
+  </div>
   </div>
   <div>
     <h2>Projects in Progress</h2>
@@ -44,17 +46,25 @@
     margin: 0 0 320px 0;
   }
 
+  .bigimage-container{
+    position: relative;
+    width: 464px;
+    height: 608px;
+    border-radius: 0 270px 0 0;
+  }
+
+  .bigimage-container img {
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 272px;
+    height: 272px;
+  }
+
   #person{
     width: 464px;
     height: 608px;
     border-radius: 8px;
-  }
-
-  #founder{
-    position: absolute;
-    right: 32px;
-    width: 272px;
-    height: 272px;
   }
 
     @media (max-width: 768px) {
