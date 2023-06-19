@@ -1,6 +1,6 @@
 <template>
     <div class="person-card">
-      <img alt="picture" src="~\assets\img\youngwoman2.png" id="profile">
+      <img alt="picture" :src="require(`~/assets/img/portraits/${name}${surname}.jpg`)" id="profile">
       <div class="data-container">
         <div class="person-name-surname">{{ name }} {{surname }}</div>
         <div class="person-founderTag" v-if="isFounder == true">Founder</div>
@@ -87,5 +87,4 @@
 <script setup>
 
   const props = defineProps(['name', 'surname', 'isFounder', 'area', 'link']);
-
 </script>
