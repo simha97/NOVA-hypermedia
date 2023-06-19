@@ -7,3 +7,4 @@ TO DO:
 - create picture for each project
 - decide images for each project
 - decide images for about us
+- do reports
