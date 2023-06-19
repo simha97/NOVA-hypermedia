@@ -12,7 +12,7 @@
         {title:'Past Job Experience', description: person.pastJobExperience}]"/>
     </div>
     <div class="bigimage-container">
-      <img src="~\assets\img\youngWoman.png" id="person">
+      <img :src="`/portraits/${person.name}${person.surname}.jpg`" id="person">
       <div v-if="person.isFounder == true">
         <img src="~\assets\img\founder.png" id="founder">
       </div>
