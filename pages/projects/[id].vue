@@ -13,6 +13,7 @@
         <PersonInfo :infos="[{title:'Main Ideas', description: project.mainIdea}, 
             {title:'Area', description: project.area}, 
             {title:'Supervisor', description: project.persons.name + ' ' + project.persons.surname}]"/>
+        <img :src="`/portraits/${project.persons.name+project.persons.surname}.jpg`" id="person"/>
     </div>    
     <h2>How it works</h2>    
     <div class="scroll-container" @wheel="ScrollPictures($event)" >
@@ -49,6 +50,13 @@
 
     .project-info{
         margin-bottom: 216px;
+    }
+
+    #person{
+        width: 128px;
+        height: 128px;
+        border-radius: 128px;
+
     }
 
 </style>

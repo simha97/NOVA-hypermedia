@@ -16,7 +16,7 @@
   const props = defineProps(['links']);
 </script>
 
-<style>
+<style scoped>
 
   .breadcrumb-container{
     position: relative;

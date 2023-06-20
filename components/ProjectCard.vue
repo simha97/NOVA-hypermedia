@@ -18,7 +18,7 @@
   </NuxtLink>
 </template>
 
-<style>
+<style scoped>
 
   .project-card {
     box-shadow: 0 4px 8px 0 #282E36;

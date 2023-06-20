@@ -15,7 +15,7 @@
     </div>
 </template>
 
-<style>
+<style scoped>
 
   .person-card {
     box-shadow: 0 4px 8px 0 #282E36;

@@ -16,7 +16,7 @@
   const props = defineProps(['infos']);
 </script>
 
-<style>
+<style scoped>
 
   .person-info-container{
     position: relative;

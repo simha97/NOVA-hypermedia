@@ -14,7 +14,7 @@
   const props = defineProps(['link']);
 </script>
 
-<style>
+<style scoped>
 
   .link-info-container{
     position: relative;

@@ -4,7 +4,9 @@ html, body{
 
 body{
   background-color: #F5F5F5;
-    margin: 0;
+  margin: 0;
+  font-family: "Myriad-Pro-Regular";
+  font-size: 24px;
 }
 
 main {
@@ -16,7 +18,7 @@ main {
 
 h1 {
     font-family: "Myriad-Pro-Light";
-    font-weight:normal;
+    font-weight: normal;
     font-size: 48px;
     letter-spacing: 2px;
     margin-block-start: 0;

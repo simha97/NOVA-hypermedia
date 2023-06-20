@@ -30,7 +30,7 @@
   </div>
 </template>
   
-<style>
+<style scoped>
   
   .big-project-card {
     width: 1120px; 

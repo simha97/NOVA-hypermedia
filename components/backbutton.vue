@@ -5,7 +5,7 @@
   </button>
 </template>
 
-<style>
+<style scoped>
 
   .back-button {
     border: 1px solid #F26225;

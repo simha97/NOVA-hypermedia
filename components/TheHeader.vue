@@ -27,7 +27,7 @@
     </div> 
 </template>
 
-<style>
+<style scoped>
     .nav-container{
         background-color: #F5F5F5;
         display: flex;

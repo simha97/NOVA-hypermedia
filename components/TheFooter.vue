@@ -26,7 +26,7 @@
     </footer>
 </template>
 
-<style>
+<style scoped>
     footer
     {
         background-color: #282E36;
