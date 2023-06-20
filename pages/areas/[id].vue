@@ -72,6 +72,7 @@
     padding: 16px;
     border-radius: 8px;
     box-shadow: 1px 1px 2px 0 #282E36;
+    
   }
 
   .area-description{
