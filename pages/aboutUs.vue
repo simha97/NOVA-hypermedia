@@ -3,8 +3,10 @@
         <img class="shadow" src="~\assets\img\pageShadow.png">
         <img id="aboutUs" src="~\assets\img\AboutUs.png">
         <div class="intro-description">
-            <h1>Empowering Entrepreneurs Powering Progress</h1>
-            <h3>NOVA, a venture capital company<br>help you <b>START</b> and <b>GROW</b> your business</h3>
+            <div>
+                <h1>Empowering Entrepreneurs Powering Progress</h1>
+                <h3>NOVA, a venture capital company<br>help you <b>START</b> and <b>GROW</b> your business</h3>
+            </div>
         </div>
     </div>
     <Breadcrumb :links="[{bread:'Home', goTo: '/'}, {bread:'About Us', goTo: '/aboutUs'}]"/>

@@ -5,8 +5,10 @@
         <img class="shadow" src="~\assets\img\pageShadow.png">
         <img id="home" src="~\assets\img\Home.png">
         <div class="intro-description">
-            <h1>Empowering Entrepreneurs<br>Powering Progress</h1>
-            <h3>NOVA, a venture capital company<br>help you <b>START</b> and <b>GROW</b> your business</h3>
+            <div>
+                <h1>Empowering Entrepreneurs<br>Powering Progress</h1>
+                <h3>NOVA, a venture capital company<br>help you <b>START</b> and <b>GROW</b> your business</h3>
+            </div>
         </div>
     </div>
     <Breadcrumb :links="[{bread:'Home', goTo: '/'}]"/>

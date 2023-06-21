@@ -16,7 +16,10 @@
               <div class="area-container" >{{ info.content }}</div>
             </div>
             <div v-if="info.type == 'picture'">
-              <div class="area-container" >{{ info.content }}</div>
+              <NuxtLink :to = info.content.page class="person-info-picture">
+                <img v-bind:src="'/_nuxt/portraits/' + info.content.name + info.content.surname + '.jpg'" id="person"/>
+                <div class="person-info-picture-link">{{ info.content.name + ' ' + info.content.surname }}</div>
+              </NuxtLink>            
             </div>
           </div>
         </div>
@@ -78,5 +81,23 @@
     color: #F26225;
   }
 
+  #person{
+      margin-top: 16px;
+      width: 128px;
+      height: 128px;
+      border-radius: 128px;
+  }
+
+  .person-info-picture-link{
+    color: #F26225;
+    font-size: 18px;
+    font-family: "Myriad-Pro-Regular";
+    margin-top: 8px;
+    text-align: center;
+  }
+
+  .person-info-picture:hover .person-info-picture-link{
+    text-decoration: underline;
+  }
 
 </style>

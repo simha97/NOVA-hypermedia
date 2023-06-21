@@ -3,8 +3,11 @@
         <img class="shadow" src="~\assets\img\pageShadow.png">
         <img v-bind:src="'/_nuxt/LogoPng/' + project.projectTitle + '_Big.png'" id="project-img">
         <div class="intro-description">
-            <h1>{{project.projectTitle}}</h1>
-            <h3>{{ project.slogan}}</h3>
+            <img v-bind:src="'/_nuxt/LogoPng/' + project.projectTitle + '_Icon.png'" id="project-icon">
+            <div>
+                <h1>{{project.projectTitle}}</h1>
+                <h3>{{ project.slogan}}</h3>
+            </div>
         </div>
     </div>
     <Breadcrumb :links="[{bread:'Home', goTo: '/'}, {bread:'Project', goTo: '/projects'}, {bread:project.projectTitle, goTo: '/projects/' + project.id}]"/>
@@ -22,19 +25,18 @@
         <h2>{{project.projectTitle}}</h2>
         <Info :infos="[{title:'Main Ideas', content: project.mainIdea, type: 'text'}, 
             {title:'Area', content: project.area, type: 'area'}, 
-            {title:'Supervisor', content: project.persons.name + ' ' + project.persons.surname, type: 'text'}]"/>
-        <img v-bind:src="'/_nuxt/public/portraits/' + project.persons.name + project.persons.surname + '.jpg'" id="person"/>
+            {title:'Supervisor', content: {page: '/ourTeam/' + project.persons.id, name: project.persons.name, surname: project.persons.surname}, type: 'picture'}]"/>
     </div>    
     <h2>How it works</h2>    
     <div class="scroll-container" @wheel="ScrollPictures($event)" >
-        <img src="~\assets\img\AboutUsScroll.png">
-        <img src="~\assets\img\AboutUsScroll.png">
-        <img src="~\assets\img\AboutUsScroll.png">
-        <img src="~\assets\img\AboutUsScroll.png">
+        <img v-bind:src="'/_nuxt/LogoPng/' + project.projectTitle + '_Frame1.png'" id="frame">
+        <img v-bind:src="'/_nuxt/LogoPng/' + project.projectTitle + '_Frame2.png'" id="frame">
+        <img v-bind:src="'/_nuxt/LogoPng/' + project.projectTitle + '_Frame3.png'" id="frame">
     </div>
     <div class="project-info">
         <h2>Social impact</h2> 
         <h3>{{ project.socialImpact }}</h3>
+        <img v-bind:src="'/_nuxt/LogoPng/' + project.projectTitle + '_SocialImpact.png'" id="social-impact">
     </div>
     <div class="project-info">
         <h2>Economic impact</h2> 
@@ -54,20 +56,21 @@
 
 <style>
 
+    .intro-description #project-icon{
+        margin-left: 0;
+        margin-top: 0;
+        width: 128px;
+        height: 128px;
+        margin-right: 32px;
+    }
+
     #project-img {
         width: 1440px;
         height: 648px;
     }
 
     .project-info{
-        margin-bottom: 216px;
-    }
-
-    #person{
-        width: 128px;
-        height: 128px;
-        border-radius: 128px;
-
+        margin-bottom: 160px;
     }
 
     .practical-info{
@@ -97,6 +100,19 @@
         width: 18px;
         margin-top: 6px;
         margin-right: 8px;
+    }
+
+    #frame{
+        height: 400px;
+        width: 736px;
+        border-radius: 8px;
+    }
+
+    #social-impact{
+        margin-left: 136px;
+        margin-top: 24px;
+        width: 848px;
+        height: 312px;
     }
 
 </style>

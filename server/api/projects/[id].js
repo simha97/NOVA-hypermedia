@@ -13,7 +13,7 @@ export default defineEventHandler(async (event) => {
   
   const  {data, error} = await client
       .from('projects')
-      .select(`id, projectTitle, city, area, mainIdea, socialImpact, economicImpact, slogan, date, persons (name, surname)`)
+      .select(`id, projectTitle, city, area, mainIdea, socialImpact, economicImpact, slogan, date, persons (id, name, surname)`)
       .eq('area', project.data.area);
 
   if (error) {

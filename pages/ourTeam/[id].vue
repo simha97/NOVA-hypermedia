@@ -12,7 +12,7 @@
         {title:'Past Job Experience', content: person.pastJobExperience, type: 'text'}]"/>
     </div>
     <div class="bigimage-container">
-      <img v-bind:src="'/_nuxt/public/portraits/' + person.name + person.surname + '.jpg'" id="person">
+      <img v-bind:src="'/_nuxt/portraits/' + person.name + person.surname + '.jpg'" id="person">
       <div v-if="person.isFounder == true">
         <img src="~\assets\img\founder.png" id="founder">
       </div>

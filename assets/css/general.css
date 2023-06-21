@@ -95,6 +95,7 @@ p, ul li, .breadcrumb-container {
     position: absolute;
     top: 400px;
     max-width: 576px;
+    display: flex;
 }
 
 .slogan{
