@@ -10,6 +10,12 @@ export default defineEventHandler(async (event) => {
     .eq('area', area)
     .order('projectTitle');
 
+  const prova = await client
+    .from('areas')
+    .select(`*`);  
+
+  console.log(prova)  
+
   if (error) {
     throw createError({ statusCode: 400, statusMessage: error.message });
   }
