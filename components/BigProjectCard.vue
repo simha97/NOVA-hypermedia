@@ -19,7 +19,7 @@
         </div>
         <NuxtLink :to = link>Show me more</NuxtLink>
         <div class="icon-text">
-          <img src="~\assets\icons\date.png" id="icon-date">
+          <img src="~\assets\icons\date-white.png" id="icon-date">
           {{ date }}
         </div>
       </div>
@@ -81,6 +81,7 @@
     height: 16px;
     font-family: 'Myriad-Pro-Regular';
     font-size: 18px;
+    margin-top: 16px;
   }
 
   .big-project-card .area-container {
@@ -116,11 +117,6 @@
     width: 20px;
     margin-top: 2px;
     margin-right: 8px;
-  }
-
-  .big-project-card .icon-text {
-    margin-top: 16px;
-    font-size: 18px;
   }
 
   #start-shadow{

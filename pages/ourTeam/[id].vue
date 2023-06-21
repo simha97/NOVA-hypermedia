@@ -42,6 +42,10 @@
     margin-right: 200px;
   }    
 
+  .person-data .slogan{
+    margin-bottom: 32px;
+  }
+
   .goBack-container{
     margin: 0 0 320px 0;
   }

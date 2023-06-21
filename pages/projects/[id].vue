@@ -1,7 +1,7 @@
 <template>
     <div class="intro">
         <img class="shadow" src="~\assets\img\pageShadow.png">
-        <img v-bind:src="'/_nuxt/LogoPng/' + project.projectTitle + '_Ultra.png'" id="project-img">
+        <img v-bind:src="'/_nuxt/LogoPng/' + project.projectTitle + '_Big.png'" id="project-img">
         <div class="intro-description">
             <h1>{{project.projectTitle}}</h1>
             <h3>{{ project.slogan}}</h3>
@@ -9,6 +9,16 @@
     </div>
     <Breadcrumb :links="[{bread:'Home', goTo: '/'}, {bread:'Project', goTo: '/projects'}, {bread:project.projectTitle, goTo: '/projects/' + project.id}]"/>
     <div class="project-info">
+        <div class="practical-info">
+            <div class="icon-text">
+                <img src="~\assets\icons\location-pin-dark.png" id="icon-white">
+                {{ project.city }}
+            </div>
+            <div class="icon-text">
+                <img src="~\assets\icons\date-dark.png" id="icon-date">
+                {{ project.date }}
+            </div>
+        </div>
         <h2>{{project.projectTitle}}</h2>
         <Info :infos="[{title:'Main Ideas', content: project.mainIdea, type: 'text'}, 
             {title:'Area', content: project.area, type: 'text'}, 
@@ -45,7 +55,8 @@
 <style>
 
     #project-img {
-        margin-top: 0;
+        width: 1440px;
+        height: 648px;
     }
 
     .project-info{
@@ -57,6 +68,35 @@
         height: 128px;
         border-radius: 128px;
 
+    }
+
+    .practical-info{
+        display: flex;
+        position: absolute;
+        margin-top: 24px;
+        right: 160px;
+        gap: 32px;
+    }
+
+    .practical-info .icon-text {
+        display: flex;
+        height: 16px;
+        margin-top: 8px;
+        font-size: 24px;  
+    }
+
+    .practical-info #icon-white{
+        height: 26px;
+        width: 24px;
+        margin-top: 6px;
+        margin-right: 4px;
+    }
+
+    .practical-info #icon-date{
+        height: 18px;
+        width: 18px;
+        margin-top: 6px;
+        margin-right: 8px;
     }
 
 </style>
