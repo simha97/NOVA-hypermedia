@@ -22,7 +22,7 @@
     <h2>Projects in Progress</h2>
     <h3>Discover a collection of ongoing projects by {{ person.name }} {{ person.surname }}.</h3>
     <div class="card-container">
-      <ProjectCard v-for="project in person.projects" :key="project.id" :title="project.projectTitle" :city="project.city" :mainIdea="project.mainIdea" :area="project.area" :isFounder="project.isFounder" :link="'/projects/' + project.id" />
+      <ProjectCard v-for="project in person.projects" :key="project.id" :title="project.projectTitle" :city="project.city" :mainIdea="project.mainIdea" :area="project.areas.name" :isFounder="project.isFounder" :link="'/projects/' + project.id" />
     </div>
   </div>
   <div class="goBack-container">

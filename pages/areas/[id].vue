@@ -36,12 +36,10 @@
         </div>
       </NuxtLink>  
     </div>
-    <div class="area-description">
-      We support art-related startups that leverage technology to democratize art, foster diversity, and connect artists with collectors. Our focus includes emerging artists, digital art platforms, and innovative ways to engage audiences.
-    </div>
+    <div class="area-description">{{ area_info.description }}</div>
   </div>
   <div class="card-container">
-    <ProjectCard v-for="project in projects" :key="project.id" :title="project.projectTitle" :city="project.city" :mainIdea="project.mainIdea" :area="project.area" :link="'/projects/' + project.id" />
+    <ProjectCard v-for="project in area_info.projects" :key="project.id" :title="project.projectTitle" :city="project.city" :mainIdea="project.mainIdea" :area="project.areas.name" :link="'/projects/' + project.id" />
   </div>
 </template>
 
@@ -90,6 +88,6 @@
 
   const route = useRoute()
   const area = route.params.id
-  const { data: projects } = await useFetch('/api/areas/' + area)
+  const { data: area_info } = await useFetch('/api/areas/' + area)
   
 </script>

@@ -6,16 +6,16 @@ export default defineEventHandler(async (event) => {
 
   const project = await client
     .from('projects')
-    .select(`id, area`)
+    .select(`id, areas(id)`)
     .eq('id', id)
     .limit(1)
     .single();
   
   const  {data, error} = await client
       .from('projects')
-      .select(`id, projectTitle, city, area, mainIdea, socialImpact, economicImpact, slogan, date, persons (id, name, surname)`)
-      .eq('area', project.data.area);
-
+      .select(`id, projectTitle, city, area, mainIdea, socialImpact, economicImpact, slogan, date, areas(name), persons (id, name, surname)`)
+      .eq('area', project.data.areas.id);
+    
   if (error) {
     throw createError({ statusCode: 400, statusMessage: error.message });
   }

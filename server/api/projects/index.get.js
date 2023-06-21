@@ -5,7 +5,7 @@ export default defineEventHandler(async (event) => {
 
   const { data, error } = await client
     .from('projects')
-    .select('*')
+    .select('id, projectTitle, mainIdea, city, areas(name)')
     .order('projectTitle');
 
   if (error) {

@@ -3,7 +3,7 @@
     <h2>All Projects</h2>        
     <h3>Discover our amazing projects from here.</h3>
     <div class="card-container">
-        <ProjectCard v-for="project in projects" :key="project.id" :title="project.projectTitle" :city="project.city" :mainIdea="project.mainIdea" :area="project.area" :link="'/projects/' + project.id" />
+        <ProjectCard v-for="project in projects" :key="project.id" :title="project.projectTitle" :city="project.city" :mainIdea="project.mainIdea" :area="project.areas.name" :link="'/projects/' + project.id" />
     </div>
 </template>
 

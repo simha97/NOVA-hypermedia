@@ -1,6 +1,5 @@
 TO DO:
-- create Areas in supabase if we want to have area description
-- design id project page
+- create area description
 - design contactUs page
 - create slogan for each person
 - create picture of each person

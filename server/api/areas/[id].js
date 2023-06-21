@@ -5,16 +5,11 @@ export default defineEventHandler(async (event) => {
   const area = event.context.params.id;
 
   const { data, error } = await client
-    .from('projects')
-    .select(`*`)
-    .eq('area', area)
-    .order('projectTitle');
-
-  const prova = await client
     .from('areas')
-    .select(`*`);  
-
-  console.log(prova)  
+    .select(`id, name, description, projects(id, projectTitle, mainIdea, city, areas(name))`)
+    .eq('name', area)
+    .limit(1)
+    .single();  
 
   if (error) {
     throw createError({ statusCode: 400, statusMessage: error.message });

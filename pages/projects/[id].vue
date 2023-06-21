@@ -24,7 +24,7 @@
         </div>
         <h2>{{project.projectTitle}}</h2>
         <Info :infos="[{title:'Main Ideas', content: project.mainIdea, type: 'text'}, 
-            {title:'Area', content: project.area, type: 'area'}, 
+            {title:'Area', content: project.areas.name, type: 'area'}, 
             {title:'Supervisor', content: {page: '/ourTeam/' + project.persons.id, name: project.persons.name, surname: project.persons.surname}, type: 'picture'}]"/>
     </div>    
     <h2>How it works</h2>    
@@ -44,9 +44,9 @@
     </div>
     <div>
         <h2>Similar Projects</h2>
-        <h3>Other {{project.area }} projects.</h3>
+        <h3>Other {{project.areas.name }} projects.</h3>
         <div class="card-container">
-            <ProjectCard v-for="p in projects" :key="p.id" :title="p.projectTitle" :city="p.city" :mainIdea="p.mainIdea" :area="p.area" :isFounder="p.isFounder" :link="'/projects/' + p.id" />
+            <ProjectCard v-for="p in projects" :key="p.id" :title="p.projectTitle" :city="p.city" :mainIdea="p.mainIdea" :area="p.areas.name" :isFounder="p.isFounder" :link="'/projects/' + p.id" />
         </div>
     </div>
     <div class="goBack-container">
