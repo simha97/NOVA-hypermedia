@@ -5,7 +5,14 @@
         <img id="bullet" src="~\assets\icons\orange-bullet.png">
         <div>
           <div class="person-info-title">{{ info.title }}</div>
-          <div class="person-info-description">{{ info.description }}</div>
+          <div class="person-info-content">
+            <div class="person-info-description" v-if="info.type == 'text'">
+              {{ info.content }}
+            </div>
+            <div v-if="info.type == 'link'">
+              <NuxtLink :to = info.content.page><div class="person-info-link" >{{ info.content.title }}</div></NuxtLink>
+            </div>
+          </div>
         </div>
       </div>
     </div>
@@ -22,7 +29,6 @@
     position: relative;
     width: fit-content;
     font-size: 24px;
-    margin-top: 64px;
   }
 
   .person-info-data{
@@ -44,7 +50,20 @@
 
   .person-info-description{
     margin-top: 16px;
-    font-size: 18px;
+    font-size: 16px;
   }
+  .person-info-link{
+    color: #F26225;
+    font-style: italic;
+    text-align:center;
+    font-size: 24px;
+    font-family: "Myriad-Pro-Bold";
+    margin-top: 8px;
+  }
+
+  .person-info-link:hover{
+    text-decoration: underline;
+  }
+
 
 </style>

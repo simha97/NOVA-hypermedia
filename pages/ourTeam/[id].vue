@@ -6,10 +6,10 @@
       <div class="slogan">
         “As an expert in both Education and Art I am dedicated to fostering creativity and knowledge through innovative approaches.”
       </div>
-      <PersonInfo :infos="[{title:'Profile', description: person.story}, 
-        {title:'Main Expertise', description: person.mainExpertise}, 
-        {title:'Academic Experience', description: person.degree}, 
-        {title:'Past Job Experience', description: person.pastJobExperience}]"/>
+      <Info :infos="[{title:'Profile', content: person.story, type: 'text'}, 
+        {title:'Main Expertise', content: person.mainExpertise, type: 'text'}, 
+        {title:'Academic Experience', content: person.degree, type: 'text'}, 
+        {title:'Past Job Experience', content: person.pastJobExperience, type: 'text'}]"/>
     </div>
     <div class="bigimage-container">
       <img :src="`/portraits/${person.name}${person.surname}.jpg`" id="person">

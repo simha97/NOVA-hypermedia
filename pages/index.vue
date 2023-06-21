@@ -37,16 +37,12 @@
     </div>
     <div class="smart-links-container">
         <div class="smart-link">
-            <LinkInfo :link="{question:'Want to Meet Our Experts?', title:'Find in Our Team', page:'/ourTeam'}"/>
-        </div>
-        <div class="smart-link">
-            <LinkInfo :link="{question:'Curious about Our Areas of focus?', title:'Find in Areas', page:'/areas/Art'}"/>
-        </div>
-        <div class="smart-link">
-            <LinkInfo :link="{question:'Interested in Our Main Projects?', title:'Find in Main Projects', page:'/projects/mainProjects'}"/>
-        </div>
-        <div class="smart-link">
-            <LinkInfo :link="{question:'Learn more About Our Services?', title:'Find in Contact Us', page:'/contactUs'}"/>
+            <Info :infos="
+                [{title:'Want to Meet Our Experts?', content: {title: 'Find in Our Team', page:'/ourTeam'}, type: 'link'},
+                 {title:'Curious About Our Areas of Focus?', content: {title: 'Find in Areas', page:'/areas/Art'}, type: 'link'},
+                 {title:'Interested in Our Main Projects?', content: {title: 'Find in Main Projects', page:'/projects/mainProjects'}, type: 'link'},
+                 {title:'Learn More About Our Service?', content: {title: 'Find in Contact Us', page:'/contactUs'}, type: 'link'}
+                ]"/>
         </div>
     </div>
 </template>
@@ -63,7 +59,6 @@
     }
 
     .smart-links-container{
-        display: flex;
         gap: 32px;
         margin-top: 96px;
         border-top: solid 1px #D8D8D8;
@@ -103,6 +98,26 @@
         margin-top: 80px;
         height: 104px;
         width: 256px;
+    }
+
+    .smart-link .person-info-container{
+        display: flex;
+        gap: 32px;
+    }
+
+    .smart-link #bullet{
+        width: 24px;
+        height: 24px;
+        margin-right: 0px;
+    }
+
+    .smart-link .person-info-data{
+        width: 256px;
+        text-align: center;
+    }
+
+    .smart-link .person-info-title{
+        width: 216px;
     }
 
 </style>

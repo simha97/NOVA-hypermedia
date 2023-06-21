@@ -10,9 +10,9 @@
     <Breadcrumb :links="[{bread:'Home', goTo: '/'}, {bread:'Project', goTo: '/projects'}, {bread:project.projectTitle, goTo: '/projects/' + project.id}]"/>
     <div class="project-info">
         <h2>{{project.projectTitle}}</h2>
-        <PersonInfo :infos="[{title:'Main Ideas', description: project.mainIdea}, 
-            {title:'Area', description: project.area}, 
-            {title:'Supervisor', description: project.persons.name + ' ' + project.persons.surname}]"/>
+        <Info :infos="[{title:'Main Ideas', content: project.mainIdea, type: 'text'}, 
+            {title:'Area', content: project.area, type: 'text'}, 
+            {title:'Supervisor', content: project.persons.name + ' ' + project.persons.surname, type: 'text'}]"/>
         <img :src="`/portraits/${project.persons.name+project.persons.surname}.jpg`" id="person"/>
     </div>    
     <h2>How it works</h2>    
