@@ -1,68 +1,100 @@
 <template>
-      <Breadcrumb :links="[{bread:'Home', goTo: '/'}, {bread:'Contact Us', goTo: '/contactUs'}]"/>
-    <main>
-        <main>
-            <p>
-                This are our contacts:
-                <ul>
-                    <li>E-mail: mail@shelter.it</li>
-                    <li>Tel: 053684864351</li>
-                </ul>
-            </p>
-            <form>
-                <div>
-                    <label for = "name">Name & Surname</label>
-                    <input type = "text" id = "name" placeholder = "Name & Surname">
-                </div>
-                <div>
-                    <label for = "mail">E-mail</label>
-                    <input type = "email" id = "mail" placeholder = "E-mail">
-                </div>
-                <div id = "message-div">
-                    <label for = "message">Message</label>
-                    <textarea id = "message" placeholder = "Write your message here"></textarea>  
-                </div>
-                <button>Send Message</button>
-            </form>
-        </main>
-    </main>
+    <Breadcrumb :links="[{bread:'Home', goTo: '/'}, {bread:'Contact Us', goTo: '/contactUs'}]"/>
+    <h2>Contact Us</h2>
+    <div class="form">
+        <input type = "text" id = "name" placeholder = "Name">
+        <input type = "text" id = "name" placeholder = "Surname">
+        <input type = "email" id = "mail" placeholder = "Email">
+        <textarea id = "message" placeholder = "Please let us know your requirements, and we will get back to you soon!"></textarea>  
+        <input type="checkbox" id="check" >
+        <label for="check" id="check-text">I am confirming that I am acknowledging and accepting the privacy statement</label>
+        <div id="submit" @click="toggle()">Submit</div>
+        <div id="hidden-message" v-if="active">
+            <img id="hidden-bullet" src="~\assets\icons\orange-bullet.png">
+            Your message has been received
+        </div>
+    </div>
 </template>
 
 <style>
 
-    form {
-        width: 600px;
+    .form {
+        width: 672px;
         display: flex;
-        flex-direction: column;
-        padding: 15px;
-        border: 2px rgb(255, 102, 0) dashed;
-        border-radius: 5px;
-        row-gap: 20px;
+        gap: 16px;
+        flex-wrap: wrap;
     }
 
-    form div {
-        display: flex;
-        flex-direction: row;
-        justify-content: space-between;
+    #name{
+        width: 294px;
+        height: 24px;
+        padding: 16px;
+        border: 0;
+        border-radius: 8px;
     }
 
-    textarea {
-        width: 99%;
-        min-height: 5.1em;
-        resize: vertical;
+    #mail{
+        width: 640px;
+        height: 24px;
+        padding: 16px;
+        border: 0;
+        border-radius: 8px;
     }
 
-    input {
-        width: 60%;
+    #message{
+        width: 640px;
+        height: 284px;
+        padding: 16px;
+        border: 0;
+        border-radius: 8px;
     }
 
-    label {
-        font-size: 13pt;
-        font-weight: bold;
+    #check{
+        width: 24px;
+        height: 24px;
+        margin-top: 16px;
     }
 
-    #message-div {
-        flex-direction: column;
+    #check-text{
+        margin-top: 16px;
+        align-self: center;
+        font-size: 18px;
+    }
+
+    #submit{
+        margin-top: 64px;
+        padding: 16px 24px;
+        font-family: 'Myriad-Pro-Regular';
+        font-size: 24px;
+        color: #F26225;
+        border: solid 1px #F26225;
+        border-radius: 8px;
+        margin-right: 48px;
+    }
+
+    #submit:hover{
+        text-decoration: underline;
+        cursor: pointer;
+    }
+
+    #hidden-message{
+        margin-top: 84px;
+        color: #F26225;
+        font-family: 'Myriad-Pro-Regular';
+        font-size: 18px;
+    }
+
+    #hidden-bullet{
+        width: 24px;
+        height: 24px;
+        margin-right: 16px;
+        vertical-align: bottom;
+    }
+
+    ::placeholder{
+        color: #282E36;
+        font-family: 'Myriad-Pro-Regular';
+        font-size: 18px;
     }
 
     @media screen and (max-width: 650px) {
@@ -81,3 +113,18 @@
     }
     
 </style>
+
+<script>
+  export default {
+    data () {
+      return {
+        active: false
+      }
+    },
+    methods: {
+      toggle () {
+        this.active = true;
+      }
+    }
+  }
+</script>

@@ -12,13 +12,11 @@
     <Breadcrumb :links="[{bread:'Home', goTo: '/'}, {bread:'Our Team', goTo: '/ourTeam'}]"/>
     <h2>Our Team</h2>
     <h3>Our team page showcases the impressive network of backers who believe in our vision and share our passion for supporting innovative startups.</h3>
-    <main>
-        <div class="card-container">
-            <div v-for="person of filtered">
-                <NuxtLink :to = "'/ourTeam/' + person.id"><PersonCard id="card" :key="person.id" :name="person.name" :surname="person.surname" :age="person.age" :area="person.area" :isFounder="person.isFounder"/></NuxtLink>
-            </div>
+    <div class="card-container">
+        <div v-for="person of filtered">
+            <NuxtLink :to = "'/ourTeam/' + person.id"><PersonCard id="card" :key="person.id" :name="person.name" :surname="person.surname" :age="person.age" :area="person.area" :isFounder="person.isFounder"/></NuxtLink>
         </div>
-    </main>
+    </div>
 </template>
 
 <style>
