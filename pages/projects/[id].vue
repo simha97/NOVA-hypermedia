@@ -21,9 +21,9 @@
         </div>
         <h2>{{project.projectTitle}}</h2>
         <Info :infos="[{title:'Main Ideas', content: project.mainIdea, type: 'text'}, 
-            {title:'Area', content: project.area, type: 'text'}, 
+            {title:'Area', content: project.area, type: 'area'}, 
             {title:'Supervisor', content: project.persons.name + ' ' + project.persons.surname, type: 'text'}]"/>
-        <img :src="`/portraits/${project.persons.name+project.persons.surname}.jpg`" id="person"/>
+        <img v-bind:src="'/_nuxt/public/portraits/' + project.persons.name + project.persons.surname + '.jpg'" id="person"/>
     </div>    
     <h2>How it works</h2>    
     <div class="scroll-container" @wheel="ScrollPictures($event)" >

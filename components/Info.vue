@@ -12,6 +12,12 @@
             <div v-if="info.type == 'link'">
               <NuxtLink :to = info.content.page><div class="person-info-link" >{{ info.content.title }}</div></NuxtLink>
             </div>
+            <div v-if="info.type == 'area'">
+              <div class="area-container" >{{ info.content }}</div>
+            </div>
+            <div v-if="info.type == 'picture'">
+              <div class="area-container" >{{ info.content }}</div>
+            </div>
           </div>
         </div>
       </div>
@@ -52,6 +58,7 @@
     margin-top: 16px;
     font-size: 16px;
   }
+
   .person-info-link{
     color: #F26225;
     font-style: italic;
@@ -63,6 +70,12 @@
 
   .person-info-link:hover{
     text-decoration: underline;
+  }
+
+  .area-container{
+    margin-top: 16px;
+    border: solid 1px #F26225;
+    color: #F26225;
   }
 
 
