@@ -1,28 +1,44 @@
 <template>
     <Breadcrumb :links="[{bread:'Home', goTo: '/'}, {bread:'Contact Us', goTo: '/contactUs'}]"/>
     <h2>Contact Us</h2>
-    <div class="form">
-        <input type = "text" id = "name" placeholder = "Name">
-        <input type = "text" id = "name" placeholder = "Surname">
-        <input type = "email" id = "mail" placeholder = "Email">
-        <textarea id = "message" placeholder = "Please let us know your requirements, and we will get back to you soon!"></textarea>  
-        <input type="checkbox" id="check" >
-        <label for="check" id="check-text">I am confirming that I am acknowledging and accepting the privacy statement</label>
-        <div id="submit" @click="toggle()">Submit</div>
-        <div id="hidden-message" v-if="active">
-            <img id="hidden-bullet" src="~\assets\icons\orange-bullet.png">
-            Your message has been received
+    <div class="contact-us">
+        <div class="form">
+            <input type = "text" id = "name" placeholder = "Name">
+            <input type = "text" id = "name" placeholder = "Surname">
+            <input type = "email" id = "mail" placeholder = "Email">
+            <textarea id = "message" placeholder = "Please let us know your requirements, and we will get back to you soon!"></textarea>  
+            <input type="checkbox" id="check" >
+            <label for="check" id="check-text">I am confirming that I am acknowledging and accepting the privacy statement</label>
+            <div id="submit" @click="toggle()">Submit</div>
+            <div id="hidden-message" v-if="active">
+                <img id="hidden-bullet" src="~\assets\icons\orange-bullet.png">
+                Your message has been received
+            </div>
+        </div>
+        <div>
+            <h3>Contact us if you want to...</h3>
+            <Info id="contact-list" :infos="
+                        [{title:'Send Your Project', content: '', type: 'text'},
+                        {title:'Make an appointment', content: '', type: 'text'},
+                        {title:'Request more information', content: '', type: 'text'},
+                        {title:'Just contact us!', content: '', type: 'text'}
+                        ]"/>
         </div>
     </div>
 </template>
 
 <style>
 
+    .contact-us{
+        display: flex;
+    }
+
     .form {
         width: 672px;
         display: flex;
         gap: 16px;
         flex-wrap: wrap;
+        margin-right: 96px;
     }
 
     #name{
@@ -47,6 +63,7 @@
         padding: 16px;
         border: 0;
         border-radius: 8px;
+        resize: none;
     }
 
     #check{
@@ -95,6 +112,23 @@
         color: #282E36;
         font-family: 'Myriad-Pro-Regular';
         font-size: 18px;
+    }
+
+    .contact-us h3{
+        width: 336px;
+    }
+
+    #contact-list .person-info-data{
+        margin-bottom: 0;
+    }
+
+    #contact-list .person-info-title{
+        margin-top: 4px;
+    }
+
+    #contact-list #bullet{
+        width: 24px;
+        height: 24px;
     }
 
     @media screen and (max-width: 650px) {
