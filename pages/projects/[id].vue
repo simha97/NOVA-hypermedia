@@ -1,7 +1,7 @@
 <template>
     <div class="intro">
         <img class="shadow" src="~\assets\img\pageShadow.png">
-        <img v-bind:src="'/_nuxt/LogoPng/' + project.projectTitle + '_Big.png'" id="project-img">
+        <img v-bind:src="'/_nuxt/PicturesForProjects/' + project.projectTitle + '_Banner.jpg'" id="project-img">
         <div class="intro-description">
             <img v-bind:src="'/_nuxt/LogoPng/' + project.projectTitle + '_Icon.png'" id="project-icon">
             <div>
@@ -29,9 +29,9 @@
     </div>    
     <h2>How it works</h2>    
     <div class="scroll-container" @wheel="ScrollPictures($event)" >
-        <img v-bind:src="'/_nuxt/LogoPng/' + project.projectTitle + '_Frame1.png'" id="frame">
-        <img v-bind:src="'/_nuxt/LogoPng/' + project.projectTitle + '_Frame2.png'" id="frame">
-        <img v-bind:src="'/_nuxt/LogoPng/' + project.projectTitle + '_Frame3.png'" id="frame">
+        <img v-bind:src="'/_nuxt/PicturesForProjects/' + project.projectTitle + '1.jpg'" id="frame">
+        <img v-bind:src="'/_nuxt/PicturesForProjects/' + project.projectTitle + '2.jpg'" id="frame">
+        <img v-bind:src="'/_nuxt/PicturesForProjects/' + project.projectTitle + '3.jpg'" id="frame">
     </div>
     <div class="project-info">
         <h2>Social impact</h2> 

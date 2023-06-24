@@ -26,7 +26,7 @@
     </div>
     <img class="shadow" src="~\assets\img\bigProjectShadow.png" id="start-shadow">
     <img class="shadow" src="~\assets\img\bigProjectHoverShadow.png" id="end-shadow">
-    <img alt="picture" v-bind:src="'/_nuxt/LogoPng/' + title + '_Big.png'" id="big-picture">
+    <img v-bind:src="'/_nuxt/PicturesForProjects/' + title + '_Banner.jpg'" id="big-picture">
   </div>
 </template>
   
