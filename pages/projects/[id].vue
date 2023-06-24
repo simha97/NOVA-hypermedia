@@ -23,7 +23,7 @@
             </div>
         </div>
         <h2>{{project.projectTitle}}</h2>
-        <Info :infos="[{title:'Main Ideas', content: project.mainIdea, type: 'text'}, 
+        <Info id="info" :infos="[{title:'Main Idea', content: project.mainIdea, type: 'text'}, 
             {title:'Area', content: project.areas.name, type: 'area'}, 
             {title:'Supervisor', content: {page: '/ourTeam/' + project.persons.id, name: project.persons.name, surname: project.persons.surname}, type: 'picture'}]"/>
     </div>    
@@ -71,6 +71,10 @@
 
     .project-info{
         margin-bottom: 160px;
+    }
+
+    #info{
+        margin-top: 96px;
     }
 
     .practical-info{
