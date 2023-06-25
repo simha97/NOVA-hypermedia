@@ -39,7 +39,6 @@
     width: fit-content;
     font-size: 24px;
   }
-
   .person-info-data{
     display: flex;
     margin-bottom: 32px;
@@ -52,29 +51,20 @@
     margin-right: 16px;
     margin-top: 6px;
   }
-
-  .person-info-title{
-    font-size: 24px;
-  }
-
   .person-info-description{
     margin-top: 16px;
-    font-size: 16px;
+    font-size: 18px;
   }
-
   .person-info-link{
     color: #F26225;
     font-style: italic;
     text-align:center;
-    font-size: 24px;
     font-family: "Myriad-Pro-Bold";
     margin-top: 8px;
   }
-
   .person-info-link:hover{
     text-decoration: underline;
   }
-
   .area-container{
     margin-top: 16px;
     border: solid 1px #F26225;
@@ -87,7 +77,6 @@
       height: 128px;
       border-radius: 128px;
   }
-
   .person-info-picture-link{
     color: #F26225;
     font-size: 18px;
@@ -95,7 +84,6 @@
     margin-top: 8px;
     text-align: center;
   }
-
   .person-info-picture:hover .person-info-picture-link{
     text-decoration: underline;
   }

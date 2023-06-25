@@ -88,6 +88,8 @@ p, ul li, .breadcrumb-container {
 .intro img{
     margin-top: -96px;
     margin-left: -160px;
+    width: 1440px;
+    height: 648px;
 }
 
 .intro-description{
@@ -147,6 +149,12 @@ p, ul li, .breadcrumb-container {
   margin-top: 64px;
   margin-bottom: 240px;
   margin-right: 32px;
+}
+
+.frame{
+    height: 400px;
+    width: 736px;
+    border-radius: 8px;
 }
 
 @media (max-width: 768px) {

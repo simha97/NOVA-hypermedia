@@ -26,12 +26,15 @@
         <Info id="info" :infos="[{title:'Main Idea', content: project.mainIdea, type: 'text'}, 
             {title:'Area', content: project.areas.name, type: 'area'}, 
             {title:'Supervisor', content: {page: '/ourTeam/' + project.persons.id, name: project.persons.name, surname: project.persons.surname}, type: 'picture'}]"/>
-    </div>    
-    <h2>How it works</h2>    
-    <div class="scroll-container" @wheel="ScrollPictures($event)" >
-        <img v-bind:src="'/PicturesForProjects/' + project.projectTitle + '1.jpg'" id="frame">
-        <img v-bind:src="'/PicturesForProjects/' + project.projectTitle + '2.jpg'" id="frame">
-        <img v-bind:src="'/PicturesForProjects/' + project.projectTitle + '3.jpg'" id="frame">
+    </div>   
+    <div class="project-info"> 
+        <h2>How it works</h2>    
+        <div class="scroll-container" @wheel="ScrollPictures($event)" >
+            <img v-bind:src="'/PicturesForProjects/' + project.projectTitle + '1.jpg'" class="frame">
+            <img v-bind:src="'/PicturesForProjects/' + project.projectTitle + '2.jpg'" class="frame">
+            <img v-bind:src="'/PicturesForProjects/' + project.projectTitle + '3.jpg'" class="frame">
+        </div>
+        <h3>{{ project.description }}</h3>
     </div>
     <div class="project-info">
         <h2>Social impact</h2> 
@@ -73,15 +76,28 @@
         margin-bottom: 160px;
     }
 
+    .project-info h3{
+        white-space: break-spaces;
+    }
+
+    .project-info .scroll-container{
+        margin-bottom: 96px;
+    }
+
     #info{
         margin-top: 96px;
+    }
+
+    #info .person-info-description{
+        font-size: 24px;
+        width: 1120px;
     }
 
     .practical-info{
         display: flex;
         position: absolute;
         margin-top: 24px;
-        right: 160px;
+        right: 136px;
         gap: 32px;
     }
 
@@ -104,12 +120,6 @@
         width: 18px;
         margin-top: 6px;
         margin-right: 8px;
-    }
-
-    #frame{
-        height: 400px;
-        width: 736px;
-        border-radius: 8px;
     }
 
     #social-impact{

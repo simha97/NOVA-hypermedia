@@ -1,7 +1,7 @@
 <template>
     <div class="intro">
         <img class="shadow" src="~\assets\img\pageShadow.png">
-        <img id="aboutUs" src="~\assets\img\AboutUs.png">
+        <img src="~\assets\img\AboutUs.png">
         <div class="intro-description">
             <div>
                 <h1>Empowering Entrepreneurs Powering Progress</h1>
@@ -13,10 +13,9 @@
     <h2>About Us</h2>
     <h3>Our journey began with a shared passion for fostering entrepreneurship and driving positive change. We recognized the immense value of transformative ideas and the need for strategic capital to bring them to life. With this vision in mind, we set out to build a platform that not only provides financial support but also serves as a strategic partner and mentor to our portfolio companies.</h3>
     <div class="scroll-container" @wheel="ScrollPictures($event)" >
-        <img src="/PicturesForProjects/Lifelong Learners3.jpg">
-        <img src="/PicturesForProjects/Global Classroom1.jpg">
-        <img src="/PicturesForProjects/Art For All3.jpg">
-        <img src="/PicturesForProjects/Art For All3.jpg">
+        <img src="/PicturesForProjects/Lifelong Learners3.jpg" class="frame">
+        <img src="/PicturesForProjects/Global Classroom1.jpg" class="frame">
+        <img src="/PicturesForProjects/Art For All3.jpg" class="frame">
     </div>
     <h2>Co-Founders</h2>
     <div v-for="founder in founders">
@@ -30,10 +29,6 @@
 </template>
 
 <style>
-
-    #aboutUs {
-        margin-top: 0;
-    }
 
     .intro .shadow{
         width: 1440px;
