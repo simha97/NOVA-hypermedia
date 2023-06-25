@@ -1,6 +1,6 @@
 <template>
     <div class="person-card">
-      <img alt="picture" v-bind:src="'/_nuxt/portraits/' + name + surname + '.jpg'" id="profile">
+      <img alt="picture" v-bind:src="'/portraits/' + name + surname + '.jpg'" id="profile">
       <div class="data-container">
         <div class="person-name-surname">{{ name }} {{surname }}</div>
         <div class="person-founderTag" v-if="isFounder == true">Founder</div>

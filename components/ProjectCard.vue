@@ -1,7 +1,7 @@
 <template>
   <NuxtLink :to = "link">
     <div class="project-card" >
-      <img class="main-img" id="logo" v-bind:src="'/_nuxt/LogoPng/' + title + '.png'">
+      <img class="main-img" id="logo" v-bind:src="'/LogoPng/' + title + '.png'">
       <div class="data-container">
         <div class="project-title">{{ title }}</div>
         <div class="project-mainIdea">{{ mainIdea }}</div>

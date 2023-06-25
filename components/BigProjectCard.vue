@@ -2,7 +2,7 @@
   <div class="big-project-card">
     <div class="data-container">
       <div class="shown-data">
-        <img v-bind:src="'/_nuxt/LogoPng/' + title + '_Icon.png'" id="small-logo">
+        <img v-bind:src="'/LogoPng/' + title + '_Icon.png'" id="small-logo">
         <div>
           <div class="project-title">{{ title }}</div>
           <div class="project-description">{{ slogan }}</div>
@@ -26,7 +26,7 @@
     </div>
     <img class="shadow" src="~\assets\img\bigProjectShadow.png" id="start-shadow">
     <img class="shadow" src="~\assets\img\bigProjectHoverShadow.png" id="end-shadow">
-    <img v-bind:src="'/_nuxt/PicturesForProjects/' + title + '_Banner.jpg'" id="big-picture">
+    <img v-bind:src="'/PicturesForProjects/' + title + '_Banner.jpg'" id="big-picture">
   </div>
 </template>
   

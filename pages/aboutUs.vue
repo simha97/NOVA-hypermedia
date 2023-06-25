@@ -13,10 +13,10 @@
     <h2>About Us</h2>
     <h3>Our journey began with a shared passion for fostering entrepreneurship and driving positive change. We recognized the immense value of transformative ideas and the need for strategic capital to bring them to life. With this vision in mind, we set out to build a platform that not only provides financial support but also serves as a strategic partner and mentor to our portfolio companies.</h3>
     <div class="scroll-container" @wheel="ScrollPictures($event)" >
-        <img src="~\assets\img\AboutUsScroll.png">
-        <img src="~\assets\img\AboutUsScroll.png">
-        <img src="~\assets\img\AboutUsScroll.png">
-        <img src="~\assets\img\AboutUsScroll.png">
+        <img src="/PicturesForProjects/Lifelong Learners3.jpg">
+        <img src="/PicturesForProjects/Global Classroom1.jpg">
+        <img src="/PicturesForProjects/Art For All3.jpg">
+        <img src="/PicturesForProjects/Art For All3.jpg">
     </div>
     <h2>Co-Founders</h2>
     <div v-for="founder in founders">

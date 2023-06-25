@@ -1,9 +1,9 @@
 <template>
     <div class="intro">
         <img class="shadow" src="~\assets\img\pageShadow.png">
-        <img v-bind:src="'/_nuxt/PicturesForProjects/' + project.projectTitle + '_Banner.jpg'" id="project-img">
+        <img v-bind:src="'/PicturesForProjects/' + project.projectTitle + '_Banner.jpg'" id="project-img">
         <div class="intro-description">
-            <img v-bind:src="'/_nuxt/LogoPng/' + project.projectTitle + '_Icon.png'" id="project-icon">
+            <img v-bind:src="'/LogoPng/' + 'Artificial Art_Icon' + '.png'" id="project-icon">
             <div>
                 <h1>{{project.projectTitle}}</h1>
                 <h3>{{ project.slogan}}</h3>
@@ -29,14 +29,14 @@
     </div>    
     <h2>How it works</h2>    
     <div class="scroll-container" @wheel="ScrollPictures($event)" >
-        <img v-bind:src="'/_nuxt/PicturesForProjects/' + project.projectTitle + '1.jpg'" id="frame">
-        <img v-bind:src="'/_nuxt/PicturesForProjects/' + project.projectTitle + '2.jpg'" id="frame">
-        <img v-bind:src="'/_nuxt/PicturesForProjects/' + project.projectTitle + '3.jpg'" id="frame">
+        <img v-bind:src="'/PicturesForProjects/' + project.projectTitle + '1.jpg'" id="frame">
+        <img v-bind:src="'/PicturesForProjects/' + project.projectTitle + '2.jpg'" id="frame">
+        <img v-bind:src="'/PicturesForProjects/' + project.projectTitle + '3.jpg'" id="frame">
     </div>
     <div class="project-info">
         <h2>Social impact</h2> 
         <h3>{{ project.socialImpact }}</h3>
-        <img v-bind:src="'/_nuxt/LogoPng/' + project.projectTitle + '_SocialImpact.png'" id="social-impact">
+        <img v-bind:src="'/LogoPng/' +  'Cecio_SocialImpact.png'" id="social-impact">
     </div>
     <div class="project-info">
         <h2>Economic impact</h2> 
