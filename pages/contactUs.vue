@@ -3,12 +3,12 @@
     <h2>Contact Us</h2>
     <div class="contact-us">
         <div class="form">
-            <p v-if="errors.length">
+            <div class="error" v-if="errors.length">
                 <b>Please correct the following error(s):</b>
                 <ul>
                     <li v-for="error in errors">{{ error }}</li>
                 </ul>
-            </p>
+              </div>
             <input type = "text" id = "name" placeholder = "Name" v-model="name">
             <input type = "text" id = "name" placeholder = "Surname" v-model="surname">
             <input type = "email" id = "mail" placeholder = "Email" v-model="email">
@@ -40,9 +40,9 @@
     }
 
     .form {
+        margin-top: 32px;
         width: 672px;
         display: flex;
-        flex-direction: column;
         gap: 16px;
         flex-wrap: wrap;
         margin-right: 96px;
@@ -94,6 +94,7 @@
         border: solid 1px #F26225;
         border-radius: 8px;
         margin-right: 48px;
+        width: fit-content;
     }
 
     #submit:hover{
@@ -138,6 +139,11 @@
         height: 24px;
     }
 
+    .error{
+      color: #F26225;
+      width: max-content;
+    }
+
     @media screen and (max-width: 650px) {
         form div {
             flex-direction: column;
@@ -177,12 +183,15 @@
         this.errors.push('Surname required.');
       }
       if (!this.email) {
-        this.errors.push('email required.');
+        this.errors.push('Email required.');
       } else if (!this.validEmail(this.email)) {
         this.errors.push('Valid email required.');
       }
       if (!document.getElementById("message").value) {
-        this.errors.push('Message empty.');
+        this.errors.push('Empty message.');
+      }
+      if (!document.getElementById("check").checked) {
+        this.errors.push('Accept privacy policy.');
       }
       if (!this.errors.length) {
         this.active=true
