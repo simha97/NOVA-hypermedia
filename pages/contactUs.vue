@@ -3,13 +3,19 @@
     <h2>Contact Us</h2>
     <div class="contact-us">
         <div class="form">
-            <input type = "text" id = "name" placeholder = "Name">
-            <input type = "text" id = "name" placeholder = "Surname">
-            <input type = "email" id = "mail" placeholder = "Email">
+            <p v-if="errors.length">
+                <b>Please correct the following error(s):</b>
+                <ul>
+                    <li v-for="error in errors">{{ error }}</li>
+                </ul>
+            </p>
+            <input type = "text" id = "name" placeholder = "Name" v-model="name">
+            <input type = "text" id = "name" placeholder = "Surname" v-model="surname">
+            <input type = "email" id = "mail" placeholder = "Email" v-model="email">
             <textarea id = "message" placeholder = "Please let us know your requirements, and we will get back to you soon!"></textarea>  
-            <input type="checkbox" id="check" >
-            <label for="check" id="check-text">I am confirming that I am acknowledging and accepting the privacy statement</label>
-            <div id="submit" @click="toggle()">Submit</div>
+            <div id="check-text"><input type="checkbox" id="check" >
+            <label for="check">I am confirming that I am acknowledging and accepting the privacy statement</label></div>
+            <div id="submit" @click="checkForm()">Submit</div>
             <div id="hidden-message" v-if="active">
                 <img id="hidden-bullet" src="~\assets\icons\orange-bullet.png">
                 Your message has been received
@@ -36,6 +42,7 @@
     .form {
         width: 672px;
         display: flex;
+        flex-direction: column;
         gap: 16px;
         flex-wrap: wrap;
         margin-right: 96px;
@@ -152,12 +159,40 @@
   export default {
     data () {
       return {
-        active: false
+        active: false,
+        errors:[],
+        name: null,
+        surname: null,
+        email: null,
+        field: null
       }
     },
     methods: {
-      toggle () {
-        this.active = true;
+      checkForm: function (e) {
+      this.errors = [];
+      if (!this.name) {
+        this.errors.push('Name required.');
+      }
+      if (!this.surname) {
+        this.errors.push('Surname required.');
+      }
+      if (!this.email) {
+        this.errors.push('email required.');
+      } else if (!this.validEmail(this.email)) {
+        this.errors.push('Valid email required.');
+      }
+      if (!document.getElementById("message").value) {
+        this.errors.push('Message empty.');
+      }
+      if (!this.errors.length) {
+        this.active=true
+      }else{
+        this.active=false
+      }
+    },
+      validEmail: function (email) {
+        var re = /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+        return re.test(email);
       }
     }
   }
