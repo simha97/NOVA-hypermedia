@@ -3,9 +3,7 @@
   <div class="person-container">
     <div class="person-data">
       <h2>{{ person.name }} {{ person.surname }}</h2>
-      <div class="slogan">
-        “As an expert in both Education and Art I am dedicated to fostering creativity and knowledge through innovative approaches.”
-      </div>
+      <div class="slogan">{{ person.slogan }}</div>
       <Info :infos="[{title:'Profile', content: person.story, type: 'text'}, 
         {title:'Main Expertise', content: person.mainExpertise, type: 'text'}, 
         {title:'Academic Experience', content: person.degree, type: 'text'}, 
@@ -130,7 +128,6 @@
     const route = useRoute()
     const id = route.params.id
     const { data: person } = await useFetch('/api/ourTeam/' + id)
-    const description = ref(newLineOnFullStop(person.value.story))
     
 </script>
 
