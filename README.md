@@ -1,5 +1,4 @@
 TO DO:
-- create slogan for each person (easy)
 - create picture for each project (can be the repetead for project of same area):
     - 1 picture about social impact
 - create logo for each project (or we remove it? or we reuse the already created ones?)    
