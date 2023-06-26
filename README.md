@@ -1,7 +1,7 @@
 TO DO:
-- create picture for each project (can be the repetead for project of same area):
+- create picture for each project (can be all the same, or different based on area):
     - 1 picture about social impact
-- create logo for each project (or we remove it? or we reuse the already created ones?)    
+    - 1 logo (can be removed)
 - look at v-key problem in the pages
 - do reports
 
