@@ -1,6 +1,6 @@
 <template>
     <div class="nav-container">
-        <NuxtLink to="/" ><img src="/logo_black.png" alt="logo nova" style="position: relative; left: 56px; width: 160px;"/></NuxtLink>
+        <div><NuxtLink to="/" ><img src="/logo_black.png" alt="logo nova"/></NuxtLink></div>
         <div class="nav-list-item">
             <span class="nav-item">
                 <div class="dropdown"><NuxtLink to="/projects">PROJECTS</NuxtLink>
@@ -31,6 +31,7 @@
     .nav-container{
         background-color: #F5F5F5;
         display: flex;
+        align-items: flex-end;
         width: 100%;
         height: 96px;
         position: relative;
@@ -39,6 +40,9 @@
         align-items: center;
     }
 
+    .nav-container img{
+        margin-left: 56px;
+    }
     .nav-list-item {
         position: absolute;
         right: 56px;
@@ -91,26 +95,28 @@
 
     @media (max-width: 830px) {
         .nav-container{
-            background-color: #F5F5F5;
-            display: flex;
-            width: 100%;
-            height: 56px;
-            position: relative;
-            z-index: 1; /*this give the idea of "layers", so this has to be up the root level 0, and must be accompanied with position*/
-            padding-bottom: 8px;
-            box-shadow: 0 1px 1px 0 #282E36;
+            flex-direction: column;
+            align-items: flex-end;
+            height: 4em;
         }
+        
         .nav-container:hover{
-            height: 10em;
-            
+            height: 10.6em;    
+        }
+        #novalogo-linkToHome{
+            position: relative;
+            right: 10%;
+            width: 160px;
         }
         .nav-list-item {
-            position: relative;
-            align-items: center;
-            display: flex;
-            text-align:center;
-            text-indent:10px;
-
+            align-items: flex-end;
+            gap: 5px;
+            text-indent: 10px;
+            margin-right: 30px;
+            left:0;
+        }
+        .dropdown:hover .dropdown-sub {
+            left: 50%;
         }
     }
 </style>

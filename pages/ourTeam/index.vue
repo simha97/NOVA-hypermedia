@@ -44,17 +44,13 @@
     }
 
     @media screen and (max-width: 830px) {
-        .intro {
-            width:  700px;
-            height: 400px;
-        }
+
         .intro img{
-            max-width: 100%;
             max-height: auto;
-            background-size: 100% 100%;
-            overflow: hidden;
-            opacity: 0.9;
-            position: absolute;
+            width: 100%;
+            height: auto;
+            min-height: 648px;
+            margin: 0;
         }
 
         main #card-container{

@@ -34,6 +34,12 @@
   .breadcrumb-container .breadcrumbs:hover{
     text-decoration: underline;
   }
+  @media screen and (max-width: 830px) {
+    .breadcrumb-container{
+      margin-top: 110px;
+    }
+
+  }
 
 </style>
 

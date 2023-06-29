@@ -81,7 +81,15 @@
     border-radius: 8px;
     box-shadow: 1px 1px 2px 0 #282E36;
   }
+  @media screen and (max-width: 830px) {
+    .area-description{
+      width: auto;
+    }
+    .areas-selector{
+      width: auto;
+    }
 
+  }
 </style>
 
 <script setup>
