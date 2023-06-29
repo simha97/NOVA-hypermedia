@@ -1,6 +1,6 @@
 <template>
   <div class="person-info-container">
-    <div v-for="info in infos">
+    <div v-for="info in infos" :key="info.title">
       <div class="person-info-data">
         <img id="bullet" src="~\assets\icons\orange-bullet.png">
         <div>
@@ -35,8 +35,7 @@
 <style scoped>
 
   .person-info-container{
-    position: relative;
-    width: fit-content;
+    width: 100%;
     font-size: 24px;
   }
   .person-info-data{
@@ -75,7 +74,7 @@
       margin-top: 16px;
       width: 128px;
       height: 128px;
-      border-radius: 128px;
+      border-radius: 50%;
   }
   .person-info-picture-link{
     color: #F26225;
@@ -86,6 +85,25 @@
   }
   .person-info-picture:hover .person-info-picture-link{
     text-decoration: underline;
+  }
+
+  @media (max-width: 480px) {
+    .person-info-container {
+      font-size: 18px;
+    }
+
+    .person-info-data {
+      flex-direction: column;
+      align-items: flex-start;
+    }
+
+    #bullet {
+      margin-top: 0;
+    }
+
+    .person-info-title {
+      margin-bottom: 8px;
+    }
   }
 
 </style>

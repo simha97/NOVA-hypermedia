@@ -9,12 +9,6 @@
         {title:'Academic Experience', content: person.degree, type: 'text'}, 
         {title:'Past Job Experience', content: person.pastJobExperience, type: 'text'}]"/>
     </div>
-    <div class="bigimage-container">
-      <img v-bind:src="'/portraits/' + person.name + person.surname + '.jpg'" id="person">
-      <div v-if="person.isFounder == true">
-        <img src="~\assets\img\founder.png" id="founder">
-      </div>
-  </div>
   </div>
   <div>
     <h2>Projects in Progress</h2>
@@ -49,10 +43,12 @@
   }
 
   .bigimage-container{
+    display: flex;
     position: relative;
     width: 464px;
     height: 608px;
     border-radius: 0 270px 0 0;
+    
   }
 
   .bigimage-container img {
@@ -120,6 +116,17 @@
         font-size: 12px;
       }
     }
+    @media (max-width: 768px) {
+  .bigimage-container {
+    padding-top: 100%; /* Adjust as per your desired aspect ratio */
+  }
+}
+
+@media (max-width: 480px) {
+  .bigimage-container {
+    padding-top: 120%; /* Adjust as per your desired aspect ratio */
+  }
+}
 
 </style>
 

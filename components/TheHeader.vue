@@ -106,7 +106,6 @@
         }
         .nav-list-item {
             position: relative;
-            left:30%;
             align-items: center;
             display: flex;
             text-align:center;
