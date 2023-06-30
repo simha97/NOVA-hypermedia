@@ -18,7 +18,7 @@
 <style scoped>
 
   .person-card {
-    box-shadow: 0 4px 8px 0 #282E36;
+    box-shadow: 0 4px 8px 0 #E7E7E7;
     transition: 0.3s;
     width: 256px;
     height: 400px;

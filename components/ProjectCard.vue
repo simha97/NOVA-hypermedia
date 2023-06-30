@@ -21,7 +21,7 @@
 <style scoped>
 
   .project-card {
-    box-shadow: 0 4px 8px 0 #282E36;
+    box-shadow: 0 4px 8px 0 #E7E7E7;
     width: 352px;
     height: 564px;
     background-color: white;
