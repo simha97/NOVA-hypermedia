@@ -17,7 +17,7 @@
             </div>
             <div v-if="info.type == 'picture'">
               <NuxtLink :to = info.content.page class="person-info-picture">
-                <img v-bind:src="'/portraits/' + info.content.name + info.content.surname + '.jpg'" id="person"/>
+                <img v-bind:src="'/TeamPictures/' + info.content.name + info.content.surname + '.jpg'" id="person"/>
                 <div class="person-info-picture-link">{{ info.content.name + ' ' + info.content.surname }}</div>
               </NuxtLink>            
             </div>
