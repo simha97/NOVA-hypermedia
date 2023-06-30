@@ -74,6 +74,7 @@
 
     .project-info{
         margin-bottom: 160px;
+        width: 1120px;
     }
 
     .project-info h3{
