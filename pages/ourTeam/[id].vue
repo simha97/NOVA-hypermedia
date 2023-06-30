@@ -9,6 +9,12 @@
         {title:'Academic Experience', content: person.degree, type: 'text'}, 
         {title:'Past Job Experience', content: person.pastJobExperience, type: 'text'}]"/>
     </div>
+    <div class="bigimage-container">
+      <img v-bind:src="'/TeamPictures/' + person.name + person.surname + '.jpg'" id="person">
+      <div v-if="person.isFounder == true">
+        <img src="~\assets\img\founder.png" id="founder">
+      </div>
+    </div>
   </div>
   <div>
     <h2>Projects in Progress</h2>
