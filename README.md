@@ -5,7 +5,7 @@ TO DO:
 - nova logo white for the footer
 - change the website and the address in the footer
 - look at v-key problem in the pages
-- do reports
+- DO REPORT
 
 TO DISCUSS:
 - how breadcrumbs works (if click go to link? show also current page?) only in area page - REMOVE THE LINK OF AREA PAGE BREADCRUMB
@@ -15,3 +15,6 @@ TO DISCUSS:
 - how form contact us works (missing parameter message, when to show hidden message) - ADD THE RESET THE FORM FUNCTION WHEN CLICK ON SUBMIT. Do a call to the server that responds with a 
 200 status code (practically speaking a “Hello World”) and then you display the notification.
 - scroll images: ADD SCROLL WITH MOUSE EVENT, 
+
+1) finish the website
+2) report
