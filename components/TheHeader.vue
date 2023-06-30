@@ -1,6 +1,6 @@
 <template>
     <div class="nav-container">
-        <div><NuxtLink to="/" ><img src="/logo_black.png" alt="logo nova"/></NuxtLink></div>
+        <div><NuxtLink to="/" ><img src="~\assets\img\logo_black.png" id="logo-nova"></NuxtLink></div>
         <div class="nav-list-item">
             <span class="nav-item">
                 <div class="dropdown"><NuxtLink to="/projects">PROJECTS</NuxtLink>
