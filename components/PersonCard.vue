@@ -6,8 +6,8 @@
         <div class="person-founderTag" v-if="isFounder == true">Founder</div>
         <div class="person-expertiseInfo">Expert in
           <div class="person-areaTag">
-            <div v-for="element in area.split(',')" class="area-container"> 
-              {{ element }}
+            <div v-for="element in area" class="area-container"> 
+              {{ element.name }}
             </div>
           </div>  
         </div>      
@@ -88,4 +88,5 @@
 <script setup>
 
   const props = defineProps(['name', 'surname', 'isFounder', 'area', 'link']);
+  
 </script>

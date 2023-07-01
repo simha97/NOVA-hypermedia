@@ -20,7 +20,7 @@
     <h2>Co-Founders</h2>
     <div v-for="founder in founders">
         <div class="founder-container" v-bind:style=" founders.indexOf(founder) % 2 === 1 ? {'flex-direction': 'row-reverse'} : {'flex-direction': 'row'}">
-            <PersonCard :key="founder.id" :name="founder.name" :surname="founder.surname" :area="founder.area" :isFounder="founder.isFounder" :link="'/ourTeam/' + founder.id"/>
+            <PersonCard :key="founder.id" :name="founder.name" :surname="founder.surname" :area="founder.areas" :isFounder="founder.isFounder" :link="'/ourTeam/' + founder.id"/>
             <div class="slogan">
                 “As an expert in both Education and Art I am dedicated to fostering creativity and knowledge through innovative approaches.”
             </div>
