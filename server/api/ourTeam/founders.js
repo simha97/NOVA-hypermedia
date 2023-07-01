@@ -5,7 +5,7 @@ export default defineEventHandler(async (event) => {
 
   const { data, error } = await client
     .from('persons')
-    .select('id, name, surname, areas(name), isFounder')
+    .select('id, name, surname, areas(name), isFounder, slogan')
     .eq('isFounder', true)
     .order('surname');
 
