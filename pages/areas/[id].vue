@@ -5,34 +5,34 @@
     <div class="areas-selector">
       <NuxtLink to="/areas/Art">
         <div v-if="area == 'Art'">
-          <div class="active-area-button">Art</div>
+          <div class="active-area-button"><span>Art</span></div>
         </div> 
         <div v-else>
-          <div class="area-button">Art</div>
+          <div class="area-button"><span>Art</span></div>
         </div>
       </NuxtLink>  
       <NuxtLink to="/areas/Education">
         <div v-if="area == 'Education'">
-          <div class="active-area-button">Education</div>
+          <div class="active-area-button"><span>Education</span></div>
         </div> 
         <div v-else>
-          <div class="area-button">Education</div>
+          <div class="area-button"><span>Education</span></div>
         </div>
       </NuxtLink>  
       <NuxtLink to="/areas/Energy">
         <div v-if="area == 'Energy'">
-          <div class="active-area-button">Energy</div>
+          <div class="active-area-button"><span>Education</span></div>
         </div> 
         <div v-else>
-          <div class="area-button">Energy</div>
+          <div class="area-button"><span>Energy</span></div>
         </div>
       </NuxtLink>  
       <NuxtLink to="/areas/Food">
         <div v-if="area == 'Food'">
-          <div class="active-area-button">Food</div>
+          <div class="active-area-button"><span>Food</span></div>
         </div> 
         <div v-else>
-          <div class="area-button">Food</div>
+          <div class="area-button"><span>Food</span></div>
         </div>
       </NuxtLink>  
     </div>
@@ -54,32 +54,37 @@
   .areas-selector{
     gap: 56px;
     display: flex;
+    position: relative;
+    bottom: -50px;
   }
 
   .area-button{
-    width: 160px;
+    width: 175px;
+    height: 83px;
     text-align: center;
     padding: 16px;
   }
-
+  .active-area span{
+    position: absolute 13px 77px 41px 50px;
+  }
   .active-area-button{
-    width: 160px;
+    width: 175px;
+    height: 83px;
     background-color: white;
     color: #F26225;
     text-align: center;
     padding: 16px;
     border-radius: 8px;
-    box-shadow: 1px 1px 2px 0 #282E36;
-    
   }
-
+  .active-area-button span{
+    position: absolute 13px 77px 41px 50px;
+  }
   .area-description{
-    margin-top: 8px;
     width: 1120px;
     background-color: white;
     padding: 40px 64px 40px 64px;
     border-radius: 8px;
-    box-shadow: 1px 1px 2px 0 #282E36;
+
   }
   @media screen and (max-width: 830px) {
     .area-description{
