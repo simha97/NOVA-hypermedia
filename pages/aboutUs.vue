@@ -28,7 +28,7 @@
 
 <style>
 
-    .intro .shadow{
+    .intro img{
         width: 1440px;
         height: 648px;
     }

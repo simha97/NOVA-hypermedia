@@ -1,6 +1,6 @@
 <template>
     <div class="nav-container">
-        <div><NuxtLink to="/" ><img src="~\assets\img\logo_black.png" id="logo-nova"></NuxtLink></div>
+        <div id="landmark-homepage"><NuxtLink to="/" ><img src="~\assets\img\logo_black.png" id="logo-nova"></NuxtLink></div>
         <div class="nav-list-item">
             <span class="nav-item">
                 <div class="dropdown"><NuxtLink to="/projects">PROJECTS</NuxtLink>
@@ -32,7 +32,7 @@
         background-color: #F5F5F5;
         display: flex;
         align-items: flex-end;
-        width: 100%;
+        width: 1440px;
         height: 96px;
         position: relative;
         z-index: 1; /*this give the idea of "layers", so this has to be up the root level 0, and must be accompanied with position*/
@@ -96,25 +96,31 @@
     @media (max-width: 830px) {
         .nav-container{
             flex-direction: column;
-            align-items: flex-end;
-            height: 4em;
+            align-items: flex-start;
+            height: 3em;
         }
         
         .nav-container:hover{
-            height: 10.6em;    
+            height: 12em;
         }
-        #novalogo-linkToHome{
+        .nav-container:hover .nav-list-item {
+            display: flex;
+        }
+        #landmark-homepage{
             position: relative;
-            right: 10%;
+            margin-top: 5px;
             width: 160px;
         }
         .nav-list-item {
+            position: relative;
+            display: none;
             align-items: flex-end;
             gap: 5px;
             text-indent: 10px;
             margin-right: 30px;
             left:0;
         }
+
         .dropdown:hover .dropdown-sub {
             left: 50%;
         }

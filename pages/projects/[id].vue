@@ -13,16 +13,19 @@
     <Breadcrumb :links="[{bread:'Home', goTo: '/'}, {bread:'Project', goTo: '/projects'}, {bread:project.projectTitle, goTo: '/projects/' + project.id}]"/>
     <div class="project-info">
         <div class="practical-info">
-            <div class="icon-text">
-                <img src="~\assets\icons\location-pin-dark.png" id="icon-white">
-                {{ project.city }}
-            </div>
-            <div class="icon-text">
-                <img src="~\assets\icons\date-dark.png" id="icon-date">
-                {{ project.date }}
+            <h2>{{project.projectTitle}}</h2>
+            <div id="icon-text">
+                <div class="icon-text">
+                    <img src="~\assets\icons\location-pin-dark.png" id="icon-white">
+                    {{ project.city }}
+                </div>
+                <div class="icon-text">
+                    <img src="~\assets\icons\date-dark.png" id="icon-date">
+                    {{ project.date }}
+                </div>
             </div>
         </div>
-        <h2>{{project.projectTitle}}</h2>
+        
         <Info id="info" :infos="[{title:'Main Idea', content: project.mainIdea, type: 'text'}, 
             {title:'Area', content: project.areas.name, type: 'area'}, 
             {title:'Supervisor', content: {page: '/ourTeam/' + project.persons.id, name: project.persons.name, surname: project.persons.surname}, type: 'picture'}]"/>
@@ -96,17 +99,24 @@
 
     .practical-info{
         display: flex;
-        position: absolute;
-        margin-top: 24px;
-        right: 136px;
-        gap: 32px;
+        position: relative;
+        width: 1120px;
+
     }
 
     .practical-info .icon-text {
         display: flex;
+        position: relative;
+        right: 136px;
         height: 16px;
         margin-top: 8px;
         font-size: 24px;  
+    }
+    .practical-info #icon-text{
+        position: relative;
+        display: flex;
+        gap: 32px;
+        left: 744px;
     }
 
     .practical-info #icon-white{
@@ -129,7 +139,6 @@
         width: 848px;
         height: 312px;
     }
-
 </style>
 
 <script setup>

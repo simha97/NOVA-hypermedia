@@ -17,6 +17,6 @@ TO DISCUSS:
 - scroll images: ADD SCROLL WITH MOUSE EVENT, 
 
 1) finish the website
-2) deisgn things
+2) design things
 3) report
 4) vercel
