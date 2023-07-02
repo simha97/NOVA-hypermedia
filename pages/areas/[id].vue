@@ -5,34 +5,34 @@
     <div class="areas-selector">
       <NuxtLink to="/areas/Art">
         <div v-if="area == 'Art'">
-          <div class="active-area-button"><span>Art</span></div>
+          <div class="active-area-button"><span>#Art</span></div>
         </div> 
         <div v-else>
-          <div class="area-button"><span>Art</span></div>
+          <div class="area-button"><span>#Art</span></div>
         </div>
       </NuxtLink>  
       <NuxtLink to="/areas/Education">
         <div v-if="area == 'Education'">
-          <div class="active-area-button"><span>Education</span></div>
+          <div class="active-area-button"><span>#Education</span></div>
         </div> 
         <div v-else>
-          <div class="area-button"><span>Education</span></div>
+          <div class="area-button"><span>#Education</span></div>
         </div>
       </NuxtLink>  
       <NuxtLink to="/areas/Energy">
         <div v-if="area == 'Energy'">
-          <div class="active-area-button"><span>Education</span></div>
+          <div class="active-area-button"><span>#Energy</span></div>
         </div> 
         <div v-else>
-          <div class="area-button"><span>Energy</span></div>
+          <div class="area-button"><span>#Energy</span></div>
         </div>
       </NuxtLink>  
       <NuxtLink to="/areas/Food">
         <div v-if="area == 'Food'">
-          <div class="active-area-button"><span>Food</span></div>
+          <div class="active-area-button"><span>#Food</span></div>
         </div> 
         <div v-else>
-          <div class="area-button"><span>Food</span></div>
+          <div class="area-button"><span>#Food</span></div>
         </div>
       </NuxtLink>  
     </div>
@@ -45,29 +45,30 @@
 
 <style>
 
-  .areas-container{
+  div.areas-container{
     margin-top: 96px;
     font-size: 24px;
     font-family: "Myriad-Pro-Regular";
   }
 
-  .areas-selector{
+  div.areas-selector{
+    font-weight: 700;
     gap: 56px;
     display: flex;
     position: relative;
     bottom: -50px;
   }
 
-  .area-button{
+  div.area-button{
     width: 175px;
     height: 83px;
     text-align: center;
     padding: 16px;
   }
-  .active-area span{
-    position: absolute 13px 77px 41px 50px;
+  div.active-area span{
+    position: relative;
   }
-  .active-area-button{
+  div.active-area-button{
     width: 175px;
     height: 83px;
     background-color: white;
@@ -77,7 +78,7 @@
     border-radius: 8px;
   }
   .active-area-button span{
-    position: absolute 13px 77px 41px 50px;
+    position: relative;
   }
   .area-description{
     width: 1120px;
