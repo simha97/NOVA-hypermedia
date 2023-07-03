@@ -2,9 +2,7 @@
   <div class="breadcrumb-container">
     <img src="~\assets\icons\breadcrumb.png">
     <span v-for="item in links">
-        <NuxtLink :to="item.goTo" class="breadcrumbs">
-          {{ item.bread }}
-        </NuxtLink>
+        {{ item.bread }}
         <span v-if="links.indexOf(item) != links.length - 1">
           /
         </span>

@@ -2,7 +2,7 @@
     <Breadcrumb :links="[{bread:'Home', goTo: '/'}, {bread:'Contact Us', goTo: '/contactUs'}]"/>
     <h2>Contact Us</h2>
     <div class="contact-us">
-        <div class="form">
+        <div class="form" id="form">
             <div class="error" v-if="errors.length">
                 <b>Please correct the following error(s):</b>
                 <ul>
@@ -79,11 +79,12 @@
         margin-top: 16px;
     }
 
-    #check-text{
-        margin-top: 16px;
-        align-self: center;
-        font-size: 18px;
+    #check-text label{
+      font-size: 18px;
+      margin-left: 16px;
+      vertical-align: text-top;
     }
+
 
     #submit{
         margin-top: 64px;
@@ -162,6 +163,7 @@
 </style>
 
 <script>
+
   export default {
     data () {
       return {
@@ -175,30 +177,51 @@
     },
     methods: {
       checkForm: function (e) {
-      this.errors = [];
-      if (!this.name) {
-        this.errors.push('Name required.');
-      }
-      if (!this.surname) {
-        this.errors.push('Surname required.');
-      }
-      if (!this.email) {
-        this.errors.push('Email required.');
-      } else if (!this.validEmail(this.email)) {
-        this.errors.push('Valid email required.');
-      }
-      if (!document.getElementById("message").value) {
-        this.errors.push('Empty message.');
-      }
-      if (!document.getElementById("check").checked) {
-        this.errors.push('Accept privacy policy.');
-      }
-      if (!this.errors.length) {
-        this.active=true
-      }else{
-        this.active=false
-      }
-    },
+        this.errors = [];
+        if (!this.name) {
+          this.errors.push('Name required.');
+        }
+        else if (!this.validName(this.name)) {
+          this.errors.push('You can only use letters for name.');
+        }
+        if (!this.surname) {
+          this.errors.push('Surname required.');
+        }
+        else if (!this.validName(this.surname)) {
+          this.errors.push('You can only use letters for surname.');
+        }
+        if (!this.email) {
+          this.errors.push('Email required.');
+        } 
+        else if (!this.validEmail(this.email)) {
+          this.errors.push('Wrong email format.');
+        }
+        if (!document.getElementById("message").value) {
+          this.errors.push('Empty message.');
+        }
+        if (!document.getElementById("check").checked) {
+          this.errors.push('Accept privacy policy.');
+        }
+        if (!this.errors.length) {
+          this.active=true
+          this.name = ""
+          this.surname = ""
+          this.email = ""
+          document.getElementById("message").value = ""
+          document.getElementById("check").checked = false
+        }
+        else{
+          window.scrollTo({
+            top: 320,
+            behavior: 'smooth',
+          })
+          this.active=false
+        }
+      },
+      validName: function (name) {
+        var re = /[^a-zA-Z]/;
+        return !re.test(name);
+      },
       validEmail: function (email) {
         var re = /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
         return re.test(email);
