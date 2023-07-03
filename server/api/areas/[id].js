@@ -11,6 +11,8 @@ export default defineEventHandler(async (event) => {
     .limit(1)
     .single();  
 
+  console.log(data)  
+
   if (error) {
     throw createError({ statusCode: 400, statusMessage: error.message });
   }

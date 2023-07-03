@@ -42,7 +42,7 @@
     <div class="project-info">
         <h2>Social impact</h2> 
         <h3>{{ project.socialImpact }}</h3>
-        <img v-bind:src="'/ProjectSocialImpacts/' +  'Cecio.png'" id="social-impact">
+        <img v-bind:src="'/ProjectSocialImpacts/' + project.areas.name +  '.png'" id="social-impact">
     </div>
     <div class="project-info">
         <h2>Economic impact</h2> 
