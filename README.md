@@ -6,7 +6,6 @@ TO DO:
 - DO REPORT
 
 TO DISCUSS:
-- PUT TRIANGLE IMAGE IN THE SUB DROPDOWN NAVIGATION BAR
 - OVERFLOW OF THE COVER IMAGE IN HORIZONTAL SCROLLING
 - AREA PAGE: CHANGE DESIGN OF THE AREA_SELECTOR, NO NEED OF CHANGE THE RELOAD BUT WRITE IN THE FUTURE IMPROVEMENT
 - Do a call to the server that responds with a 200 status code (practically speaking a “Hello World”) and then you display the notification.
