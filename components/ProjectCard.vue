@@ -27,7 +27,7 @@
     background-color: white;
     transition: .3s ease-in-out;
     color: #282E36;
-    border-radius: 4px;
+    border-radius: 8px;
   }
   
   #logo{

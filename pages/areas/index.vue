@@ -1,26 +1,22 @@
 <template>
-    <h1>Our concerns in the world</h1>
+    <Breadcrumb breadcrumb = 'Home / Areas'/>
+    <h2>All Areas</h2>        
+    <h3>Our concern in the world.</h3>
     <div class="areas-container">
         <AreaCard v-for="area in areas" :key="area.id" :name="area.name"></AreaCard>
     </div>
 </template>
 
 <style scoped>
-    h1{
-        position: relative;
-        margin-top: 100px;
-    }
-    div.areas-container{
-        display: flex;
-        flex-direction: column;
-        gap: 30px;
 
+    .areas-container{
+        margin-top: 32px;
+        display: flex;
+        flex-wrap: wrap;
+        column-gap: 64px;
+        row-gap: 64px;
     }
-    div.areas-container a{
-        position: relative;
-        background-color: white;
-        border: 1px goldenrod;
-    }
+    
 </style>
 
 <script setup>

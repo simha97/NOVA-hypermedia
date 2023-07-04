@@ -25,7 +25,7 @@
     background-color: #F26225;
     transition: background-color .3s ease-in-out;
     color: white;
-    border-radius: 4px;
+    border-radius: 8px;
   }
 
   .person-card .data-container{

@@ -1,18 +1,21 @@
 <template>
-    <div><NuxtLink :to="'/areas/'+name">{{ name }}</NuxtLink></div>
+    <NuxtLink :to="'/areas/'+name">
+        <div class="area-button">{{ name }}</div>
+    </NuxtLink>
 </template>
 
 <style scoped>
 
-    div.area-button{
+     .area-button{
         border: 1px solid #F26225;
-        background: #FFFFFF;
+        background: white;
         border-radius: 8px;
-        width: 176px;
-        height: 64px;
+        width: 400px;
+        height: 400px;
         transition: box-shadow .3s ease-in-out;
-        margin-top: 240px;
+        align-items: center;
     }
+
 </style>
 
 <script setup>
