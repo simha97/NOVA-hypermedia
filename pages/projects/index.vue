@@ -105,10 +105,12 @@
             }
             if(area == "Education"){
                 if(this.active.Education == true){
+                    document.getElementById("Education-arrow").style.transform= "rotate(-135deg)";
                     document.getElementById("Education-projects").style.display = "none";
                     this.active.Education = false;
                 }
                 else{
+                    document.getElementById("Education-arrow").style.transform= "rotate(45deg)";
                     document.getElementById("Education-projects").style.display = "flex";
                     this.active.Education = true;
                     window.scrollTo({
@@ -119,10 +121,12 @@
             }
             if(area == "Energy"){
                 if(this.active.Energy == true){
+                    document.getElementById("Energy-arrow").style.transform= "rotate(-135deg)";
                     document.getElementById("Energy-projects").style.display = "none";
                     this.active.Energy = false;
                 }
                 else{
+                    document.getElementById("Energy-arrow").style.transform= "rotate(45deg)";
                     document.getElementById("Energy-projects").style.display = "flex";
                     this.active.Energy = true;
                     window.scrollTo({
@@ -133,10 +137,12 @@
             }
             if(area == "Food"){
                 if(this.active.Food == true){
+                    document.getElementById("Food-arrow").style.transform= "rotate(-135deg)";
                     document.getElementById("Food-projects").style.display = "none";
                     this.active.Food = false;
                 }
                 else{
+                    document.getElementById("Food-arrow").style.transform= "rotate(45deg)";
                     document.getElementById("Food-projects").style.display = "flex";
                     this.active.Food = true;
                     window.scrollTo({
