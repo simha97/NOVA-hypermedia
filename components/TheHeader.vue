@@ -24,29 +24,10 @@
             </span>    
             <div class="nav-item">
                 <NuxtLink to="/ourTeam">OUR TEAM</NuxtLink>
+            </div>   
+            <div class="nav-item">
+                <NuxtLink to="/areas">AREAS</NuxtLink>
             </div>
-            <span class="nav-item">
-                <div class="dropdown">
-                    <NuxtLink to="/areas">
-                        AREAS
-                        <img src="~\assets\icons\vector.png" id="vector">
-                    </NuxtLink>
-                    <div class="dropdown-sub">
-                        <div class="dropdown-option">
-                            <NuxtLink to="/areas/Art" >ART</NuxtLink>
-                        </div>
-                        <div class="dropdown-option">
-                            <NuxtLink to="/areas/Education" >EDUCATION</NuxtLink>
-                        </div>
-                        <div class="dropdown-option">
-                            <NuxtLink to="/areas/Energy">ENERGY</NuxtLink>
-                        </div>
-                        <div class="dropdown-option">
-                            <NuxtLink to="/areas/Food">FOOD</NuxtLink>
-                        </div>
-                    </div>
-                </div>
-            </span>
             <div class="nav-item">
                 <NuxtLink to="/aboutUs"> ABOUT US</NuxtLink>
             </div>

@@ -125,10 +125,11 @@
     }
 
     #social-impact{
-        margin-left: 136px;
+        margin-left: auto;
+        margin-right: auto;
         margin-top: 24px;
-        width: 848px;
         height: 312px;
+        display: block;
     }
 </style>
 
