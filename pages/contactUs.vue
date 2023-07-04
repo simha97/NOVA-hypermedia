@@ -176,7 +176,7 @@
       }
     },
     methods: {
-      checkForm: function (e) {
+      checkForm: function () {
         this.errors = [];
         if (!this.name) {
           this.errors.push('Name required.');
@@ -228,4 +228,5 @@
       }
     }
   }
+
 </script>

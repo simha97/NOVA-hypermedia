@@ -2,6 +2,7 @@
     This is an error page.
     Whenever a route that doesn't exist is called, this page will be shown.
 -->
+
 <template>
     <NuxtLayout>
         <main>

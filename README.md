@@ -6,6 +6,7 @@ TO DO:
 - design all areas page
 - design project by areas page (or use the one we already designed)
 - DO REPORT
+- ERROR PAGE
 
 TO DISCUSS:
 - OVERFLOW OF THE COVER IMAGE IN HORIZONTAL SCROLLING

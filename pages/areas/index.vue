@@ -20,6 +20,7 @@
 </style>
 
 <script setup>
+
     const { data: areas } = await useFetch('/api/areas')
     
 </script>

@@ -17,7 +17,7 @@
                             <NuxtLink to="/projects/mainProjects" >MAIN PROJECTS</NuxtLink>
                         </div>
                         <div class="dropdown-option">
-                            <NuxtLink to="/projects" >ALL PROJECTS</NuxtLink>
+                            <NuxtLink to="/projects" >PROJECTS BY AREA</NuxtLink>
                         </div>
                     </div>
                 </div>
