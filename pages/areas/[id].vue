@@ -56,7 +56,7 @@
     gap: 56px;
     display: flex;
     position: relative;
-    bottom: -50px;
+    bottom: -40px;
   }
 
   div.area-button{
