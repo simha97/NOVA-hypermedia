@@ -4,7 +4,7 @@
     <h3>Discover our amazing projects from here.</h3>
     <div class="area-zone" v-for="areaProjects of projectsByArea">
         <div class="area-selector" @click="showProjects(areaProjects.area)">
-            <img src="~\assets\icons\vector.png" id="area-vector">
+            <span class="arrow" :id="areaProjects.area + '-arrow'"></span>
             {{areaProjects.area}}
         </div>
         <div class="card-container" :id="areaProjects.area + '-projects'">
@@ -27,19 +27,20 @@
 
     .area-selector{
         width: 1088px;
-        border: solid 1px;
+        border: solid 1px #F26225;
+        color: #F26225;
         border-radius: 8px;
         font-size: 32px;
         padding: 8px 16px;
         cursor: pointer;
+        background-color: white;
     }
 
-    .area-selector #area-vector{
+    .area-selector .arrow{
         position: absolute;
-        width: 32px;
-        height: 20px;
-        margin-top: 8px;
+        margin-top: 12px;
         right: 168px;
+        transform: rotate(-135deg);
     }
 
     @media screen and (max-width: 830px) {
@@ -88,10 +89,12 @@
         showProjects: function (area) {   
             if(area == "Art"){
                 if(this.active.Art == true){
+                    document.getElementById("Art-arrow").style.transform= "rotate(-135deg)";
                     document.getElementById("Art-projects").style.display = "none";
                     this.active.Art = false;
                 }
                 else{
+                    document.getElementById("Art-arrow").style.transform= "rotate(45deg)";
                     document.getElementById("Art-projects").style.display = "flex";
                     this.active.Art = true;
                     window.scrollTo({

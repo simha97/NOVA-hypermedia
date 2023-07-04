@@ -17,15 +17,6 @@
     margin-top: 240px;
   }
 
-  .arrow {
-    display: inline-block;
-    width: 12px;
-    height: 12px;
-    border-top: 2px solid #F26225;
-    border-left: 2px solid #F26225;
-    transform: rotate(-45deg);
-  }
-
   .back-text {
     font-size: 24px;
     color:#F26225;
