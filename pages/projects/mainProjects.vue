@@ -1,5 +1,5 @@
 <template>
-    <Breadcrumb :links="[{bread:'Home', goTo: '/'}, {bread:'Projects', goTo: '/projects'}, {bread:'Main Projects', goTo: '/projects/mainProjects'}]"/>
+    <Breadcrumb breadcrumb = 'Home / Projects / Main Projects'/>
     <h2>Main Projects</h2>        
     <h3>Discover our main projects.</h3>
     <div class="card-container">

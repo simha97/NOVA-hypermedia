@@ -7,7 +7,7 @@
         <div class="person-expertiseInfo">Expert in
           <div class="person-areaTag">
             <div v-for="element in area" class="area-container"> 
-              {{ element.name }}
+              {{ element }}
             </div>
           </div>  
         </div>      

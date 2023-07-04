@@ -9,7 +9,7 @@
             </div>
         </div>
     </div>
-    <Breadcrumb :links="[{bread:'Home', goTo: '/'}, {bread:'About Us', goTo: '/aboutUs'}]"/>
+    <Breadcrumb breadcrumb = 'Home / About Us'/>
     <h2>About Us</h2>
     <h3>Our journey began with a shared passion for fostering entrepreneurship and driving positive change. We recognized the immense value of transformative ideas and the need for strategic capital to bring them to life. With this vision in mind, we set out to build a platform that not only provides financial support but also serves as a strategic partner and mentor to our portfolio companies.</h3>
     <div class="scroll-container" @wheel="ScrollPictures($event)" >

@@ -9,11 +9,11 @@
             </div>
         </div>
     </div>
-    <Breadcrumb :links="[{bread:'Home', goTo: '/'}, {bread:'Our Team', goTo: '/ourTeam'}]"/>
+    <Breadcrumb breadcrumb = 'Home / OurTeam'/>
     <h2>Our Team</h2>
     <h3>Our team page showcases the impressive network of backers who believe in our vision and share our passion for supporting innovative startups.</h3>
     <div class="card-container">
-        <div v-for="person of filtered">
+        <div v-for="person of persons">
             <NuxtLink :to = "'/ourTeam/' + person.id"><PersonCard id="card" :key="person.id" :name="person.name" :surname="person.surname" :age="person.age" :area="person.areas" :isFounder="person.isFounder"/></NuxtLink>
         </div>
     </div>
@@ -68,19 +68,5 @@
 <script setup>
 
     const { data: persons } = await useFetch('/api/ourTeam')
-    const age = ref(0);
-    const filtered = computed(() => {
-        if(age.value == 0 || age.value == "")
-            return persons.value
-
-        const arr = []
-
-        for(let person of persons.value) {
-            if(person.age < age.value)
-                arr.push(person)
-        }
-
-        return arr
-    })
 
 </script>

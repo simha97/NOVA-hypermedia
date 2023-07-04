@@ -1,17 +1,14 @@
 <template>
   <div class="breadcrumb-container">
     <img src="~\assets\icons\breadcrumb.png">
-    <span v-for="item in links">
-        {{ item.bread }}
-        <span v-if="links.indexOf(item) != links.length - 1">
-          /
-        </span>
+    <span>
+      {{ breadcrumb }}
     </span>
   </div>  
 </template>
 
 <script setup>
-  const props = defineProps(['links']);
+  const props = defineProps(['breadcrumb']);
 </script>
 
 <style scoped>

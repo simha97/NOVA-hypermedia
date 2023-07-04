@@ -11,7 +11,7 @@
             </div>
         </div>
     </div>
-    <Breadcrumb :links="[{bread:'Home', goTo: '/'}]"/>
+    <Breadcrumb breadcrumb = 'Home'/>
     <h2>How we work</h2>
     <h3>Our team page showcases the impressive network of backers who believe in our vision and share our passion for supporting innovative startups.</h3>
     <div class="how-we-work-container">

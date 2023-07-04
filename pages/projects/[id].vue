@@ -10,7 +10,7 @@
             </div>
         </div>
     </div>
-    <Breadcrumb :links="[{bread:'Home', goTo: '/'}, {bread:'Project', goTo: '/projects'}, {bread:project.projectTitle, goTo: '/projects/' + project.id}]"/>
+  <Breadcrumb :breadcrumb = '"Home / Projects / " + project.projectTitle'/>
     <div class="project-info">
         <div class="practical-info">
             <h2>{{project.projectTitle}}</h2>
@@ -101,22 +101,13 @@
         display: flex;
         position: relative;
         width: 1120px;
-
     }
 
-    .practical-info .icon-text {
-        display: flex;
-        position: relative;
-        right: 136px;
-        height: 16px;
-        margin-top: 8px;
-        font-size: 24px;  
-    }
     .practical-info #icon-text{
-        position: relative;
+        position: absolute;
         display: flex;
         gap: 32px;
-        left: 744px;
+        right: 0;
     }
 
     .practical-info #icon-white{

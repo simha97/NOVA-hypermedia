@@ -1,5 +1,5 @@
 <template>
-  <Breadcrumb :links="[{bread:'Home', goTo: '/'}, {bread:'Our Team', goTo: '/ourTeam'}, {bread:person.name +  ' ' + person.surname, goTo: '/ourTeam/' + person.id}]"/>
+  <Breadcrumb :breadcrumb = '"Home / Our Team / " + person.name + " " + person.surname'/>
   <div class="person-container">
     <div class="person-data">
       <h2>{{ person.name }} {{ person.surname }}</h2>

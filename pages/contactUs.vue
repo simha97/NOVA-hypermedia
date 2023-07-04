@@ -1,5 +1,5 @@
 <template>
-    <Breadcrumb :links="[{bread:'Home', goTo: '/'}, {bread:'Contact Us', goTo: '/contactUs'}]"/>
+  <Breadcrumb breadcrumb = 'Home / Contact Us'/>
     <h2>Contact Us</h2>
     <div class="contact-us">
         <div class="form" id="form">
