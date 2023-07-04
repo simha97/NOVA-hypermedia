@@ -27,7 +27,7 @@
             </div>
             <span class="nav-item">
                 <div class="dropdown">
-                    <NuxtLink to="/areas/Art">
+                    <NuxtLink to="/areas">
                         AREAS
                         <img src="~\assets\icons\vector.png" id="vector">
                     </NuxtLink>
