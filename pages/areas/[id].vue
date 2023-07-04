@@ -1,6 +1,6 @@
 <template>
-  <Breadcrumb :breadcrumb = '"Home / Areas / " + area'/>
-  <h2>{{area}}</h2>
+  <Breadcrumb :breadcrumb = '"Home / Areas / " + area_info.name'/>
+  <h2>{{area_info.name}}</h2>
   <h3>{{ area_info.description }}</h3>
   <div class="card-container">
     <ProjectCard v-for="project in area_info.projects" :key="project.id" :title="project.projectTitle" :city="project.city" :mainIdea="project.mainIdea" :area="project.areas.name" :link="'/projects/' + project.id" />
@@ -13,7 +13,7 @@
 <script setup>
 
   const route = useRoute()
-  const area = route.params.id
-  const { data: area_info } = await useFetch('/api/areas/' + area)
+  const id = route.params.id
+  const { data: area_info } = await useFetch('/api/areas/' + id)
   
 </script>

@@ -1,24 +1,37 @@
 <template>
-    <NuxtLink :to="'/areas/'+name">
-        <div class="area-button">{{ name }}</div>
+    <NuxtLink :to="'/areas/' + id">
+        <div class="area-button" v-bind:style="{ backgroundImage: 'url(' + img + ')' }">
+            <div class="area-name">
+                #{{name}}
+            </div>
+        </div>
     </NuxtLink>
 </template>
 
 <style scoped>
 
      .area-button{
-        border: 1px solid #F26225;
-        background: white;
+        box-shadow: 0 4px 8px 0 #282E36;
         border-radius: 8px;
-        width: 400px;
-        height: 400px;
+        width: 544px;
+        height: 296px;
         transition: box-shadow .3s ease-in-out;
-        align-items: center;
+    }
+
+    .area-name{
+        color: white;
+        font-style: 'Myriad-Pro-Regular';
+        font-weight: bold;
+        font-size: 28px;
+        padding-left: 32px;
+        padding-top: 232px;
     }
 
 </style>
 
 <script setup>
-    const props = defineProps(['name']);
+
+    const props = defineProps(['id', 'name', 'img']);
+
 </script>
 
