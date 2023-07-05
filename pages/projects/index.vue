@@ -1,6 +1,6 @@
 <template>
     <Breadcrumb breadcrumb = 'Home / Projects / Projects By Area'/>
-    <h2>Projects By Area</h2>        
+    <h2 id="area-title">Projects By Area</h2>        
     <h3>Discover our amazing projects from here.</h3>
     <div class="area-zone" v-for="areaProjects of projectsByArea" :id="areaProjects.area + '-zone'">
         <div class="area-selector" @click="showProjects(areaProjects.area)">
@@ -27,11 +27,11 @@
 
     .area-selector{
         width: 1088px;
-        border: solid 1px #F26225;
         color: #F26225;
         border-radius: 8px;
-        font-size: 32px;
-        padding: 8px 16px;
+        font-size: 24px;
+        font-family: 'Myriad-Pro-Bold';
+        padding: 16px 24px;
         cursor: pointer;
         background-color: white;
     }
@@ -41,7 +41,9 @@
         margin-top: 12px;
         right: 168px;
         transform: rotate(-135deg);
-        transition: .8s ease-in-out;
+        transition: .4s ease-in-out;
+        border-top: 4px solid #F26225;
+        border-left: 4px solid #F26225;
     }
 
     @media screen and (max-width: 830px) {
@@ -94,7 +96,7 @@
                     document.getElementById("Art-projects").style.display = "none";
                     this.active.Art = false;
                     window.scrollTo({
-                        top: document.getElementById("Art-zone").offsetTop - 16,
+                        top: document.getElementById("area-title").offsetTop - 32,
                         behavior: 'smooth',
                     })
                 }
@@ -103,7 +105,7 @@
                     document.getElementById("Art-projects").style.display = "flex";
                     this.active.Art = true;
                     window.scrollTo({
-                            top: document.getElementById("Art-zone").offsetTop - 16,
+                            top: document.getElementById("Art-zone").offsetTop - 32,
                             behavior: 'smooth',
                         })
                 }
@@ -114,7 +116,7 @@
                     document.getElementById("Education-projects").style.display = "none";
                     this.active.Education = false;
                     window.scrollTo({
-                        top: document.getElementById("Art-zone").offsetTop - 16,
+                        top: document.getElementById("Art-zone").offsetTop - 32,
                         behavior: 'smooth',
                     })
                 }
@@ -123,7 +125,7 @@
                     document.getElementById("Education-projects").style.display = "flex";
                     this.active.Education = true;
                     window.scrollTo({
-                        top: document.getElementById("Education-zone").offsetTop - 16,
+                        top: document.getElementById("Education-zone").offsetTop - 32,
                         behavior: 'smooth',
                     })
                 }
@@ -134,7 +136,7 @@
                     document.getElementById("Energy-projects").style.display = "none";
                     this.active.Energy = false;
                     window.scrollTo({
-                        top: document.getElementById("Art-zone").offsetTop - 16,
+                        top: document.getElementById("Art-zone").offsetTop - 32,
                         behavior: 'smooth',
                     })
                 }
@@ -143,7 +145,7 @@
                     document.getElementById("Energy-projects").style.display = "flex";
                     this.active.Energy = true;
                     window.scrollTo({
-                        top: document.getElementById("Energy-zone").offsetTop - 16,
+                        top: document.getElementById("Energy-zone").offsetTop - 32,
                         behavior: 'smooth',
                     })
                 }
@@ -154,7 +156,7 @@
                     document.getElementById("Food-projects").style.display = "none";
                     this.active.Food = false;
                     window.scrollTo({
-                        top: document.getElementById("Art-zone").offsetTop - 16,
+                        top: document.getElementById("Art-zone").offsetTop - 32,
                         behavior: 'smooth',
                     })
                 }
@@ -163,7 +165,7 @@
                     document.getElementById("Food-projects").style.display = "flex";
                     this.active.Food = true;
                     window.scrollTo({
-                        top: document.getElementById("Food-zone").offsetTop - 16,
+                        top: document.getElementById("Food-zone").offsetTop - 32,
                         behavior: 'smooth',
                     })
                 }

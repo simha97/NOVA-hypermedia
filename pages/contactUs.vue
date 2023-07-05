@@ -212,7 +212,7 @@
         }
         else{
           window.scrollTo({
-            top: 320,
+            top: 424,
             behavior: 'smooth',
           })
           this.active=false
