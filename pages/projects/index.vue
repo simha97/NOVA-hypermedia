@@ -2,7 +2,7 @@
     <Breadcrumb breadcrumb = 'Home / Projects / Projects By Area'/>
     <h2>Projects By Area</h2>        
     <h3>Discover our amazing projects from here.</h3>
-    <div class="area-zone" v-for="areaProjects of projectsByArea">
+    <div class="area-zone" v-for="areaProjects of projectsByArea" :id="areaProjects.area + '-zone'">
         <div class="area-selector" @click="showProjects(areaProjects.area)">
             <span class="arrow" :id="areaProjects.area + '-arrow'"></span>
             {{areaProjects.area}}
@@ -41,6 +41,7 @@
         margin-top: 12px;
         right: 168px;
         transform: rotate(-135deg);
+        transition: .8s ease-in-out;
     }
 
     @media screen and (max-width: 830px) {
@@ -92,15 +93,19 @@
                     document.getElementById("Art-arrow").style.transform= "rotate(-135deg)";
                     document.getElementById("Art-projects").style.display = "none";
                     this.active.Art = false;
+                    window.scrollTo({
+                        top: document.getElementById("Art-zone").offsetTop - 16,
+                        behavior: 'smooth',
+                    })
                 }
                 else{
                     document.getElementById("Art-arrow").style.transform= "rotate(45deg)";
                     document.getElementById("Art-projects").style.display = "flex";
                     this.active.Art = true;
                     window.scrollTo({
-                        top: document.getElementById("Art-projects").offsetTop - 16,
-                        behavior: 'smooth',
-                    })
+                            top: document.getElementById("Art-zone").offsetTop - 16,
+                            behavior: 'smooth',
+                        })
                 }
             }
             if(area == "Education"){
@@ -108,13 +113,17 @@
                     document.getElementById("Education-arrow").style.transform= "rotate(-135deg)";
                     document.getElementById("Education-projects").style.display = "none";
                     this.active.Education = false;
+                    window.scrollTo({
+                        top: document.getElementById("Art-zone").offsetTop - 16,
+                        behavior: 'smooth',
+                    })
                 }
                 else{
                     document.getElementById("Education-arrow").style.transform= "rotate(45deg)";
                     document.getElementById("Education-projects").style.display = "flex";
                     this.active.Education = true;
                     window.scrollTo({
-                        top: document.getElementById("Education-projects").offsetTop - 16,
+                        top: document.getElementById("Education-zone").offsetTop - 16,
                         behavior: 'smooth',
                     })
                 }
@@ -124,13 +133,17 @@
                     document.getElementById("Energy-arrow").style.transform= "rotate(-135deg)";
                     document.getElementById("Energy-projects").style.display = "none";
                     this.active.Energy = false;
+                    window.scrollTo({
+                        top: document.getElementById("Art-zone").offsetTop - 16,
+                        behavior: 'smooth',
+                    })
                 }
                 else{
                     document.getElementById("Energy-arrow").style.transform= "rotate(45deg)";
                     document.getElementById("Energy-projects").style.display = "flex";
                     this.active.Energy = true;
                     window.scrollTo({
-                        top: document.getElementById("Energy-projects").offsetTop - 16,
+                        top: document.getElementById("Energy-zone").offsetTop - 16,
                         behavior: 'smooth',
                     })
                 }
@@ -140,13 +153,17 @@
                     document.getElementById("Food-arrow").style.transform= "rotate(-135deg)";
                     document.getElementById("Food-projects").style.display = "none";
                     this.active.Food = false;
+                    window.scrollTo({
+                        top: document.getElementById("Art-zone").offsetTop - 16,
+                        behavior: 'smooth',
+                    })
                 }
                 else{
                     document.getElementById("Food-arrow").style.transform= "rotate(45deg)";
                     document.getElementById("Food-projects").style.display = "flex";
                     this.active.Food = true;
                     window.scrollTo({
-                        top: document.getElementById("Food-projects").offsetTop - 16,
+                        top: document.getElementById("Food-zone").offsetTop - 16,
                         behavior: 'smooth',
                     })
                 }
