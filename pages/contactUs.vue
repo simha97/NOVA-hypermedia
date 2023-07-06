@@ -176,6 +176,17 @@
       }
     },
     methods: {
+      async handleSubmit(){
+        const { data: response } = await useFetch('/api/contactUs', {
+                method: 'post',
+                body: {
+                    data: [this.name,this.surname,this.email,this.field]
+                } 
+            })
+            if (response) {
+                alert(response.value);
+            }
+      },
       checkForm: function () {
         this.errors = [];
         if (!this.name) {
@@ -204,6 +215,7 @@
         }
         if (!this.errors.length) {
           this.active=true
+          this.handleSubmit()
           this.name = ""
           this.surname = ""
           this.email = ""
