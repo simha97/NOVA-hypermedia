@@ -54,13 +54,13 @@
     }
 
     .area-description{
-        font-size: 24px;
+        font-size: 20px;
         margin-top: 48px;
         opacity: 0;
         transition: opacity .3s ease;
         max-width: 480px;
         display: -webkit-box;
-        -webkit-line-clamp: 4;
+        -webkit-line-clamp: 6;
         -webkit-box-orient: vertical;
         overflow: hidden;
     }
