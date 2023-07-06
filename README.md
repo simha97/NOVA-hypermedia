@@ -1,9 +1,9 @@
 TO DO:
 - change the website and the address in the footer (what is that?)
 - look at v-key problem in the pages
-- look shadow of cards and general design of website
-- DO REPORT
+- look shadow of cards and general design of website (too much space at end of page? backbutton too distant?)
 - ERROR PAGE
+- DO REPORT
 
 TO DISCUSS:
 - OVERFLOW OF THE COVER IMAGE IN HORIZONTAL SCROLLING

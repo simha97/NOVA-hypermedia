@@ -41,7 +41,7 @@
         <div class="smart-link">
             <Info :infos="
                 [{title:'Want to Meet Our Experts?', content: {title: 'Find in Our Team', page:'/ourTeam'}, type: 'link'},
-                 {title:'Curious About Our Areas of Focus?', content: {title: 'Find in Areas', page:'/areas/Art'}, type: 'link'},
+                 {title:'Curious About Our Areas of Focus?', content: {title: 'Find in Areas', page:'/areas'}, type: 'link'},
                  {title:'Interested in Our Main Projects?', content: {title: 'Find in Main Projects', page:'/projects/mainProjects'}, type: 'link'},
                  {title:'Learn More About Our Service?', content: {title: 'Find in Contact Us', page:'/contactUs'}, type: 'link'}
                 ]"/>
