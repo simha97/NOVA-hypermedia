@@ -24,7 +24,7 @@
     </div>
   </div>
   <div class="goBack-container">
-    <NuxtLink to="/ourTeam"><backbutton text="Our Team"></backbutton></NuxtLink>
+    <NuxtLink to="/ourTeam"><Backbutton text="Our Team"/></NuxtLink>
   </div>
 </template>
 

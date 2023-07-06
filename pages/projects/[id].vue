@@ -56,7 +56,7 @@
         </div>
     </div>
     <div class="goBack-container">
-        <NuxtLink to="/projects"><backbutton text="All Projects"></backbutton></NuxtLink>
+        <NuxtLink to="/projects"><Backbutton text="All Projects"/></NuxtLink>
     </div>
 </template>
 

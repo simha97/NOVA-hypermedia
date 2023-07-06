@@ -6,7 +6,7 @@
     <ProjectCard v-for="project in area_info.projects" :key="project.id" :title="project.projectTitle" :city="project.city" :mainIdea="project.mainIdea" :area="project.areas.name" :link="'/projects/' + project.id" />
   </div>
   <div class="goBack-container">
-    <NuxtLink to="/areas"><backbutton text="All Areas"></backbutton></NuxtLink>
+    <NuxtLink to="/areas"><Backbutton text="All Areas"/></NuxtLink>
   </div>
 </template>
 

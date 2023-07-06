@@ -14,7 +14,7 @@
     width: 176px;
     height: 64px;
     transition: box-shadow .3s ease-in-out;
-    margin-top: 240px;
+    margin-top: 16px;
   }
 
   .back-text {
