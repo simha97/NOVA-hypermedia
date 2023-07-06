@@ -3,7 +3,7 @@
 <template>
     <div class="intro">
         <img class="shadow" src="~\assets\img\pageShadow.png">
-        <img id="home" src="~\assets\img\Home.png">
+        <img id="home" src="/PagePictures/Home.png">
         <div class="intro-description">
             <div>
                 <h1>Empowering Entrepreneurs<br>Powering Progress</h1>

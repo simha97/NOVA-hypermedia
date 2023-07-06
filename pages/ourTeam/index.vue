@@ -1,7 +1,7 @@
 <template> 
     <div class="intro">
         <img class="shadow" src="~\assets\img\pageShadow.png">
-        <img src="~\assets\img\OurTeam.png">
+        <img src="/PagePictures/OurTeam.png">
         <div class="intro-description">
             <div>
                 <h1>Meet Our Teams</h1>
