@@ -3,7 +3,7 @@
         <img class="shadow" src="~\assets\img\pageShadow.png">
         <img v-bind:src="'/ProjectBanners/' + project.projectTitle + '.jpg'" id="project-img">
         <div class="intro-description">
-            <img v-bind:src="'/ProjectIcons/' + project.projectTitle + '.png'" id="project-icon">
+            <img v-bind:src="'/ProjectIcons/' + project.projectTitle + '.png'" id="project-icon" alt="Image showcasing a project's main feature. It displays the focal point of the project">
             <div>
                 <h1>{{project.projectTitle}}</h1>
                 <h3>{{ project.slogan}}</h3>
@@ -16,7 +16,7 @@
             <h2>{{project.projectTitle}}</h2>
             <div id="icon-text">
                 <div class="icon-text">
-                    <img src="~\assets\icons\location-pin-dark.png" id="icon-white">
+                    <img src="~\assets\icons\location-pin-dark.png" id="icon-white" alt="icon of the selected project">
                     {{ project.city }}
                 </div>
                 <div class="icon-text">
@@ -33,16 +33,16 @@
     <div class="project-info"> 
         <h2>How it works</h2>    
         <div class="scroll-container" @wheel="ScrollPictures($event)" id="project-scroll">
-            <img v-bind:src="'/ProjectPictures/' + project.projectTitle + '1.jpg'" class="frame" id="project-frame1" @click="ClickPicture('project-frame1')">
-            <img v-bind:src="'/ProjectPictures/' + project.projectTitle + '2.jpg'" class="frame" id="project-frame2" @click="ClickPicture('project-frame2')">
-            <img v-bind:src="'/ProjectPictures/' + project.projectTitle + '3.jpg'" class="frame" id="project-frame3" @click="ClickPicture('project-frame3')">
+            <img v-bind:src="'/ProjectPictures/' + project.projectTitle + '1.jpg'" class="frame" id="project-frame1" alt="Image showcasing the project's concept and design. It displays the architectural rendering of the project, providing a visual representation of its overall structure and aesthetics" @click="ClickPicture('project-frame1')">
+            <img v-bind:src="'/ProjectPictures/' + project.projectTitle + '2.jpg'" class="frame" id="project-frame2" alt="Image displaying the project's construction phase. It shows the construction site, workers, and equipment, illustrating the progress and activity involved in bringing the project to life" @click="ClickPicture('project-frame2')">
+            <img v-bind:src="'/ProjectPictures/' + project.projectTitle + '3.jpg'" class="frame" id="project-frame3" alt="Image capturing the completed project. It showcases the finished structure, highlighting its key features, design elements, and surrounding environment, providing a glimpse of the final outcome." @click="ClickPicture('project-frame3')">
         </div>
         <h3>{{ project.description }}</h3>
     </div>
     <div class="project-info">
         <h2>Social impact</h2> 
         <h3>{{ project.socialImpact }}</h3>
-        <img v-bind:src="'/ProjectSocialImpacts/' + project.areas.name +  '.png'" id="social-impact">
+        <img v-bind:src="'/ProjectSocialImpacts/' + project.areas.name +  '.png'" id="social-impact" alt="Image: CO2 Emission Breakdown - Production, Transportation, and Post-Purchase. The picture illustrates the percentage distribution of CO2 emissions throughout the lifecycle of a product. It highlights the CO2 emissions during the production phase, transportation phase, and post-purchase phase. This visual representation helps to understand the environmental impact of each stage and encourages sustainable choices.">
     </div>
     <div class="project-info">
         <h2>Economic impact</h2> 

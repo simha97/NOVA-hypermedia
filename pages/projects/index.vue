@@ -2,7 +2,7 @@
     <Breadcrumb breadcrumb = 'Home / Projects / Projects By Area'/>
     <h2 id="area-title">Projects By Area</h2>        
     <h3>Discover our amazing projects from here.</h3>
-    <div class="area-zone" v-for="areaProjects of projectsByArea" :id="areaProjects.area + '-zone'">
+    <div class="area-zone" v-for="areaProjects of projectsByArea" :key="areaProjects.area + '-zone'" :id="areaProjects.area + '-zone'">
         <div class="area-selector" @click="showProjects(areaProjects.area)">
             <span class="arrow" :id="areaProjects.area + '-arrow'"></span>
             {{areaProjects.area}}

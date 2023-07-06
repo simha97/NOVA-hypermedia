@@ -3,7 +3,7 @@
     <h2>Areas</h2>        
     <h3>Our concern in the world.</h3>
     <div class="areas-container">
-        <AreaCard v-for="area in areas" :id="area.id" :name="area.name" :img="'/Areas/' + area.name + '.png'" :description="area.description"></AreaCard>
+        <AreaCard v-for="area in areas" :key="area.id" :id="area.id" :name="area.name" :img="'/Areas/' + area.name + '.png'" :description="area.description"></AreaCard>
     </div>
 </template>
 
