@@ -4,10 +4,11 @@ TO DO:
 - look shadow of cards and general design of website (too much space at end of page? backbutton too distant?)
 - ERROR PAGE
 - DO REPORT
-
-TO DISCUSS:
-- OVERFLOW OF THE COVER IMAGE IN HORIZONTAL SCROLLING
+- width of page overflow
+- resize page ??
+- alt imag for accesiblity
 - Do a call to the server that responds with a 200 status code (practically speaking a “Hello World”) and then you display the notification.
+
 
 1) finish the website
 2) design things
