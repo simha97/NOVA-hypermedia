@@ -12,10 +12,10 @@
     <Breadcrumb breadcrumb = 'Home / About Us'/>
     <h2>About Us</h2>
     <h3>Our journey began with a shared passion for fostering entrepreneurship and driving positive change. We recognized the immense value of transformative ideas and the need for strategic capital to bring them to life. With this vision in mind, we set out to build a platform that not only provides financial support but also serves as a strategic partner and mentor to our portfolio companies.</h3>
-    <div class="scroll-container" @wheel="ScrollPictures($event)" >
-          <img src="~\assets\img\AboutUs1.png" class="frame">
-          <img src="~\assets\img\AboutUs2.png" class="frame">
-          <img src="~\assets\img\AboutUs3.png" class="frame">
+    <div class="scroll-container" @wheel="ScrollPictures($event)" id="scroll">
+          <img src="~\assets\img\AboutUs1.png" class="frame" @click="ClickPicture('frame1')" id="frame1">
+          <img src="~\assets\img\AboutUs2.png" class="frame" @click="ClickPicture('frame2')" id="frame2">
+          <img src="~\assets\img\AboutUs3.png" class="frame" @click="ClickPicture('frame3')" id="frame3">
     </div>
     <h2>Co-Founders</h2>
     <div v-for="founder in founders">
@@ -87,12 +87,17 @@
 </script>
 
 <script>
-
+    
     export default {
         methods: {
-            ScrollPictures(event) {
-                event.currentTarget.scrollLeft += event.deltaX
-                console.log([event.deltX, event.target.scrollLeft])
+            ScrollPictures(image) {
+                image.currentTarget.scrollLeft += image.deltaX
+            },
+            ClickPicture(image) {
+                document.getElementById("scroll").scrollTo({
+                    left: document.getElementById(image).offsetLeft - 360,
+                    behavior: 'smooth'
+                })
             }
         }
     }

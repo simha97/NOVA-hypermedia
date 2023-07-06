@@ -156,7 +156,7 @@ p, ul li, .breadcrumb-container {
 
 .scroll-container{
   display: flex;
-  overflow: hidden;
+  overflow-x: hidden;
   height: 400px;
   gap: 32px;
   margin-left: -128px;
@@ -169,6 +169,7 @@ p, ul li, .breadcrumb-container {
     height: 400px;
     width: 736px;
     border-radius: 8px;
+    cursor: pointer;
 }
 
 @media (max-width: 768px) {

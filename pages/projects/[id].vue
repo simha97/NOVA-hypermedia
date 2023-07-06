@@ -32,10 +32,10 @@
     </div>   
     <div class="project-info"> 
         <h2>How it works</h2>    
-        <div class="scroll-container" @wheel="ScrollPictures($event)" >
-            <img v-bind:src="'/ProjectPictures/' + project.projectTitle + '1.jpg'" class="frame">
-            <img v-bind:src="'/ProjectPictures/' + project.projectTitle + '2.jpg'" class="frame">
-            <img v-bind:src="'/ProjectPictures/' + project.projectTitle + '3.jpg'" class="frame">
+        <div class="scroll-container" @wheel="ScrollPictures($event)" id="project-scroll">
+            <img v-bind:src="'/ProjectPictures/' + project.projectTitle + '1.jpg'" class="frame" id="project-frame1" @click="ClickPicture('project-frame1')">
+            <img v-bind:src="'/ProjectPictures/' + project.projectTitle + '2.jpg'" class="frame" id="project-frame2" @click="ClickPicture('project-frame2')">
+            <img v-bind:src="'/ProjectPictures/' + project.projectTitle + '3.jpg'" class="frame" id="project-frame3" @click="ClickPicture('project-frame3')">
         </div>
         <h3>{{ project.description }}</h3>
     </div>
@@ -164,12 +164,17 @@
 </script>
 
 <script>
-
+    
     export default {
         methods: {
-            ScrollPictures(event) {
-                event.currentTarget.scrollLeft += event.deltaX
-                console.log([event.deltX, event.target.scrollLeft])
+            ScrollPictures(image) {
+                image.currentTarget.scrollLeft += image.deltaX
+            },
+            ClickPicture(image) {
+                document.getElementById("project-scroll").scrollTo({
+                    left: document.getElementById(image).offsetLeft - 360,
+                    behavior: 'smooth'
+                })
             }
         }
     }

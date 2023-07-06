@@ -89,7 +89,7 @@
         background-color: #F5F5F5;
         width: max-content;
         overflow: auto;
-        box-shadow: 0px 10px 10px 0px rgba(0,0,0,0.7);
+        box-shadow: 0px 2px 4px 0px #282E36;
         row-gap: 45px;
         padding: 12px 16px 12px 16px;
         border: solid 1px #282E36;
