@@ -67,6 +67,10 @@
     border-radius: 8px;
   }
 
+  #founder{
+    border-top-right-radius: 8px;
+  }
+
     @media (max-width: 768px) {
       #main-img {
         width: 100%;
