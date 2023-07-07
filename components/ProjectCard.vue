@@ -1,7 +1,7 @@
 <template>
   <NuxtLink :to = "link">
     <div class="project-card" >
-      <img class="main-img" id="logo" v-bind:src="'/ProjectLogos/' + title + '.png'" alt="logo">
+      <img class="main-img" id="logo" v-bind:src="'/ProjectLogos/' + title + '.png'" alt="logo of the project, it works as a button to go to the project's page and read more information about it">
       <div class="data-container">
         <div class="project-title">{{ title }}</div>
         <div class="project-mainIdea">{{ mainIdea }}</div>

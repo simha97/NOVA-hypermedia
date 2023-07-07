@@ -1,12 +1,13 @@
 <template>
     <div class="person-card">
-      <img alt="picture" v-bind:src="'/TeamPictures/' + name + surname + '.jpg'" id="profile">
+      <img alt="Picture of the team member, it works as a button to go to the person's page and read more information" 
+       v-bind:src="'/TeamPictures/' + name + surname + '.jpg'" id="profile">
       <div class="data-container">
         <div class="person-name-surname">{{ name }} {{surname }}</div>
         <div class="person-founderTag" v-if="isFounder == true">Founder</div>
         <div class="person-expertiseInfo">Expert in
           <div class="person-areaTag">
-            <div v-for="element in area" class="area-container"> 
+            <div v-for="element in area" :key="element.id" class="area-container"> 
               {{ element.name }}
             </div>
           </div>  

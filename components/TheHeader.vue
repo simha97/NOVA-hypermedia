@@ -2,7 +2,7 @@
     <div class="nav-container">
         <div id="landmark-homepage">
             <NuxtLink to="/" >
-                <img src="~\assets\img\logo_black.png" id="logo-nova">
+                <img src="~\assets\img\logo_black.png" id="logo-nova" alt="NOVA logo">
             </NuxtLink>
         </div>
         <div class="nav-list-item">
@@ -10,7 +10,7 @@
                 <div class="dropdown">
                     <NuxtLink to="/projects">
                         PROJECTS
-                        <img src="~\assets\icons\vector.png" id="vector">
+                        <img src="~\assets\icons\vector.png" id="vector" alt="">
                     </NuxtLink>
                     <div class="dropdown-sub">
                         <div class="dropdown-option">
