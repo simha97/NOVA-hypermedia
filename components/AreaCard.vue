@@ -34,7 +34,7 @@
     }
 
     .area-name{
-        font-size: 28px;
+        font-size: 24px;
         font-weight: bold;
     }
 
