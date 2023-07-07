@@ -55,6 +55,7 @@
 
     .area-description{
         font-size: 24px;
+        font-weight: regular;
         margin-top: 48px;
         opacity: 0;
         transition: opacity .3s ease;
