@@ -17,7 +17,7 @@
 <style scoped>
 
     .area-button{
-        box-shadow: 0 4px 8px 0 #282E36;
+        box-shadow: 0 4px 8px 0 #E7E7E7;
         border-radius: 8px;
         width: 544px;
         height: 296px;

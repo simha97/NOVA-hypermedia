@@ -47,7 +47,7 @@
         height: 96px;
         position: relative;
         z-index: 1; /*this give the idea of "layers", so this has to be up the root level 0, and must be accompanied with position*/
-        box-shadow: 0 0 5px 0 #282E36;
+        box-shadow: 0 0 5px 0 #E7E7E7;
         align-items: center;
     }
 
@@ -90,7 +90,7 @@
         background-color: #F5F5F5;
         width: max-content;
         overflow: auto;
-        box-shadow: 0px 2px 4px 0px #282E36;
+        box-shadow: 0px 4px 8px 0px #E7E7E7;
         row-gap: 45px;
         padding: 12px 16px 12px 16px;
         border: solid 1px #282E36;

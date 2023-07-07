@@ -72,18 +72,18 @@
     height: 16px;
     width: 14px;
     margin-right: 4px;
-    margin-top: 4px;
     opacity: 100%;
     transition: opacity .3s ease-in-out;
+    padding: 5px 0;
   }
 
   .project-card #icon-white{
     height: 16px;
     width: 14px;
     margin-right: 4px;
-    margin-top: 4px;
     opacity: 0%;
     transition: opacity .3s ease-in-out;
+    padding: 5px 0;
   }
 
   .project-card:hover{

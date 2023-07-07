@@ -15,8 +15,5 @@ TO DO:
 
 Check all icons and words to make it align (footer, each project)
 Navigation -  remove the outline of the hovering effect for project, change the shadow colour to #282E36  opacity 25%
-Main projects - change the shadow colour to #E7E7E7
 Each project (?)- create link between area tag here back to the single area page 
-Area - change shadow colour to #E7E7E7
 Each person -  put person’s picture next to the right margin 
-            -  I will find some pictures to replace the pictures with watermark 

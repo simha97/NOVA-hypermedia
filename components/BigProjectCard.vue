@@ -38,7 +38,7 @@
     color: white;
     transition: .5s ease-in-out;
     pointer-events: none;
-    box-shadow: 0 4px 8px 0 #282E36;
+    box-shadow: 0 4px 8px 0 #E7E7E7;
     border-radius: 8px;
   }
     
@@ -108,15 +108,13 @@
     height: 30px;
     width: 26px;
     margin-left: -4px;
-    margin-top: 2px;
     margin-right: 8px;
   }
 
   .big-project-card #icon-date{
     height: 20px;
     width: 20px;
-    margin-top: 2px;
-    margin-right: 8px;
+    margin-right: 10px;
   }
 
   #start-shadow{
