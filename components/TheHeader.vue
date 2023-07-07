@@ -53,6 +53,7 @@
 
     #logo-nova{
         margin-left: 56px;
+        width: 160px;
     }
 
     #vector{

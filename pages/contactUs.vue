@@ -180,7 +180,7 @@
         const { data: response } = await useFetch('/api/contactUs', {
                 method: 'post',
                 body: {
-                    data: [this.name,this.surname,this.email,this.field]
+                    data: [this.name, this.surname, this.email, this.field]
                 } 
             })
             if (response) {
@@ -214,7 +214,7 @@
           this.errors.push('Accept privacy policy.');
         }
         if (!this.errors.length) {
-          this.active=true
+          this.active = true
           this.handleSubmit()
           this.name = ""
           this.surname = ""
