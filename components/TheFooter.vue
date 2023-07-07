@@ -27,17 +27,16 @@
 </template>
 
 <style scoped>
-    footer
-    {
+    
+    footer{
         background-color: #282E36;
         flex-shrink: 0;
         text-align: left;
-        margin-top: 64px;
+        margin-top: 96px;
         padding: 10px;
         min-height: 1vh;
     }
-    .footer-container
-    {
+    .footer-container{
         color:white;
         margin-left: 160px;
         margin-right: 160px;
@@ -48,27 +47,27 @@
     .list1 {
     list-style: url('~/assets/icons/phone.png');
     
-  }
-  .list2 {
-    list-style: url('~/assets/icons/mail-alt.png');
-  }
-  .list3 {
-    list-style: url('~/assets/icons/globe-alt.png');
-    bottom: -80%;
+    }
+    .list2 {
+      list-style: url('~/assets/icons/mail-alt.png');
+    }
+    .list3 {
+      list-style: url('~/assets/icons/globe-alt.png');
+      bottom: -80%;
 
-  }
-  .list3 img {
-  position: absolute;
-  }
-  .list4 {
-    list-style: url('~/assets/icons/location-pin-white.png');
-  }
-  .social-media{
-    padding: 20px;
-    justify-content: space-between;
-    display: flex;
-    margin-right: 750px;
-  }
+    }
+    .list3 img {
+    position: absolute;
+    }
+    .list4 {
+      list-style: url('~/assets/icons/location-pin-white.png');
+    }
+    .social-media{
+      padding: 20px;
+      justify-content: space-between;
+      display: flex;
+      margin-right: 750px;
+    }
 
   @media (max-width: 768px) {
     /* Styles for tablets and smaller devices */

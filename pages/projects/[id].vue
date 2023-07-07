@@ -14,7 +14,7 @@
     <div class="project-info">
         <div class="practical-info">
             <h2>{{project.projectTitle}}</h2>
-            <div id="icon-text">
+            <div id="info-text">
                 <div class="icon-text">
                     <img src="~\assets\icons\location-pin-dark.png" id="icon-white">
                     {{ project.city }}
@@ -25,7 +25,6 @@
                 </div>
             </div>
         </div>
-        
         <Info id="info" :infos="[{title:'Main Idea', content: project.mainIdea, type: 'text'}, 
             {title:'Area', content: project.areas.name, type: 'area'}, 
             {title:'Supervisor', content: {page: '/ourTeam/' + project.persons.id, name: project.persons.name, surname: project.persons.surname}, type: 'picture'}]"/>
@@ -103,7 +102,7 @@
         width: 1120px;
     }
 
-    .practical-info #icon-text{
+    .practical-info #info-text{
         position: absolute;
         display: flex;
         gap: 32px;
@@ -124,10 +123,14 @@
         margin-right: 8px;
     }
 
+    .practical-info .icon-text{
+        display: flex;
+    }
+
     #social-impact{
         margin-left: auto;
         margin-right: auto;
-        margin-top: 24px;
+        margin-top: 48px;
         height: 312px;
         display: block;
     }

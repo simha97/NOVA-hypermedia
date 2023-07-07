@@ -44,10 +44,6 @@
     margin-bottom: 32px;
   }
 
-  .goBack-container{
-    margin: 0 0 320px 0;
-  }
-
   .bigimage-container{
     display: flex;
     position: relative;
