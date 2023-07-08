@@ -1,36 +1,184 @@
-html, body
-{
+html, body{
     height: 100%; 
-}
-
-body
-{
-    background-color: lightgoldenrodyellow;
     margin: 0;
+
 }
 
-    .slogan {
-        src:url('~/assets/font/helvetica-light.ttf');
-        font-family: Helvetica;
-        font: Helvetica 48px light;
+body{
+  background-color: #F5F5F5;
+  font-family: "Myriad-Pro-Regular";
+  font-size: clamp(16px, 4vw, 24px);
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-content: flex-start;
+}
+
+h1 {
+    font-family: "Myriad-Pro-Light";
+    font-weight: normal;
+    font-size: clamp(40px, 4vw, 48px);
+    letter-spacing: 2px;
+    margin-block-start: 0;
+    margin-block-end: 0;
+    width: fit-content;
+    max-width: 1120px;
+}
+
+h2 {
+    position: relative;
+    font-family: "Myriad-Pro-Light";
+    padding-top: 16px;
+    font-size: clamp(28px, 4vw, 36px);
+    width: fit-content;
+    border-top: 4px solid #F26225;
+    font-weight:normal;
+    max-width: 1120px;
+}
+
+h3 {
+    position: relative;
+    font-family: "Myriad-Pro-Regular";
+    margin-top: 16px;
+    font-size: clamp(16px, 4vw, 24px);
+    width: fit-content;
+    font-weight:normal;
+    max-width: 1120px;
+}
+
+.intro-description h3{
+  letter-spacing: 1px;
+  max-width: 576px;
+}
+
+a{
+    color:#282E36;
+    font-family: "Myriad-Pro-Regular";
+    font-size: clamp(16px, 4vw, 24px);
+    width: max-content;
+    text-decoration: none;
+}
+
+p, ul li, .breadcrumb-container {
+    font-family: "Myriad-Pro-Regular";
+    font-size: clamp(10px, 4vw, 18px);
+  }
+
+.page {
+    background-color: #F5F5F5;
+    color:#282E36;
+  }
+
+.content-container {    
+    margin-left: 160px;
+}
+
+.card-container{
+    display: flex ;
+    flex-wrap: wrap;
+    flex-direction: row;
+    column-gap: 32px;
+    row-gap: 80px;
+    margin-top: 96px;
+}
+
+.intro{
+    width:  1280px; 
+    height: 552px;
+}
+
+.intro img{
+    margin-top: -96px;
+    margin-left: -160px;
+    width: 1440px;
+    height: 648px;
+}
+
+.intro-description{
+    color: white;
+    position: absolute;
+    top: 400px;
+    max-width: 576px;
+    display: flex;
+}
+
+.slogan{
+    position: relative;
+    padding-top: 16px;
+    font-size: clamp(16px, 4vw, 24px);
+    font-style: italic;
+    font-family: "Myriad-Pro-Light";
+    max-width: 576px;
+}
+
+.area-container {
+    background-color: #f5f5f5;
+    color: #282E36;
+    border-radius: 8px;
+    padding: 4px 8px 4px 8px;
+    width: fit-content;
+    text-align: center;
+    font-size: 18px;
+}
+
+.arrow {
+    display: inline-block;
+    width: 12px;
+    height: 12px;
+    border-top: 2px solid #F26225;
+    border-left: 2px solid #F26225;
+    transform: rotate(-45deg);
+  }
+
+.form-container {
+    width: 90%;
+    border-radius: 10px;
+    border: 2px solid brown;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-content: flex-start;
+    gap: 20px;
+    background-color: burlywood;
+    padding: 20px;
+}
+
+.shadow{
+    position: absolute;
+}
+
+.goBack-container{
+    margin-top: 96px;
+}
+
+.scroll-container{
+  display: flex;
+  overflow-x: hidden;
+  height: 400px;
+  gap: 32px;
+  margin-left: -128px;
+  margin-top: 64px;
+  margin-bottom: 240px;
+  width: 1368px;
+}
+
+.frame{
+    height: 400px;
+    width: 736px;
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+@media (max-width: 768px) {
+    /* Styles for tablets and smaller devices */
+
+    .content-container {
+      margin-left: 10px;
     }
-    .title {
-        src:url('~/assets/font/Helvetica-Bold.ttf');
-        font-family: Helvetica;
-        font: Helvetica 36px bold;
-    }
-    h1 {
-        src:url('~/assets/font/Myriad\ Pro\ Light.otf');
-        font-family: "Myriad Pro";
-        font: "Myriad Pro" 48px light;
-    }
-    h2 {
-        src:url('~/assets/font/Myriad\ Pro\ Regular.ttf');
-        font-family: "Myriad Pro";
-        font: "Myriad Pro" 32px italic;
-    }
-    h3 {
-        src:url('~/assets/font/myriadpro-semibold.otf');
-        font-family: "Myriad Pro";
-        font: "Myriad Pro" 32px;
-    }
+  }
+   
+
+

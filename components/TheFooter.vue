@@ -5,7 +5,7 @@
 <template>
     <footer>
         <div class="footer-container">
-        <img src="logo.svg" alt="logo nova"/>
+          <img src="~\assets\img\logo_white.png" id="logo-nova" alt="NOVA logo">
         <div class="footer-text">
             <p>NOVA, a venture capital company help you START and GROW your business</p>
               <ul class="address-links">
@@ -26,57 +26,73 @@
     </footer>
 </template>
 
-<style>
-    footer
-    {
+<style scoped>
+    
+    footer{
         background-color: #282E36;
         flex-shrink: 0;
         text-align: left;
-        margin-top: auto;
+        margin-top: 96px;
         padding: 10px;
-        height: 480px;
         min-height: 1vh;
-
-
     }
-    .footer-container
-    {
-
-        color:#F5F5F5;
+    .footer-container{
+        color:white;
         margin-left: 160px;
         margin-right: 160px;
         margin-bottom: 38px;
         margin-top: 63px;
-        white-space: nowrap;
-
-        
 
     }
     .list1 {
     list-style: url('~/assets/icons/phone.png');
     
-  }
-  .list2 {
-    list-style: url('~/assets/icons/mail-alt.png');
-  }
-  .list3 {
-    list-style: url('~/assets/icons/globe-alt.png');
-    bottom: -80%;
+    }
+    .list2 {
+      list-style: url('~/assets/icons/mail-alt.png');
+    }
+    .list3 {
+      list-style: url('~/assets/icons/globe-alt.png');
+      bottom: -80%;
 
-  }
-  .list3 img {
-  position: absolute;
-  }
-  .list4 {
-    list-style: url('~/assets/icons/location-pin.png');
-  }
-  .social-media{
-    padding: 20px;
-    justify-content: space-between;
-    display: flex;
-    margin-right: 750px;
+    }
+    .list3 img {
+    position: absolute;
+    }
+    .list4 {
+      list-style: url('~/assets/icons/location-pin-white.png');
+    }
+    .social-media{
+      padding: 20px;
+      justify-content: space-between;
+      display: flex;
+      margin-right: 750px;
+    }
 
+  @media (max-width: 768px) {
+    /* Styles for tablets and smaller devices */
+
+    .footer-container {
+      margin: 0 10px;
+    }
+
+    .social-media {
+      margin-right: 0;
+      justify-content: space-around;
+    }
   }
 
+  @media (max-width: 480px) {
+    /* Styles for mobile devices */
+
+    .footer-container {
+      margin: 0 5px;
+    }
+
+    .social-media {
+      flex-direction: column;
+      align-items: center;
+    }
+  }
 
 </style>

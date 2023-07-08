@@ -2,16 +2,47 @@
     This is an error page.
     Whenever a route that doesn't exist is called, this page will be shown.
 -->
+
 <template>
     <NuxtLayout>
-        <main>
-            <h1>Oops, something went wrong with your request</h1>
-
-            <NuxtLink to = "/">RETURN TO HOME PAGE</NuxtLink>
-        </main>
+        <img src="/PagePictures/Error.png" id="error">
+        <div class="error-text">
+            <div id="text-404">
+                404
+            </div>
+            <div id="text-miss">
+                something is missing...
+            </div>
+            <NuxtLink to="/"><Backbutton text="Back to Home"/></NuxtLink>
+        </div>
     </NuxtLayout>
 </template>
 
-<script setup>
+<style scope>
 
-</script>
+    #error{
+        width: 1440px;
+        height: 246px;
+        margin-left: -160px;
+        margin-top: 16px;
+    }
+
+    .error-text{
+        width: 1120px;
+        text-align: center;
+    }
+
+    #text-404{
+        font-size: 100px;
+        color: #F26225;
+        font-family: 'Myriad-Pro-Bold';
+    }
+
+    #text-miss{
+        font-size: 40px;
+        color: #282E36;
+        font-family: 'Myriad-Pro-REgular';
+        margin-top: -16px;
+    }
+
+</style>

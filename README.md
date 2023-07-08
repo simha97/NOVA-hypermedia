@@ -1,68 +1,19 @@
-# T08 - Template (Vercel)
+TO DO:
+- change the website and the address in the footer (what is that?)
+- look at v-key problem in the pages
+- look shadow of cards and general design of website (too much space at end of page? backbutton too distant?)
+- DO REPORT
+- width of page overflow
+- resize page ??
+- Do a call to the server that responds with a 200 status code (practically speaking a “Hello World”) and then you display the notification.
 
-This is the implementation of the project for Vercel + Supabase
 
-## Preliminary steps
-As usual, the first things to do are:
-- moving inside the folder with the terminal (or opening the project with VSCode) and then using:
+1) finish the website
+2) design things
+3) report
+4) vercel
 
-      npm install
-
-- To run the project you have to use:
-
-      npm run dev
-
-    or
-
-      npm run dev -- -o
-    
-    to automatically open your project in a new tab of your browser.
-
-## Configuration
-To make the project work on GH-Pages there are a few steps to do:
-- install gh-pages
-
-      npm install @nuxtjs/supabase --save-dev
-
-- add the module to the nuxt.config.ts file:
-
-      export default defineNuxtConfig({
-        modules: ['@nuxtjs/supabase'],
-      })
-
-- add SUPABASE_URL and SUPABASE_KEY to the .env (for local use):
-
-      SUPABASE_URL="<Supabase URL>"
-      SUPABASE_KEY="<Supabase API Key>"
-
-## Deployment
-Vercel is connected to your repository. Any time you push something on the main/master branch, Vercel will automatically retrieve the project, build it and deploy it.
-This is why it's better to have two branches:
-- one for deployment
-- one for development
-
-In general, the command to build the "ready to deploy" project is:
-   
-    npm run build
-
-## Content
-The project contains:
-- 5 components
-  - Card
-  - SmallCard
-  - TextImage
-  - TheFooter
-  - TheHeader
-- 1 layout: default
-- 1 error page (currently it's not displayed properly when the project is generated)
-- 7 pages reachable at:
-  - /
-  - /contact
-  - /about
-  - /dogs
-  - /dogs/:id
-  - /locations
-  - /locations/:id
-- The server implemented using the serverless implementation with the Supabase functionality
-
-Most of the content is commented to explain how things works.
+Check all icons and words to make it align (footer, each project)
+Navigation -  remove the outline of the hovering effect for project, change the shadow colour to #282E36  opacity 25%
+Each project (?)- create link between area tag here back to the single area page 
+Each person -  put person’s picture next to the right margin 

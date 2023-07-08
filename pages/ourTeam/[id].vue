@@ -1,88 +1,146 @@
-
-
-<script setup>
-    const route = useRoute()
-    const id = route.params.id
-    // useRuntimeConfig provide us with environment variables set up in the nuxtconfig file
-    const { data: person } = await useFetch('/api/ourTeam/' + id)
-    const description = ref(newLineOnFullStop(person.value.story))
-</script>
-
 <template>
-            <div id = "data-container">
-                <p class = "name"> <span>{{ person.name }} {{ person.surname }}</span></p>
-                <p class = "quote"><span>"As an expert in both Education and Art I am dedicated to fostering creativity and knowledge through innovative approaches"</span></p>
-                <img id = "main-img" src = "~/assets/img/youngwoman.png" />
-            </div>
-            <ul class="info">
-                <li>Profile</li>
-                <p class="details">{{person.story}}</p>
-
-                <li> Academic Experience</li>
-                <p class="details">{{person.degree}}.</p>
-
-                <li> Past Job Experience</li>
-                <p class="details">{{person.pastJobExperience}}</p>
-
-              </ul>
-
+  <Breadcrumb :breadcrumb = '"Home / Our Team / " + person.name + " " + person.surname'/>
+  <div class="person-container">
+    <div class="person-data">
+      <h2>{{ person.name }} {{ person.surname }}</h2>
+      <div class="slogan">{{ person.slogan }}</div>
+      <Info :infos="[{title:'Profile', content: person.story, type: 'text'}, 
+        {title:'Main Expertise', content: person.mainExpertise, type: 'text'}, 
+        {title:'Academic Experience', content: person.degree, type: 'text'}, 
+        {title:'Past Job Experience', content: person.pastJobExperience, type: 'text'}]"/>
+    </div>
+    <div class="bigimage-container">
+      <img v-bind:src="'/TeamPictures/' + person.name + person.surname + '.jpg'" id="person" alt="Picture of the person selected">
+      <div v-if="person.isFounder == true">
+        <img src="~\assets\img\founder.png" id="founder">
+      </div>
+    </div>
+  </div>
+  <div>
+    <h2>Projects in Progress</h2>
+    <h3>Discover a collection of ongoing projects by {{ person.name }} {{ person.surname }}.</h3>
+    <div class="card-container">
+      <ProjectCard v-for="project in person.projects" :key="project.id" :title="project.projectTitle" :city="project.city" :mainIdea="project.mainIdea" :area="project.areas.name" :isFounder="project.isFounder" :link="'/projects/' + project.id" />
+    </div>
+  </div>
+  <div class="goBack-container">
+    <NuxtLink to="/ourTeam"><Backbutton text="Our Team"/></NuxtLink>
+  </div>
 </template>
 
 <style>
-    #main-img {
-        position: absolute;
-        width: 250px;
-        height: 300px;
-        float: right;
-        right:0;
-        
-        
+
+  .person-container{
+    display: flex;
+    margin-bottom: 216px;
+  }
+
+  .person-data{
+    width: 576px;
+    margin-right: 200px;
+  }    
+
+  .person-data .slogan{
+    margin-bottom: 32px;
+  }
+
+  .bigimage-container{
+    display: flex;
+    position: relative;
+    width: 464px;
+    height: 608px;
+    border-radius: 0 270px 0 0;
+    
+  }
+
+  .bigimage-container img {
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 272px;
+    height: 272px;
+  }
+
+  #person{
+    width: 464px;
+    height: 608px;
+    border-radius: 8px;
+  }
+
+  #founder{
+    border-top-right-radius: 8px;
+  }
+
+    @media (max-width: 768px) {
+      #main-img {
+        width: 100%;
+        height: auto;
+        border-radius: 8px;
+      }
+      
+      .image-column {
+        padding-left: 0;
+        text-align: center;
+      }
+      
+      .data-container {
+        flex-direction: column;
+        align-items: left;
+      }
+      
+      .quote {
+        width: 100%;
+        padding: 0 20px;
+        text-align: center;
+      }
+      
+      .info {
+        text-align: left;
+      }
+      
+      .details {
+        width: 100%;
+      }
     }
 
-    .data-container{
-        display: flex;
-
-    }
-
-    .name{
-        margin-top: 50px;
-        font-family: Myriad Pro;
-        font-size: 36px;
-        text-decoration: overline;
-        text-decoration-color: #F26225;
-
-
-    }
-    .quote{
-        font-family: 'Myriad Pro';
-        font-style: italic;
-        font-weight: 300;
+    /* Styles for mobile devices */
+    @media (max-width: 480px) {
+      .name {
         font-size: 24px;
-        line-height: 29px;
-        width: 576px;
-        height: 87px;
-        word-wrap: "overflow-wrap"; 
-
+      }
+      
+      .quote {
+        font-size: 18px;
+        line-height: 24px;
+      }
+      
+      .info {
+        font-size: 16px;
+      }
+      
+      .details {
+        font-size: 12px;
+      }
     }
-    .info{
-        list-style: url("~/assets/icons/orange-bullet.png");
-        font-family: 'Myriad Pro';
-        font-style: normal;
-        font-weight: 400;
-        font-size: 20px;
-        margin: auto;
+    @media (max-width: 768px) {
+  .bigimage-container {
+    padding-top: 100%; /* Adjust as per your desired aspect ratio */
+  }
+}
 
-    }
-    .details{
-        width: 503px;
+@media (max-width: 480px) {
+  .bigimage-container {
+    padding-top: 120%; /* Adjust as per your desired aspect ratio */
+  }
+}
 
-        font-family: 'Myriad Pro';
-        font-style: normal;
-        font-weight: 400;
-        font-size: 13px;
-
-        flex: none;
-        order: 0;
-        flex-grow: 0;
-    }
 </style>
+
+<script setup>
+
+    const route = useRoute()
+    const id = route.params.id
+    const { data: person } = await useFetch('/api/ourTeam/' + id)
+    
+</script>
+

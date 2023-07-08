@@ -1,75 +1,72 @@
-<template>
-    <main>
-        <!--
-            Filter
-        -->
-        <div class = "form-container">
-            <label for = "age-filter">Age filter</label><input id = "age-filter" type = 'text' placeholder = "Age filter" v-model = "age">
+<template> 
+    <div class="intro">
+        <img class="shadow" src="~\assets\img\pageShadow.png">
+        <img src="/PagePictures/OurTeam.png" alt=“”>
+        <div class="intro-description">
+            <div>
+                <h1>Meet Our Teams</h1>
+                <h3>The Brilliant Minds Behind Our Vision</h3>
+            </div>
         </div>
-        <h1>persons</h1>
-        <div id="card-container">
-            <Card v-for="person of filtered" :key="person.id" :title="person.name" :subtitle="person.surname" :number="person.age" :link="'/ourTeam/' + person.id" />
+    </div>
+    <Breadcrumb breadcrumb = 'Home / OurTeam'/>
+    <h2>Our Team</h2>
+    <h3>Our team page showcases the impressive network of backers who believe in our vision and share our passion for supporting innovative startups.</h3>
+    <div class="card-container">
+        <div v-for="person of persons" :key="person.id">
+            <NuxtLink :to = "'/ourTeam/' + person.id"><PersonCard id="card" :key="person.id" :name="person.name" :surname="person.surname" :age="person.age" :area="person.areas" :isFounder="person.isFounder"/></NuxtLink>
         </div>
-    </main>
+    </div>
 </template>
 
-<script setup>
-    const { data: persons } = await useFetch('/api/ourTeam')
+<style>
 
+    .intro .shadow{
+        width: 1440px;
+        height: 648px;
+    }
 
-    const age = ref(0);
+    #card #profile{    
+        transition: filter .3s ease-in-out;
+        filter: grayscale(100%); 
+    }
+    
+    #card:hover #profile{
+        filter: none;
+    }
 
-    const filtered = computed(() => {
-        // Checking for values where the full list is provided
-        if(age.value == 0 || age.value == "")
-            return persons.value
+    #card:hover{
+        background-color: #282E36;
+    }
 
-        const arr = []
+    #card:hover .area-container{
+        background-color: #282E36;
+    }
 
-        // Filtering the list
-        for(let person of persons.value) {
-            if(person.age < age.value)
-                arr.push(person)
+    @media screen and (max-width: 830px) {
+
+        .intro img{
+            max-height: auto;
+            width: 100%;
+            height: auto;
+            min-height: 648px;
+            margin: 0;
         }
 
-        // Returning the filtered list
-        return arr
-    })
+        main #card-container{
+            display: flex ;
+            flex-wrap: wrap;
+            flex-direction: row;
+            margin: 20px 40px 20px 40px;
+            gap: 32px;
+        }
 
-</script>
-
-<style>
-    #card-container
-    {
-        display: flex;
-        flex-wrap: wrap;
-        flex-direction: row;
-        justify-content: center;
-        align-content: flex-start;
-        gap: 20px;
-    }
-
-    main
-    {
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-content: flex-start;
-        gap: 10px;
-    }
-
-    .form-container {
-        width: 90%;
-        border-radius: 10px;
-        border: 2px solid brown;
-        display: flex;
-        flex-direction: row;
-        justify-content: space-evenly;
-        align-content: flex-start;
-        gap: 20px;
-
-        background-color: burlywood;
-        padding: 20px;
     }
 
 </style>
+
+<script setup>
+
+    const { data: persons } = await useFetch('/api/ourTeam')
+
+</script>
