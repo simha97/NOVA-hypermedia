@@ -15,6 +15,7 @@
         flex-wrap: wrap;
         column-gap: 32px;
         row-gap: 48px;
+        width: 1440px;
     }
     
 </style>
