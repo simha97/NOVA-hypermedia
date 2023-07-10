@@ -14,10 +14,10 @@
                     </NuxtLink>
                     <div class="dropdown-sub">
                         <div class="dropdown-option">
-                            <NuxtLink to="/projects/mainProjects" >MAIN PROJECTS</NuxtLink>
+                            <NuxtLink to="/projects/mainProjects">MAIN PROJECTS</NuxtLink>
                         </div>
                         <div class="dropdown-option">
-                            <NuxtLink to="/projects" >PROJECTS BY AREA</NuxtLink>
+                            <NuxtLink to="/projects">PROJECTS BY AREA</NuxtLink>
                         </div>
                     </div>
                 </div>
@@ -115,9 +115,8 @@
         .nav-container{
             flex-direction: column;
             align-items: flex-start;
-            height: 3em;
+            height: 4em;
         }
-        
         .nav-container:hover{
             height: 12em;
         }
@@ -131,7 +130,7 @@
         }
         .nav-list-item {
             position: relative;
-            display: none;
+            display: flex;
             align-items: flex-end;
             gap: 5px;
             text-indent: 10px;

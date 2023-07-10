@@ -33,7 +33,7 @@
 <style scoped>
   
   .big-project-card {
-    width: 1120px; 
+    width: 1120px;
     height: 480px;
     color: white;
     transition: .5s ease-in-out;

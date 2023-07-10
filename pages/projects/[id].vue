@@ -29,8 +29,8 @@
             {title:'Area', content: project.areas.name, type: 'area'}, 
             {title:'Supervisor', content: {page: '/ourTeam/' + project.persons.id, name: project.persons.name, surname: project.persons.surname}, type: 'picture'}]"/>
     </div>   
-    <div class="project-info"> 
-        <h2>How it works</h2>    
+    <div class="project-info">
+        <h2>How it works</h2>
         <div class="scroll-container" @wheel="ScrollPictures($event)" id="project-scroll">
             <img v-bind:src="'/ProjectPictures/' + project.projectTitle + '1.jpg'" class="frame" id="project-frame1" alt="Image showcasing the project's concept and design. It displays the architectural rendering of the project, providing a visual representation of its overall structure and aesthetics" @click="ClickPicture('project-frame1')">
             <img v-bind:src="'/ProjectPictures/' + project.projectTitle + '2.jpg'" class="frame" id="project-frame2" alt="Image displaying the project's construction phase. It shows the construction site, workers, and equipment, illustrating the progress and activity involved in bringing the project to life" @click="ClickPicture('project-frame2')">
@@ -39,12 +39,12 @@
         <h3>{{ project.description }}</h3>
     </div>
     <div class="project-info">
-        <h2>Social impact</h2> 
+        <h2>Social impact</h2>
         <h3>{{ project.socialImpact }}</h3>
         <img v-bind:src="'/ProjectSocialImpacts/' + project.areas.name +  '.png'" id="social-impact" alt="Image: CO2 Emission Breakdown - Production, Transportation, and Post-Purchase. The picture illustrates the percentage distribution of CO2 emissions throughout the lifecycle of a product. It highlights the CO2 emissions during the production phase, transportation phase, and post-purchase phase. This visual representation helps to understand the environmental impact of each stage and encourages sustainable choices.">
     </div>
     <div class="project-info">
-        <h2>Economic impact</h2> 
+        <h2>Economic impact</h2>
         <h3>{{ project.economicImpact }}</h3>
     </div>
     <div>
@@ -59,7 +59,7 @@
     </div>
 </template>
 
-<style>
+<style scoped>
 
     .intro-description #project-icon{
         margin-left: 0;
@@ -70,8 +70,12 @@
     }
 
     #project-img {
+        margin-top: 10px;
         width: 1440px;
         height: 648px;
+    }
+    .shadow{
+        margin-top:10px;
     }
 
     .project-info{
@@ -167,7 +171,6 @@
 </script>
 
 <script>
-    
     export default {
         methods: {
             ScrollPictures(image) {
@@ -181,6 +184,5 @@
             }
         }
     }
-    
 </script>
 

@@ -26,7 +26,7 @@
     }
 
     .area-selector{
-        width: 1088px;
+        width: 80%;
         color: #F26225;
         border-radius: 8px;
         font-size: 24px;
@@ -38,8 +38,8 @@
 
     .area-selector .arrow{
         position: absolute;
-        margin-top: 12px;
-        right: 168px;
+        margin-top: 8px;
+        right:20%;
         transform: rotate(-135deg);
         transition: .4s ease-in-out;
         border-top: 4px solid #F26225;
@@ -52,7 +52,6 @@
             margin: 0 10px;
             gap: 32px;
         }
-
     }
 
 </style>

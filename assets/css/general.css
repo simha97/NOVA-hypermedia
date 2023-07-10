@@ -177,9 +177,12 @@ p, ul li, .breadcrumb-container {
     /* Styles for tablets and smaller devices */
 
     .content-container {
-      margin-left: 10px;
+      margin-left: 15px;
     }
-  }
-   
+
+    .intro-description{
+        margin-left: 30px;
+    }
+    }
 
 

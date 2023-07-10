@@ -19,7 +19,7 @@
     </div>
 </template>
 
-<style>
+<style scoped>
 
     .intro .shadow{
         width: 1440px;
