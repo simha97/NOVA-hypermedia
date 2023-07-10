@@ -76,7 +76,7 @@
   }
 
   .person-card .area-container {
-    background-color: #F26225;
+    background-color: transparent;
     color: white;
     border: solid 1px white;
     font-size: 16px;

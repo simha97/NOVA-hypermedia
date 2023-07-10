@@ -74,6 +74,11 @@
     .founder-container .slogan{
         margin-top: 224px;
     }
+
+    #scroll{
+        margin-right: 0;
+    }
+
     @media (max-width: 768px) {
         .founder-container{
             max-width: 100%;
