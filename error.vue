@@ -23,14 +23,13 @@
 <style scope>
 
     #error{
-        width: 1440px;
+        width: 100%;
         height: 246px;
-        margin-left: -160px;
         margin-top: 16px;
     }
 
     .error-text{
-        width: 1120px;
+        width: 90%;
         text-align: center;
     }
 
