@@ -74,6 +74,23 @@
   }
 
     @media (max-width: 768px) {
+      .person-container{
+        display: flex;
+        flex-direction: column-reverse;
+      }
+      .person-data{
+        position:relative;
+        max-width: 680px;
+      }
+      .bigimage-container img{
+        position: relative;
+        max-width: fit-content;
+
+        margin-left: 10px;
+      }
+      #founder{
+        right: 280px;
+      }
       #main-img {
         width: 100%;
         height: auto;
@@ -124,17 +141,6 @@
         font-size: 12px;
       }
     }
-    @media (max-width: 768px) {
-  .bigimage-container {
-    padding-top: 100%; /* Adjust as per your desired aspect ratio */
-  }
-}
-
-@media (max-width: 480px) {
-  .bigimage-container {
-    padding-top: 120%; /* Adjust as per your desired aspect ratio */
-  }
-}
 
 </style>
 

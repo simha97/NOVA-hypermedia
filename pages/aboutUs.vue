@@ -74,7 +74,13 @@
     .founder-container .slogan{
         margin-top: 224px;
     }
-
+    @media (max-width: 768px) {
+        .founder-container{
+            max-width: 100%;
+            display: flex;
+            flex-direction: row;
+        }
+    }
 </style>
 
 <script setup>

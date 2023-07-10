@@ -29,6 +29,7 @@
 
     .area-selector{
         width: 80%;
+        width: 80%;
         color: #F26225;
         border-radius: 8px;
         font-size: 24px;
@@ -54,7 +55,6 @@
             margin: 0 10px;
             gap: 32px;
         }
-
     }
 
 </style>

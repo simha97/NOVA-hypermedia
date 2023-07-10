@@ -11,8 +11,8 @@
               <ul class="address-links">
                 <li class="list1">+39 3542904786</li>
                 <li class="list2"> office@nova.com</li>
-                <li class="list3"> www.novaventurecapital.com</li>
-                <li class="list4"> via xxxxxxxx, Milano, 20100</li>              
+                <li class="list3"> https://hypermedia-eight.vercel.app/</li>
+                <li class="list4"> Piazza Leonardo da Vinci 32, 20133 Milano</li>              
               </ul>
               <div class="social-media"><img src= '~/assets/icons/twitter.png' alt="twitter"/>
             <img src= '~/assets/icons/facebook.png' alt="facebook"/>

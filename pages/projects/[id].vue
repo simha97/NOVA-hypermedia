@@ -61,7 +61,7 @@
     </div>
 </template>
 
-<style>
+<style scoped>
 
     .intro-description #project-icon{
         margin-left: 0;
@@ -164,7 +164,6 @@
 </script>
 
 <script>
-    
     export default {
         methods: {
             ScrollPictures(image) {
@@ -178,6 +177,5 @@
             }
         }
     }
-    
 </script>
 

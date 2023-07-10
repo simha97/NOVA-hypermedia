@@ -21,7 +21,7 @@
     </div>
 </template>
 
-<style>
+<style scoped>
 
     #card #profile{    
         transition: filter .3s ease-in-out;

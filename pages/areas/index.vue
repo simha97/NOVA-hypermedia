@@ -19,7 +19,11 @@
         row-gap: 48px;
         width: 1440px;
     }
-    
+    @media (max-width: 768px) {
+        .areas-container{
+            max-width: 600px;
+        }
+    }
 </style>
 
 <script setup>
