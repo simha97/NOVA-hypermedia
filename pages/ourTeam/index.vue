@@ -25,7 +25,9 @@
         width: 1440px;
         height: 648px;
     }
-
+    .card-container{
+        max-width: 1440px;
+    }
     #card #profile{    
         transition: filter .3s ease-in-out;
         filter: grayscale(100%); 

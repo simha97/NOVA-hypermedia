@@ -43,7 +43,7 @@
         background-color: #F5F5F5;
         display: flex;
         align-items: flex-end;
-        width: 1440px;
+        width: 100%;
         height: 96px;
         position: relative;
         z-index: 1; /*this give the idea of "layers", so this has to be up the root level 0, and must be accompanied with position*/
