@@ -1,36 +1,38 @@
 <template>
-  <Breadcrumb breadcrumb = 'Home / Contact Us'/>
+  <div class="content-container">
+    <Breadcrumb breadcrumb = 'Home / Contact Us'/>
     <h2>Contact Us</h2>
     <div class="contact-us">
-        <div class="form" id="form">
-            <div class="error" v-if="errors.length">
-                <b>Please correct the following error(s):</b>
-                <ul>
-                    <li v-for="(error, index) in errors" :key="index">{{ error }}</li>
-                </ul>
-              </div>
-            <input type = "text" id = "name" placeholder = "Name" v-model="name">
-            <input type = "text" id = "name" placeholder = "Surname" v-model="surname">
-            <input type = "email" id = "mail" placeholder = "Email" v-model="email">
-            <textarea id = "message" placeholder = "Please let us know your requirements, and we will get back to you soon!"></textarea>  
-            <div id="check-text"><input type="checkbox" id="check" >
-            <label for="check">I am confirming that I am acknowledging and accepting the privacy statement</label></div>
-            <div id="submit" @click="checkForm()">Submit</div>
-            <div id="hidden-message" v-if="active">
-                <img id="hidden-bullet" src="~\assets\icons\orange-bullet.png">
-                Your message has been received
-            </div>
+      <div class="form" id="form">
+        <div class="error" v-if="errors.length">
+            <b>Please correct the following error(s):</b>
+            <ul>
+                <li v-for="(error, index) in errors" :key="index">{{ error }}</li>
+            </ul>
         </div>
-        <div>
-            <h3>Contact us if you want to...</h3>
-            <Info id="contact-list" :infos="
-                        [{title:'Send Your Project', content: '', type: 'text'},
-                        {title:'Make an appointment', content: '', type: 'text'},
-                        {title:'Request more information', content: '', type: 'text'},
-                        {title:'Just contact us!', content: '', type: 'text'}
-                        ]"/>
+        <input type = "text" id = "name" placeholder = "Name" v-model="name">
+        <input type = "text" id = "name" placeholder = "Surname" v-model="surname">
+        <input type = "email" id = "mail" placeholder = "Email" v-model="email">
+        <textarea id = "message" placeholder = "Please let us know your requirements, and we will get back to you soon!"></textarea>  
+        <div id="check-text"><input type="checkbox" id="check" >
+        <label for="check">I am confirming that I am acknowledging and accepting the privacy statement</label></div>
+        <div id="submit" @click="checkForm()">Submit</div>
+        <div id="hidden-message" v-if="active">
+          <img id="hidden-bullet" src="~\assets\icons\orange-bullet.png">
+          Your message has been received
         </div>
+      </div>
+      <div>
+        <h3>Contact us if you want to...</h3>
+        <Info id="contact-list" :infos="
+                    [{title:'Send Your Project', content: '', type: 'text'},
+                    {title:'Make an appointment', content: '', type: 'text'},
+                    {title:'Request more information', content: '', type: 'text'},
+                    {title:'Just contact us!', content: '', type: 'text'}
+                    ]"/>
+      </div>
     </div>
+  </div>
 </template>
 
 <style>

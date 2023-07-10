@@ -1,12 +1,7 @@
 <template>
   <div class = 'page'>
-
-  
     <TheHeader/>
-    
-        <div class="content-container">
-          <slot />
-        </div>
+      <slot />
     <TheFooter/>
   </div>
 </template>

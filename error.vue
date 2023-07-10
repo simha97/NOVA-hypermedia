@@ -6,14 +6,16 @@
 <template>
     <NuxtLayout>
         <img src="/PagePictures/Error.png" id="error">
-        <div class="error-text">
-            <div id="text-404">
-                404
+        <div class="content-container">
+            <div class="error-text">
+                <div id="text-404">
+                    404
+                </div>
+                <div id="text-miss">
+                    something is missing...
+                </div>
+                <NuxtLink to="/"><Backbutton text="Back to Home"/></NuxtLink>
             </div>
-            <div id="text-miss">
-                something is missing...
-            </div>
-            <NuxtLink to="/"><Backbutton text="Back to Home"/></NuxtLink>
         </div>
     </NuxtLayout>
 </template>

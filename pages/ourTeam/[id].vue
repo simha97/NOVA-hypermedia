@@ -1,30 +1,32 @@
 <template>
-  <Breadcrumb :breadcrumb = '"Home / Our Team / " + person.name + " " + person.surname'/>
-  <div class="person-container">
-    <div class="person-data">
-      <h2>{{ person.name }} {{ person.surname }}</h2>
-      <div class="slogan">{{ person.slogan }}</div>
-      <Info :infos="[{title:'Profile', content: person.story, type: 'text'}, 
-        {title:'Main Expertise', content: person.mainExpertise, type: 'text'}, 
-        {title:'Academic Experience', content: person.degree, type: 'text'}, 
-        {title:'Past Job Experience', content: person.pastJobExperience, type: 'text'}]"/>
-    </div>
-    <div class="bigimage-container">
-      <img v-bind:src="'/TeamPictures/' + person.name + person.surname + '.jpg'" id="person" alt="Picture of the person selected">
-      <div v-if="person.isFounder == true">
-        <img src="~\assets\img\founder.png" id="founder">
+  <div class="content-container">
+    <Breadcrumb :breadcrumb = '"Home / Our Team / " + person.name + " " + person.surname'/>
+    <div class="person-container">
+      <div class="person-data">
+        <h2>{{ person.name }} {{ person.surname }}</h2>
+        <div class="slogan">{{ person.slogan }}</div>
+        <Info :infos="[{title:'Profile', content: person.story, type: 'text'}, 
+          {title:'Main Expertise', content: person.mainExpertise, type: 'text'}, 
+          {title:'Academic Experience', content: person.degree, type: 'text'}, 
+          {title:'Past Job Experience', content: person.pastJobExperience, type: 'text'}]"/>
+      </div>
+      <div class="bigimage-container">
+        <img v-bind:src="'/TeamPictures/' + person.name + person.surname + '.jpg'" id="person" alt="Picture of the person selected">
+        <div v-if="person.isFounder == true">
+          <img src="~\assets\img\founder.png" id="founder">
+        </div>
       </div>
     </div>
-  </div>
-  <div>
-    <h2>Projects in Progress</h2>
-    <h3>Discover a collection of ongoing projects by {{ person.name }} {{ person.surname }}.</h3>
-    <div class="card-container">
-      <ProjectCard v-for="project in person.projects" :key="project.id" :title="project.projectTitle" :city="project.city" :mainIdea="project.mainIdea" :area="project.areas.name" :isFounder="project.isFounder" :link="'/projects/' + project.id" />
+    <div>
+      <h2>Projects in Progress</h2>
+      <h3>Discover a collection of ongoing projects by {{ person.name }} {{ person.surname }}.</h3>
+      <div class="card-container">
+        <ProjectCard v-for="project in person.projects" :key="project.id" :title="project.projectTitle" :city="project.city" :mainIdea="project.mainIdea" :area="project.areas.name" :isFounder="project.isFounder" :link="'/projects/' + project.id" />
+      </div>
     </div>
-  </div>
-  <div class="goBack-container">
-    <NuxtLink to="/ourTeam"><Backbutton text="Our Team"/></NuxtLink>
+    <div class="goBack-container">
+      <NuxtLink to="/ourTeam"><Backbutton text="Our Team"/></NuxtLink>
+    </div>
   </div>
 </template>
 
@@ -37,7 +39,7 @@
 
   .person-data{
     width: 576px;
-    margin-right: 200px;
+    margin-right: auto;
   }    
 
   .person-data .slogan{

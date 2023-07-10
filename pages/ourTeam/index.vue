@@ -9,25 +9,20 @@
             </div>
         </div>
     </div>
+    <div class="content-container">
     <Breadcrumb breadcrumb = 'Home / OurTeam'/>
-    <h2>Our Team</h2>
-    <h3>Our team page showcases the impressive network of backers who believe in our vision and share our passion for supporting innovative startups.</h3>
-    <div class="card-container">
-        <div v-for="person of persons" :key="person.id">
-            <NuxtLink :to = "'/ourTeam/' + person.id"><PersonCard id="card" :key="person.id" :name="person.name" :surname="person.surname" :age="person.age" :area="person.areas" :isFounder="person.isFounder"/></NuxtLink>
+        <h2>Our Team</h2>
+        <h3>Our team page showcases the impressive network of backers who believe in our vision and share our passion for supporting innovative startups.</h3>
+        <div class="card-container">
+            <div v-for="person of persons" :key="person.id">
+                <NuxtLink :to = "'/ourTeam/' + person.id"><PersonCard id="card" :key="person.id" :name="person.name" :surname="person.surname" :age="person.age" :area="person.areas" :isFounder="person.isFounder"/></NuxtLink>
+            </div>
         </div>
     </div>
 </template>
 
 <style>
 
-    .intro .shadow{
-        width: 1440px;
-        height: 648px;
-    }
-    .card-container{
-        max-width: 1440px;
-    }
     #card #profile{    
         transition: filter .3s ease-in-out;
         filter: grayscale(100%); 

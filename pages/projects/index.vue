@@ -1,14 +1,16 @@
 <template>
-    <Breadcrumb breadcrumb = 'Home / Projects / Projects By Area'/>
-    <h2 id="area-title">Projects By Area</h2>        
-    <h3>Discover our amazing projects from here.</h3>
-    <div class="area-zone" v-for="areaProjects of projectsByArea" :key="areaProjects.area + '-zone'" :id="areaProjects.area + '-zone'">
-        <div class="area-selector" @click="showProjects(areaProjects.area)">
-            <span class="arrow" :id="areaProjects.area + '-arrow'"></span>
-            {{areaProjects.area}}
-        </div>
-        <div class="card-container" :id="areaProjects.area + '-projects'">
-            <ProjectCard v-for="project in areaProjects.projects" :key="project.id" :title="project.projectTitle" :city="project.city" :mainIdea="project.mainIdea" :area="project.areas.name" :link="'/projects/' + project.id" />
+    <div class="content-container">
+        <Breadcrumb breadcrumb = 'Home / Projects / Projects By Area'/>
+        <h2 id="area-title">Projects By Area</h2>        
+        <h3>Discover our amazing projects from here.</h3>
+        <div class="area-zone" v-for="areaProjects of projectsByArea" :key="areaProjects.area + '-zone'" :id="areaProjects.area + '-zone'">
+            <div class="area-selector" @click="showProjects(areaProjects.area)">
+                <span class="arrow" :id="areaProjects.area + '-arrow'"></span>
+                {{areaProjects.area}}
+            </div>
+            <div class="card-container" :id="areaProjects.area + '-projects'">
+                <ProjectCard v-for="project in areaProjects.projects" :key="project.id" :title="project.projectTitle" :city="project.city" :mainIdea="project.mainIdea" :area="project.areas.name" :link="'/projects/' + project.id" />
+            </div>
         </div>
     </div>
 </template>
@@ -26,7 +28,7 @@
     }
 
     .area-selector{
-        width: 1088px;
+        width: 80%;
         color: #F26225;
         border-radius: 8px;
         font-size: 24px;
@@ -39,7 +41,7 @@
     .area-selector .arrow{
         position: absolute;
         margin-top: 12px;
-        right: 168px;
+        right: 17%;
         transform: rotate(-135deg);
         transition: .4s ease-in-out;
         border-top: 4px solid #F26225;

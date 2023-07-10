@@ -11,40 +11,42 @@
             </div>
         </div>
     </div>
-    <Breadcrumb breadcrumb = 'Home'/>
-    <h2>How we work</h2>
-    <h3>Our team page showcases the impressive network of backers who believe in our vision and share our passion for supporting innovative startups.</h3>
-    <div class="how-we-work-container">
-        <div class="text-container">
-            <div class="how-we-work-title">01 Seed Funding</div>
-            <div class="how-we-work-description">We provide crucial seed funding to early-stage ventures, helping you kickstart your operations, develop your product, and conduct market research. Our investment gives you the financial backing needed to lay a strong foundation for success.</div>
+    <div class="content-container">
+        <Breadcrumb breadcrumb = 'Home'/>
+        <h2>How we work</h2>
+        <h3>Our team page showcases the impressive network of backers who believe in our vision and share our passion for supporting innovative startups.</h3>
+        <div class="how-we-work-container">
+            <div class="text-container">
+                <div class="how-we-work-title">01 Seed Funding</div>
+                <div class="how-we-work-description">We provide crucial seed funding to early-stage ventures, helping you kickstart your operations, develop your product, and conduct market research. Our investment gives you the financial backing needed to lay a strong foundation for success.</div>
+            </div>
+            <div class="text-container">
+                <div class="how-we-work-title">02 Series a Funding</div>
+                <div class="how-we-work-description">As your startup gains traction and demonstrates promising growth potential, we offer Series A funding. This investment injects the capital required to scale your operations, expand your team, and take your product or service to the next level.</div>
+            </div>
+            <div class="blank-container">
+                <img src="~\assets\img\curvedArrow.png" id="curved-arrow">
+            </div>
+            <div class="blank-container">
+            </div>
+            <div class="text-container">
+                <div class="how-we-work-title">04 Exit Strategy Support</div>
+                <div class="how-we-work-description">We understand the importance of planning for the future. When the time is right, we help you strategize and execute your exit plan, whether through mergers, acquisitions, or IPOs.Our goal is to ensure a smooth transition.</div>
+            </div>
+            <div class="text-container">
+                <div class="how-we-work-title">03 Strategic Guidance</div>
+                <div class="how-we-work-description">Our experienced team help you navigate challenges and make informed decisions. Drawing on our expertise, industry insights, and vast network, we assist you in refining your business strategies.</div>
+            </div>
         </div>
-        <div class="text-container">
-            <div class="how-we-work-title">02 Series a Funding</div>
-            <div class="how-we-work-description">As your startup gains traction and demonstrates promising growth potential, we offer Series A funding. This investment injects the capital required to scale your operations, expand your team, and take your product or service to the next level.</div>
-        </div>
-        <div class="blank-container">
-            <img src="~\assets\img\curvedArrow.png" id="curved-arrow">
-        </div>
-        <div class="blank-container">
-        </div>
-        <div class="text-container">
-            <div class="how-we-work-title">04 Exit Strategy Support</div>
-            <div class="how-we-work-description">We understand the importance of planning for the future. When the time is right, we help you strategize and execute your exit plan, whether through mergers, acquisitions, or IPOs.Our goal is to ensure a smooth transition.</div>
-        </div>
-        <div class="text-container">
-            <div class="how-we-work-title">03 Strategic Guidance</div>
-            <div class="how-we-work-description">Our experienced team help you navigate challenges and make informed decisions. Drawing on our expertise, industry insights, and vast network, we assist you in refining your business strategies.</div>
-        </div>
-    </div>
-    <div class="smart-links-container">
-        <div class="smart-link">
-            <Info :infos="
-                [{title:'Want to Meet Our Experts?', content: {title: 'Find in Our Team', page:'/ourTeam'}, type: 'link'},
-                 {title:'Curious About Our Areas of Focus?', content: {title: 'Find in Areas', page:'/areas'}, type: 'link'},
-                 {title:'Interested in Our Main Projects?', content: {title: 'Find in Main Projects', page:'/projects/mainProjects'}, type: 'link'},
-                 {title:'Learn More About Our Service?', content: {title: 'Find in Contact Us', page:'/contactUs'}, type: 'link'}
-                ]"/>
+        <div class="smart-links-container">
+            <div class="smart-link">
+                <Info :infos="
+                    [{title:'Want to Meet Our Experts?', content: {title: 'Find in Our Team', page:'/ourTeam'}, type: 'link'},
+                    {title:'Curious About Our Areas of Focus?', content: {title: 'Find in Areas', page:'/areas'}, type: 'link'},
+                    {title:'Interested in Our Main Projects?', content: {title: 'Find in Main Projects', page:'/projects/mainProjects'}, type: 'link'},
+                    {title:'Learn More About Our Service?', content: {title: 'Find in Contact Us', page:'/contactUs'}, type: 'link'}
+                    ]"/>
+            </div>
         </div>
     </div>
 </template>

@@ -9,29 +9,26 @@
             </div>
         </div>
     </div>
-    <Breadcrumb breadcrumb = 'Home / About Us'/>
-    <h2>About Us</h2>
-    <h3>Our journey began with a shared passion for fostering entrepreneurship and driving positive change. We recognized the immense value of transformative ideas and the need for strategic capital to bring them to life. With this vision in mind, we set out to build a platform that not only provides financial support but also serves as a strategic partner and mentor to our portfolio companies.</h3>
-    <div class="scroll-container" @wheel="ScrollPictures($event)" id="scroll">
-          <img src="/PagePictures/AboutUs1.png" class="frame" alt="First picture of NOVA team" @click="ClickPicture('frame1')" id="frame1">
-          <img src="/PagePictures/AboutUs2.png" class="frame" alt="Second picture of NOVA team" @click="ClickPicture('frame2')" id="frame2">
-          <img src="/PagePictures/AboutUs3.png" class="frame" alt="Third picture of NOVA team" @click="ClickPicture('frame3')" id="frame3">
-    </div>
-    <h2>Co-Founders</h2>
-    <div v-for="founder in founders" :key="founder.id">
-        <div class="founder-container" v-bind:style=" founders.indexOf(founder) % 2 === 1 ? {'flex-direction': 'row-reverse'} : {'flex-direction': 'row'}">
-            <PersonCard :key="founder.id" :name="founder.name" :surname="founder.surname" :area="founder.areas" :isFounder="founder.isFounder" :link="'/ourTeam/' + founder.id"/>
-            <div class="slogan">{{ founder.slogan }}</div>
+    <div class="content-container">
+        <Breadcrumb breadcrumb = 'Home / About Us'/>
+        <h2>About Us</h2>
+        <h3>Our journey began with a shared passion for fostering entrepreneurship and driving positive change. We recognized the immense value of transformative ideas and the need for strategic capital to bring them to life. With this vision in mind, we set out to build a platform that not only provides financial support but also serves as a strategic partner and mentor to our portfolio companies.</h3>
+        <div class="scroll-container" @wheel="ScrollPictures($event)" id="scroll">
+            <img src="/PagePictures/AboutUs1.png" class="frame" alt="First picture of NOVA team" @click="ClickPicture('frame1')" id="frame1">
+            <img src="/PagePictures/AboutUs2.png" class="frame" alt="Second picture of NOVA team" @click="ClickPicture('frame2')" id="frame2">
+            <img src="/PagePictures/AboutUs3.png" class="frame" alt="Third picture of NOVA team" @click="ClickPicture('frame3')" id="frame3">
+        </div>
+        <h2>Co-Founders</h2>
+        <div v-for="founder in founders" :key="founder.id">
+            <div class="founder-container" v-bind:style=" founders.indexOf(founder) % 2 === 1 ? {'flex-direction': 'row-reverse'} : {'flex-direction': 'row'}">
+                <PersonCard :key="founder.id" :name="founder.name" :surname="founder.surname" :area="founder.areas" :isFounder="founder.isFounder" :link="'/ourTeam/' + founder.id"/>
+                <div class="slogan">{{ founder.slogan }}</div>
+            </div>
         </div>
     </div>
 </template>
 
 <style>
-
-    .intro img{
-        width: 1440px;
-        height: 648px;
-    }
 
     .founder-container{
         width: 1120px;
