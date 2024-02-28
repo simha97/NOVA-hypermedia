@@ -16,12 +16,10 @@ This project is a web platform designed with Vue.js and Nuxt.js, aimed at showca
 ### Prerequisites
 
 - Node.js
-- npm or yarn
+- npm
 
 ### run
 to run the project
 run the command 
 
 npm run dev
-# or
-yarn dev
