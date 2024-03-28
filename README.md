@@ -1,19 +1,25 @@
-TO DO:
-- change the website and the address in the footer (what is that?)
-- look at v-key problem in the pages
-- look shadow of cards and general design of website (too much space at end of page? backbutton too distant?)
-- DO REPORT
-- width of page overflow
-- resize page ??
-- Do a call to the server that responds with a 200 status code (practically speaking a “Hello World”) and then you display the notification.
+# NOVA
+
+## Introduction
+
+This project is a web platform designed with Vue.js and Nuxt.js, aimed at showcasing venture capital projects, the teams behind them, and their investors. It serves as a central hub for potential investors to explore and engage with various innovative projects and the brilliant minds driving them.
+
+## Features
+
+- **Project**: A comprehensive listing of all venture capital projects, including detailed descriptions, current funding status, and milestones.
+- **Team**: Information about the people working on each project, including their roles, expertise, and background.
+- **Areas**: Information about the different areas that the company works with.
 
 
-1) finish the website
-2) design things
-3) report
-4) vercel
+## Setup
 
-Check all icons and words to make it align (footer, each project)
-Navigation -  remove the outline of the hovering effect for project, change the shadow colour to #282E36  opacity 25%
-Each project (?)- create link between area tag here back to the single area page 
-Each person -  put person’s picture next to the right margin 
+### Prerequisites
+
+- Node.js
+- npm
+
+### run
+to run the project
+run the command 
+
+npm run dev
